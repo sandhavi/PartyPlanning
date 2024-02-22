@@ -1,0 +1,1 @@
+Add all frontend files here, bc we need to change .html to .php file
