@@ -1,30 +1,31 @@
-<?php
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>connect-php</title>
+</head>
 
-class Database
-{
+<body>
+    <?php 
+    $dbhost = 'localhost';
+    $dbuser = 'root';
+    $dbpass = '';
+    $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
 
-    public static $connection;
+    // if (!$conn) {
+    //     die('Could not connect: ' . mysqli_connect_error());
+    // }
+    // echo 'connected successfully';
 
-    public static function setUpConnection()
-    {
+    // echo "<hr>";
+    $db = mysqli_select_db($conn, 'party'); 
 
-        if (!isset(Database::$connection)) {
-            Database::$connection = new mysqli("localhost", "root", "", "party", "3306");
-        }
+    if (!$db) {
+        echo 'Error Check Name of the Database';
+    } else {
+        echo 'Database Sucessfully Connected';
+       
     }
+    ?>
+</body>
 
-    public static function iud($q)
-    {
-
-        Database::setUpConnection();
-        Database::$connection->query($q);
-    }
-
-    public static function search($q)
-    {
-
-        Database::setUpConnection();
-        $resultset = Database::$connection->query($q);
-        return $resultset;
-    }
-}
+</html>
