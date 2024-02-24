@@ -3,28 +3,44 @@ session_start();
 $message = "";
 if (isset($_POST['submit'])) {
 
-    include 'connect.php';
+   include '../Include/connectin.php';
+
+  
+//    $email = $_POST["email"];
+//    $password = $_POST["password"];
+//    $username = $_POST["username"];
 
 
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-    $fname = $_POST["fname"];
+//    $sql = "SELECT * FROM user WHERE email='$email' and password ='$password'";
+   
+//    $result = mysqli_query($conn, $sql);
+
+//    $row = mysqli_fetch_array($result);
+
+//    $_SESSION['name'] = $row['user'];
+
+//    if (mysqli_num_rows($result) == 1) {
 
 
-    $sql = "SELECT * FROM user WHERE email='$email' and password ='$password'";
+//       echo "<script>alert('Successful');window.location.href = 'https://www.youtube.com/';</script>";
+//       exit();
+//    } 
+//    else {
+//       echo "<script>alert('Error');window.location.href = 'https://www.google.com/';</script>";
+//    }
+  
 
-    $result = mysqli_query($conn, $sql);
+$validEmail = 'user@gamil.com';
+$validPassword = '123';
 
-    $row = mysqli_fetch_array($result);
+$userEmail = $_POST['email'];
+$userPassword = $_POST['password'];
 
-    $_SESSION['fname'] = $row['user'];
+if ($userEmail === $validEmail && $userPassword === $validPassword) {
+    echo json_encode(['success' => true]);
+} else {
+    echo json_encode(['success' => false, 'message' => 'Invalid email or password.']);
+}
 
-    if (mysqli_num_rows($result) == 1) {
 
-
-        echo "<script>alert('Successful');window.location.href = '../Pages/Home/index.html';</script>";
-        exit();
-    } else {
-        echo "<script>alert('Error');window.location.href = '../Pages/Login/index.html';</script>";
-    }
 }
