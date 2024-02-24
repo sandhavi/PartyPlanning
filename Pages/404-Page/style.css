@@ -1,0 +1,221 @@
+.element {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.element .overlap-wrapper {
+  overflow-x: hidden;
+  width: 1920px;
+  height: 2137px;
+}
+
+.element .overlap {
+  position: relative;
+  width: 1923px;
+  height: 1181px;
+}
+
+.element .background {
+  position: absolute;
+  width: 1920px;
+  height: 1181px;
+  top: 0;
+  left: 0;
+}
+
+.element .banner {
+  position: absolute;
+  width: 1583px;
+  height: 1042px;
+  top: 139px;
+  left: 340px;
+}
+
+.element .header {
+  position: absolute;
+  width: 1920px;
+  height: 160px;
+  top: 0;
+  left: 0;
+}
+
+.element .overlap-group {
+  position: relative;
+  height: 160px;
+}
+
+.element .logo-header-wrapper {
+  background-image: url(./img/background-1.svg);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 1920px;
+  height: 160px;
+  top: 0;
+  left: 0;
+}
+
+.element .logo-header {
+  display: flex;
+  width: 1199px;
+  align-items: center;
+  gap: 244px;
+  position: relative;
+  top: 62px;
+  left: 58px;
+}
+
+.element .logo {
+  position: relative;
+  width: 182.13px;
+  height: 36px;
+}
+
+.element .text-wrapper {
+  position: absolute;
+  top: 0;
+  left: 37px;
+  font-family: "Rubik", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 30px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.element .pattern {
+  top: 5px;
+  left: 2px;
+  transform: rotate(-30deg);
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ffb82b;
+}
+
+.element .div {
+  top: 18px;
+  left: 4px;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ffb82b;
+}
+
+.element .pattern-2 {
+  top: 5px;
+  left: 18px;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ffb82b;
+}
+
+.element .pattern-3 {
+  top: 18px;
+  left: 18px;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ffb82b;
+}
+
+.element .menu {
+  position: absolute;
+  width: 522px;
+  height: 22px;
+  top: 65px;
+  left: 1267px;
+}
+
+.element .menu-2 {
+  display: flex;
+  width: 522px;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+}
+
+.element .text-wrapper-2 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Krub", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 21.6px;
+  white-space: nowrap;
+}
+
+.element .about {
+  position: relative;
+  width: 78px;
+  height: 22px;
+}
+
+.element .text-wrapper-3 {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  font-family: "Krub", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 21.6px;
+  white-space: nowrap;
+}
+
+.element .line {
+  position: absolute;
+  width: 1px;
+  height: 19px;
+  top: 2px;
+  left: -1px;
+  object-fit: cover;
+}
+
+.element .pages {
+  position: relative;
+  width: 85px;
+  height: 22px;
+}
+
+.element .div-wrapper {
+  position: absolute;
+  width: 57px;
+  height: 22px;
+  top: 0;
+  left: 30px;
+}
+
+.element .text-wrapper-4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Krub", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 21.6px;
+  white-space: nowrap;
+}
+
+.element .project {
+  position: relative;
+  width: 121px;
+  height: 22px;
+}
+
+.element .contact {
+  position: relative;
+  width: 82px;
+  height: 22px;
+  margin-right: -4.39px;
+}
