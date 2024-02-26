@@ -18,22 +18,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_result($user_id, $db_username, $db_password);
         $stmt->fetch();
 
-        if (password_verify($password, $db_password)) {
+        if ($password === $db_password) {
             // Password is correct, user is authenticated
             session_start();
             $_SESSION['user_id'] = $user_id;
             $_SESSION['username'] = $db_username;
 
             // Redirect to a dashboard or another page
-            header("Location: ../../../Pages/HomePage-Ordinary_User/index.html");
+            echo "<script>alert('Login successful'); 
+            window.location.href = '../Pages/HomePage-Ordinary_User/index.html';</script>";
             exit();
         } else {
             // Incorrect password
-            echo "Incorrect password";
+            echo "<script>alert('Incorrect password'); 
+            window.location.href = '../Pages/Login/LoginUser.html';</script>";
+            exit();
         }
     } else {
         // User not found
-        echo "User not found";
+        echo "<script>alert('User not found'); 
+        window.location.href = '../Pages/Login/LoginUser.html';</script>";
+        exit();
     }
 
     // Close the statement and database connection

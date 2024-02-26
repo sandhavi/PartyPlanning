@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get user input from the form
     $email = $_POST['email'];
     $username = $_POST['username'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $password = $_POST['password'];
 
     // Prepare and execute the SQL query
     $stmt = $conn->prepare("INSERT INTO user (email, username, password) VALUES (?, ?, ?)");
