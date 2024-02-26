@@ -17,74 +17,76 @@
           </div>
         </div>
         <div class="group-3">
-          <form name="registration" method="POST" action="../../Backend/usersave.php";"></form>
-          <div class="group-4">
-            <div class="text-wrapper-2">Sign up</div>
-            <div class="group-5">
-              <p class="p">If you already have an account register</p>
-              <p class="you-can-login-here">
-                <span class="span">You can&nbsp;&nbsp; </span> <span class="text-wrapper-3">Login here !</span>
-              </p>
-            </div>
-          </div>
-          <div class="group-6">
-            <div class="text-wrapper-4">Email</div>
-            <input
-            class="text-wrapper-5"
-            placeholder="Enter your Email"
-            type="text"
-            name="password"
-          />
-            <div class="rectangle"></div>
-            <img class="message" src="img/message-1.svg" />
-          </div>
-          <div class="group-7">
-            <div class="text-wrapper-6">Confrim Password</div>
-            <div class="rectangle-2"></div>
-            <div class="group-8">
-              <input
-            class="text-wrapper-7"
-            placeholder="Confrim Your Password"
-            type="text"
-            name="text"
-          />
-              <img class="padlock" src="img/padlock-1-1.svg" />
-            </div>
-            
-          </div>
-          <div class="group-9">
-            <div class="text-wrapper-6">Password</div>
-            <div class="rectangle-2"></div>
-            <div class="group-10">
-              <input
-            class="text-wrapper-7"
-            placeholder="Enter your Password"
-            type="text"
-            name="text"
-          />
-              <img class="img" src="img/padlock-1.svg" />
-            </div>
-           
-          </div>
-          <div class="overlap-group-wrapper">
-            <div class="overlap-group"><div class="text-wrapper-8">Register</div></div>
-          </div>
-          <div class="overlap-wrapper">
-            <div class="overlap-2">
-              <div class="group-11">
-                <div class="text-wrapper-4">Username</div>
-                <input
-            class="text-wrapper-5"
-            placeholder="Enter your User Name"
-            type="text"
-            name="text"
-          />
-                <div class="rectangle-3"></div>
+          <form action="../../Backend/usersave.php" method="post">
+            <div class="group-4">
+              <div class="text-wrapper-2">Sign up</div>
+              <div class="group-5">
+                <p class="p">If you already have an account register</p>
+                <p class="you-can-login-here">
+                  <span class="span">You can&nbsp;&nbsp; </span>
+                  <span class="text-wrapper-3">Login here !</span>
+                </p>
               </div>
-              <img class="user" src="img/user-1.svg" />
             </div>
-          </div>
-        </form>
+            <div class="group-6">
+              <div class="text-wrapper-4">Email</div>
+              <input
+                class="text-wrapper-5"
+                placeholder="Enter your Email"
+                type="text"
+                name="email"
+              />
+              <div class="rectangle"></div>
+              <img class="message" src="img/message-1.svg" />
+            </div>
+            <div class="group-7">
+              <div class="text-wrapper-6">Confrim Password</div>
+              <div class="rectangle-2"></div>
+              <div class="group-8">
+                <input
+                  class="text-wrapper-7"
+                  placeholder="Confrim Your Password"
+                  type="password"
+                  name="cpassword"
+                />
+                <img class="padlock" src="img/padlock-1-1.svg" />
+              </div>
+            </div>
+            <div class="group-9">
+              <div class="text-wrapper-6">Password</div>
+              <div class="rectangle-2"></div>
+              <div class="group-10">
+                <input
+                  class="text-wrapper-7"
+                  placeholder="Enter your Password"
+                  type="password"
+                  name="password"
+                />
+                <img class="img" src="img/padlock-1.svg" />
+              </div>
+            </div>
+            <div class="overlap-group-wrapper">
+              <!-- <div class="overlap-group"><div class="text-wrapper-8">Register</div></div> -->
+              <button type="submit" class="overlap-group" value="submit">
+                Register
+              </button>
+            </div>
+            <div class="overlap-wrapper">
+              <div class="overlap-2">
+                <div class="group-11">
+                  <div class="text-wrapper-4">Username</div>
+                  <input
+                    class="text-wrapper-5"
+                    placeholder="Enter your User Name"
+                    type="text"
+                    name="username"
+                  />
+                  <div class="rectangle-3"></div>
+                </div>
+                <img class="user" src="img/user-1.svg" />
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
