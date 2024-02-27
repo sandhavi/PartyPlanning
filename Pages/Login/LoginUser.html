@@ -2,113 +2,87 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./LoginUser.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@600&display=swap"
-    />
+    <link rel="stylesheet" href="../Login-Admin/globals.css" />
+    <link rel="stylesheet" href="../Login-Admin/styleguide.css" />
+    <link rel="stylesheet" href="../Login-Admin/style.css" />
   </head>
   <body>
-    <div class="login-ordinary">
-      <div class="login-ordinary-inner">
-        <div class="frame-parent">
-          <div class="frame-wrapper">
-            <div class="sign-in-parent">
-              <h2 class="sign-in">Sign in</h2>
-              <div class="if-you-dont-have-an-account-r-parent">
-                <div class="if-you-dont">
-                  If you don’t have an account register
-                </div>
-                <div class="you-can-register-container">
-                  <span class="you-can">You can </span>
-                  <span class="register-here" style="color: purple">
-                    <a href="https://www.google.com/"> Register here ! </a>
+    <div class="login-admin">
+      <div class="div">
+        <div class="overlap">
+          <div class="group"><div class="group-2"></div></div>
+          <div class="back-to-website">
+            <div class="text-wrapper">
+              <a href="www.google.com" style="color: whitesmoke"
+                >Back to the website</a
+              >
+            </div>
+            <img class="icon-left" src="../Login-Admin/img/icon-left.svg" />
+          </div>
+        </div>
+        <div class="group-3">
+          <div class="group-4">
+            <div class="group-5">
+              <div class="text-wrapper-2">Sign in</div>
+              <div class="group-6">
+                <p class="p">If you don't have an account register</p>
+                <div class="text-wrapper-3">
+                  You can
+                  <span style="font-size: large">
+                    <a href="../Register-Ordinary/index.html">
+                      Register Here !
+                    </a>
                   </span>
                 </div>
               </div>
             </div>
-          </div>
-
-          <form action="../../Backend/login.php" method="post">
-            <div class="email-parent">
-              <div class="email">Username</div>
-              <div class="message-1-parent">
-                <img
-                  class="message-1-icon"
-                  alt=""
-                  src="./public/message-1.svg"
-                />
-                <input
-                  class="enter-your-email"
-                  placeholder="Enter your UserName
-                address"
-                  type="text"
-                  name="username"
-                />
+            <form action="../../Backend/login.php" method="post">
+              <div class="group-7">
+                <div class="group-8">
+                  <div class="group-9">
+                    <div class="text-wrapper-4">Username</div>
+                    <div class="text-wrapper-5">
+                      <input
+                        placeholder="Enter your UserName"
+                        type="text"
+                        name="username"
+                      />
+                    </div>
+                    <div class="rectangle"></div>
+                    <img
+                      class="message"
+                      src="../Login-Admin/img/message-1.svg"
+                    />
+                  </div>
+                  <div class="group-10">
+                    <div class="text-wrapper-6">Password</div>
+                    <div class="rectangle-2"></div>
+                    <div class="group-11">
+                      <div class="text-wrapper-7">
+                        <input
+                          placeholder="Enter your Password"
+                          type="password"
+                          name="password"
+                        />
+                      </div>
+                      <img
+                        class="padlock"
+                        src="../Login-Admin/img/padlock-1.svg"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="group-12"></div>
+                <div class="overlap-group-wrapper">
+                  <button type="submit" class="overlap-group">
+                    <div class="text-wrapper-10">Login</div>
+                  </button>
+                </div>
               </div>
-              <div class="component-child"></div>
-            </div>
-
-            <div class="email-parent">
-              <div class="email">Password</div>
-              <div class="message-1-parent">
-                <img
-                  class="padlock-1-icon"
-                  loading="eager"
-                  alt=""
-                  src="./public/padlock-1.svg"
-                />
-                <input
-                  class="enter-your-email"
-                  placeholder="Enter your password"
-                  type="password"
-                  name="password"
-                />
-              </div>
-              <div class="component-child"></div>
-            </div>
-
-            <div class="frame-group">
-              <div class="login-form">
-                <div class="rectangle-parent"></div>
-              </div>
-            </div>
-
-            <div class="frame-div">
-              <button class="rectangle-group" type="submit">
-                <div class="frame-child"></div>
-                <div class="login">Login</div>
-              </button>
-              <div class="or-continue-with-parent"></div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="rectangle-container">
-        <div class="frame-item"></div>
-        <img
-          class="iconleft"
-          loading="eager"
-          alt=""
-          src="./public/iconleft.svg"
-        />
-        <div class="back-button">
-          <img class="saly-10-icon" alt="" src="./public/saly10@2x.png" />
-          <div class="back-to-the">
-            <a href="https://www.google.com/" style="color: whitesmoke">
-              Back to the website
-            </a>
+            </form>
           </div>
         </div>
       </div>
     </div>
-    <script src="../../JS/login.js"></script>
   </body>
 </html>
