@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  include '../../Include/connectin.php';
+  include '../../Template/navbar.php';
+  ?>
 <!DOCTYPE html>
 <html>
   <head>

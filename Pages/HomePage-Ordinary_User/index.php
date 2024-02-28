@@ -15,8 +15,11 @@
 </head>
 
 <body>
+
   <?php
-  include 'Template\header.php';
+  session_start();
+  include '../../Include/connectin.php';
+  include '../../Template/navbar.php';
   ?>
   <div class="home-page-ordinary-user">
     <!-- <header class="header">

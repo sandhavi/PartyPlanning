@@ -1,8 +1,8 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="../Pages/HomePage-Ordinary_User/index.css" />
-    <link rel="stylesheet" href="../Pages/HomePage-Ordinary_User/global.css"" />
+    <link rel="stylesheet" href="C:\xampp\htdocs\PartyPlanning\Pages\HomePage-Ordinary_User\index.css" />
+    <link rel="stylesheet" href="C:\xampp\htdocs\PartyPlanning\Pages\HomePage-Ordinary_User\global.css"/>
     <link rel=" stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,500;0,600;1,500&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Post No Bills Jaffna Light:wght@400&display=swap" />
@@ -11,10 +11,10 @@
 
 <body>
     <?php
-    session_start();
+    
 
     if (isset($_SESSION['id'])) {
-        include '../Include/connectin.php';
+       
         $userId = $_SESSION['id'];
         $sql = "SELECT name FROM customer WHERE id = $userId";
         $result = $conn->query($sql);
