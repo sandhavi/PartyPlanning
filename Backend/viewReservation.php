@@ -47,7 +47,147 @@
         }
     </style>
 </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Data</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #EDF2F4; /* Dark background for modern look */
+            color: #f4f4f4; /* Light text for contrast */
+            margin: 0;
+            padding: 20px;
+        }
 
+        h2 {
+            color: #2B2D42; /* Slightly dimmed color for headings */
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Add shadow for depth */
+        }
+
+        th, td {
+            border: 1px solid #393939; /* Dark borders for table cells */
+            padding: 12px;
+            text-align: left;
+            color: #2B2D42; /* Light text color */
+        }
+
+        th {
+            background-color: #6D7FCC; /* Color based on site's primary color */
+            color: #ffffff;
+        }
+
+        tr:nth-child(even) {
+            background-color: transparent; /* Zebra striping for rows */
+        }
+
+        tr:hover {
+            background-color: bisque; /* Hover effect for rows */
+        }
+
+        .edit-popup, .overlay {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #363636; /* Slightly lighter shade for the popup background */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 2;
+            border-radius: 5px;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="time"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            background-color: #333; /* Dark input fields */
+            color: #f4f4f4; /* Light text color */
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="date"]:focus,
+        input[type="time"]:focus,
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #6D7FCC; /* Focus color */
+        }
+
+        button {
+            background-color: #39004b; /* Update button color */
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for buttons */
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #39004b; /* Hover color */
+            transform: translateY(-3px); /* Slight lift on hover */
+        }
+
+        .delete-btn {
+            background-color: #f44336; /* Delete button color */
+        }
+
+        .delete-btn:hover {
+            background-color: #d32f2f; /* Hover color */
+        }
+
+        /* Add Reservation Button */
+        .add-button {
+            background-color: #FFD700; /* Yellow for add new reservation */
+            color: #252525; /* Dark text */
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .add-button:hover {
+            background-color: #e5b800; /* Darker yellow on hover */
+            transform: scale(1.05); /* Scale effect on hover */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* No results style */
+        .no-results {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
 <body>
     <?php
     include '../Include/connectin.php';
