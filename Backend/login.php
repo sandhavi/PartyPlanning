@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($password === $db_password) {
             // Password is correct, user is authenticated
             session_start();
-            $_SESSION['user_id'] = $user_id;
+            $_SESSION['id'] = $user_id;
             $_SESSION['username'] = $db_username;
 
             // Redirect to a dashboard or another page

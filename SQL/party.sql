@@ -4,16 +4,20 @@ CREATE TABLE IF NOT EXISTS `customer` (
     `age` INT(100) NOT NULL,
     `email` VARCHAR(20) NOT NULL,
     `address` VARCHAR(20) NOT NULL,
+    username VARCHAR(50) NOT NULL,
+    `password` INT(100) NOT NULL,
     PRIMARY KEY (`id`)
 );
 
-INSERT INTO `customer` (`id`, `name`, `age`, `email`, `address`)
+INSERT INTO `customer` (`id`, `name`, `age`, `email`, `address`, `username`, `password`)
 VALUES (
     1,
     'sandhavi',
     23,
     'san@gmail.com',
-    'kelaniya'
+    'kelaniya',
+    'san',
+    '123'
 );
 
 CREATE TABLE IF NOT EXISTS `admin` (
