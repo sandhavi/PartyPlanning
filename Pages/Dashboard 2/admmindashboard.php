@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -30,7 +29,7 @@
           <div class="pagination">
 
             <div class="page">
-              <img class="dropdown" src="img/dropdown.svg" alt="new" />
+              <img class="dropdown" src="img/dropdown.svg" alt="new" alt="new" />
               <div class="element">
                 <div class="overlap-group">
                   <div class="text-wrapper-11">1</div>
@@ -46,7 +45,7 @@
                   <div class="text-wrapper-12">3</div>
                 </div>
               </div>
-              <img class="dropdown" src="img/dropdown-2.svg" alt="new" />
+              <img class="dropdown" src="img/dropdown-2.svg" alt="new" alt="new" />
             </div>
           </div>
           <div class="overlap-2">
@@ -65,19 +64,19 @@
                     <div class="div-wrapper">
                       <div class="overlap-group-2">
                         <div class="placeholder"></div>
-                        <img class="img" src="img/call.svg" alt="new" />
+                        <img class="img" src="img/call.svg" alt="new" alt="new" />
                       </div>
                     </div>
                     <div class="div-wrapper">
                       <div class="overlap-group-2">
                         <div class="placeholder"></div>
-                        <img class="img" src="img/email.svg" alt="new" />
+                        <img class="img" src="img/email.svg" alt="new" alt="new" />
                       </div>
                     </div>
                   </div>
                   <div class="selected"></div>
                   <div class="checkedbox">
-                    <img class="vector" src="img/vector-8.svg" alt="new" />
+                    <img class="vector" src="img/vector-8.svg" alt="new" alt="new" />
                   </div>
                   <div class="customer">
                     <div class="placeholder-2"></div>
@@ -94,7 +93,7 @@
                       <div class="text-wrapper-18">Basic</div>
                     </div>
                   </div>
-                  <img class="dots" src="img/dots.svg" alt="new" />
+                  <img class="dots" src="img/dots.svg" alt="new" alt="new" />
                 </div>
               </div>
               <div class="overlap-group-wrapper">
@@ -103,13 +102,13 @@
                     <div class="div-wrapper">
                       <div class="overlap-group-2">
                         <div class="placeholder"></div>
-                        <img class="img" src="img/call.svg" alt="new" />
+                        <img class="img" src="img/call.svg" alt="new" alt="new" />
                       </div>
                     </div>
                     <div class="div-wrapper">
                       <div class="overlap-group-2">
                         <div class="placeholder"></div>
-                        <img class="img" src="img/email.svg" alt="new" />
+                        <img class="img" src="img/email.svg" alt="new" alt="new" />
                       </div>
                     </div>
                   </div>
@@ -129,7 +128,7 @@
                   </div>
                   <div class="text-wrapper-14">March 25, 2021</div>
                   <div class="text-wrapper-17">#123456789</div>
-                  <img class="dots" src="img/dots.svg" alt="new" />
+                  <img class="dots" src="img/dots.svg" alt="new" alt="new" />
                 </div>
               </div>
               <div class="overlap-group-wrapper">
@@ -138,19 +137,19 @@
                     <div class="div-wrapper">
                       <div class="overlap-group-2">
                         <div class="placeholder"></div>
-                        <img class="img" src="img/call.svg" alt="new" />
+                        <img class="img" src="img/call.svg" alt="new" alt="new" />
                       </div>
                     </div>
                     <div class="div-wrapper">
                       <div class="overlap-group-2">
                         <div class="placeholder"></div>
-                        <img class="img" src="img/email.svg" alt="new" />
+                        <img class="img" src="img/email.svg" alt="new" alt="new" />
                       </div>
                     </div>
                   </div>
                   <div class="selected"></div>
                   <div class="checkedbox">
-                    <img class="vector" src="img/vector-8.svg" alt="new" />
+                    <img class="vector" src="img/vector-8.svg" alt="new" alt="new" />
                   </div>
                   <div class="customer">
                     <div class="placeholder-2"></div>
@@ -167,7 +166,7 @@
                       <div class="text-wrapper-18">Premium</div>
                     </div>
                   </div>
-                  <img class="dots" src="img/dots.svg" alt="new" />
+                  <img class="dots" src="img/dots.svg" alt="new" alt="new" />
                 </div>
               </div>
               <div class="overlap-group-wrapper">
@@ -176,13 +175,13 @@
                     <div class="div-wrapper">
                       <div class="overlap-group-2">
                         <div class="placeholder"></div>
-                        <img class="img" src="img/call.svg" alt="new" />
+                        <img class="img" src="img/call.svg" alt="new" alt="new" />
                       </div>
                     </div>
                     <div class="div-wrapper">
                       <div class="overlap-group-2">
                         <div class="placeholder"></div>
-                        <img class="img" src="img/email.svg" alt="new" />
+                        <img class="img" src="img/email.svg" alt="new" alt="new" />
                       </div>
                     </div>
                   </div>
@@ -202,7 +201,7 @@
                   </div>
                   <div class="text-wrapper-14">March 25, 2021</div>
                   <div class="text-wrapper-17">#123456789</div>
-                  <img class="dots" src="img/dots.svg" alt="new" />
+                  <img class="dots" src="img/dots.svg" alt="new" alt="new" />
                 </div>
               </div>
               <div class="overlap-group-wrapper">
@@ -211,19 +210,19 @@
                     <div class="div-wrapper">
                       <div class="overlap-group-2">
                         <div class="placeholder"></div>
-                        <img class="img" src="img/call.svg" alt="new" />
+                        <img class="img" src="img/call.svg" alt="new" alt="new" />
                       </div>
                     </div>
                     <div class="div-wrapper">
                       <div class="overlap-group-2">
                         <div class="placeholder"></div>
-                        <img class="img" src="img/email.svg" alt="new" />
+                        <img class="img" src="img/email.svg" alt="new" alt="new" />
                       </div>
                     </div>
                   </div>
                   <div class="selected"></div>
                   <div class="checkedbox">
-                    <img class="vector" src="img/vector-8.svg" alt="new" />
+                    <img class="vector" src="img/vector-8.svg" alt="new" alt="new" />
                   </div>
                   <div class="customer">
                     <div class="placeholder-2"></div>
@@ -240,7 +239,7 @@
                       <div class="text-wrapper-18">Basic</div>
                     </div>
                   </div>
-                  <img class="dots" src="img/dots.svg" alt="new" />
+                  <img class="dots" src="img/dots.svg" alt="new" alt="new" />
                 </div>
               </div>
               <div class="overlap-group-wrapper">
@@ -249,13 +248,13 @@
                     <div class="div-wrapper">
                       <div class="overlap-group-2">
                         <div class="placeholder"></div>
-                        <img class="img" src="img/call.svg" alt="new" />
+                        <img class="img" src="img/call.svg" alt="new" alt="new" />
                       </div>
                     </div>
                     <div class="div-wrapper">
                       <div class="overlap-group-2">
                         <div class="placeholder"></div>
-                        <img class="img" src="img/email.svg" alt="new" />
+                        <img class="img" src="img/email.svg" alt="new" alt="new" />
                       </div>
                     </div>
                   </div>
@@ -275,7 +274,7 @@
                   </div>
                   <div class="text-wrapper-14">March 25, 2021</div>
                   <div class="text-wrapper-17">#123456789</div>
-                  <img class="dots" src="img/dots.svg" alt="new" />
+                  <img class="dots" src="img/dots.svg" alt="new" alt="new" />
                 </div>
               </div>
             </div>
@@ -285,19 +284,19 @@
       <div class="student-menu">
         <div class="new-student-button">
           <div class="content-3">
-            <img class="img-2" src="img/image.svg" alt="new" />
+            <img class="img-2" src="img/image.svg" alt="new" alt="new" />
             <div class="text-wrapper-19">New Student</div>
           </div>
         </div>
         <div class="sort">
           <div class="content-4">
             <div class="text-wrapper-20">Newest</div>
-            <img class="dropdown" src="img/dropdown-1.svg" alt="new" />
+            <img class="dropdown" src="img/dropdown-1.svg" alt="new" alt="new" />
           </div>
         </div>
         <div class="search-bar">
           <div class="frame">
-            <img class="search" src="img/search.svg" alt="new" />
+            <img class="search" src="img/search.svg" alt="new" alt="new" />
             <div class="text-wrapper-21">Search here...</div>
           </div>
         </div>
@@ -310,12 +309,12 @@
         </div>
         <div class="notification">
           <div class="overlap-group-3">
-            <img class="bell" src="img/bell.svg" alt="new" />
+            <img class="bell" src="img/bell.svg" alt="new" alt="new" />
             <div class="ellipse"></div>
           </div>
         </div>
         <div class="setting">
-          <img class="gear" src="img/gear.svg" alt="new" />
+          <img class="gear" src="img/gear.svg" alt="new" alt="new" />
         </div>
       </div>
     </div>
