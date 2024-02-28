@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+  <?php
+  include '../../Template/header.php';
+  ?>
     <div class="key-offerings">
       <div class="div">
         <div class="div-2">
@@ -26,7 +29,7 @@
             </div>
           </div>
           <div class="menu">
-            <div class="menu-2">
+            <!-- <div class="menu-2">
               <div class="text-wrapper-2">Home</div>
               <div class="about">
                 <div class="text-wrapper-3">About</div>
@@ -50,7 +53,7 @@
                 <div class="text-wrapper-3">SignIn</div>
                 <img class="line" src="img/line-4.svg" alt="new" />
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="banner">

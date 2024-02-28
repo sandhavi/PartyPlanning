@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+  <?php
+  include '../../Template/header.php';
+  ?>
     <div class="vendors">
       <div class="div">
         <div class="overlap">

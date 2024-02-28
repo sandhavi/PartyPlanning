@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+  <?php
+  include '../../Template/header.php';
+  ?>
     <div class="my-projects">
       <div class="div">
         <div class="text-wrapper">My Projects</div>

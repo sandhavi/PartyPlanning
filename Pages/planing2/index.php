@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+  <?php
+  include '../../Template/header.php';
+  ?>
     <div class="planning-process">
       <div class="div">
         <div class="div-2">

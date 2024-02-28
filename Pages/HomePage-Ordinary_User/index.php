@@ -16,35 +16,10 @@
 
 <body>
   <?php
-  // Assuming you have already started the session
-  session_start();
-
-  // Check if the user is logged in
-  if (isset($_SESSION['id'])) {
-    // Connect to your MySQL database
-    include '../../Include/connectin.php';
-    // Fetch user information from the database
-    $userId = $_SESSION['id'];
-    $sql = "SELECT name FROM customer WHERE id = $userId";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-      // User found, get the name
-      $row = $result->fetch_assoc();
-      $userName = $row['name'];
-    } else {
-      // Handle the case when user information is not found
-      $userName = "Guest";
-    }
-
-    $conn->close();
-  } else {
-    // If user is not logged in, set a default name
-    $userName = "Guest";
-  }
+  include 'Template\header.php';
   ?>
   <div class="home-page-ordinary-user">
-    <header class="header">
+    <!-- <header class="header">
       <img class="background-icon" alt="" src="./public/background.svg" alt="new" />
 
       <div class="rectangle">
@@ -59,21 +34,24 @@
         <h2 class="partypro">PartyPRO</h2>
       </div>
       <div class="line">
-        <div class="home">Home</div>
+        <div class="home">
+          <a href="./index.php" style="color:aliceblue; font-size:large;  text-decoration: none;"> Home</a>
+
+        </div>
         <div class="icon"></div>
-        <div class="about">About</div>
+        <div class="about"> <a href="../about us/index.html" style="color:aliceblue; font-size:large;  text-decoration: none;"> About</a></div>
         <div class="icon1"></div>
         <div class="email">
-          <div class="pricing">Pricing</div>
+          <div class="pricing"> <a href="../Pricing/index.html" style="color:aliceblue; font-size:large;  text-decoration: none;"> Pricing</a></div>
         </div>
         <div class="icon2"></div>
-        <div class="my-projects">My Projects</div>
+        <div class="my-projects"> <a href="../my projects/index.html" style="color:aliceblue; font-size:large;  text-decoration: none;"> My Projects</a></div>
         <div class="icon3"></div>
         <div class="features">Features</div>
         <div class="icon4"></div>
-        <div class="user-welcome">Welcome, <?php echo $userName; ?>!</div>
+        <div class="user-welcome"> <a href="../my projects/index.html" style="color:aliceblue; font-size:large;  text-decoration: none;"> <?php echo $userName; ?></a></div>
       </div>
-    </header>
+    </header> -->
     <img class="background-icon1" alt="" src="./public/background.svg" alt="new" />
 
     <div class="background"></div>

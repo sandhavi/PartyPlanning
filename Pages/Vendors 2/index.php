@@ -8,6 +8,28 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+  <?php
+session_start();
+
+if (isset($_SESSION['id'])) {
+    include '../../Include/connectin.php';
+    $userId = $_SESSION['id'];
+    $sql = "SELECT name FROM customer WHERE id = $userId";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // User found, get the name
+        $row = $result->fetch_assoc();
+        $userName = $row['name'];
+    } else {
+        // User not found, set a default name
+        $userName = "Log In";
+    }
+    $conn->close();
+} else {
+    $userName = "Log In";
+}
+?>
     <div class="vendors">
       <div class="div">
         <div class="overlap">
@@ -274,19 +296,27 @@
           </div>
           <div class="menu">
             <div class="menu-2">
-              <div class="text-wrapper-24">Home</div>
+              <div class="text-wrapper-24"><a href="./index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">
+                    Home
+                </a></div>
               <div class="about">
-                <div class="text-wrapper-25">About</div>
+                <div class="text-wrapper-25"><a href="../about us/index.html" style="color:aliceblue; font-size:large;  text-decoration: none;">
+                    About
+                </a></div>
                 <img class="line-2" src="img/line-4.svg" alt="new" />
               </div>
               <div class="pages-2">
                 <div class="pages-3">
-                  <div class="text-wrapper-26">Pricing</div>
+                  <div class="text-wrapper-26"> <a href="../Pricing/index.html" style="color:aliceblue; font-size:large;  text-decoration: none;">
+                        Pricing
+                    </a></div>
                 </div>
                 <img class="line-2" src="img/line-4.svg" alt="new" />
               </div>
               <div class="project">
-                <div class="text-wrapper-25">My Projects</div>
+                <div class="text-wrapper-25"> <a href="../my projects/index.html" style="color:aliceblue; font-size:large;  text-decoration: none;">
+                    My Projects
+                </a></div>
                 <img class="line-2" src="img/line-4.svg" alt="new" />
               </div>
               <div class="contact">
@@ -294,7 +324,9 @@
                 <img class="line-2" src="img/line-4.svg" alt="new" />
               </div>
               <div class="contact-2">
-                <div class="text-wrapper-25">SignIn</div>
+                <div class="text-wrapper-25"><a href="../my projects/index.html" style="color:aliceblue; font-size:large;  text-decoration: none;">
+                    <?php echo $userName; ?>
+                </a></div>
                 <img class="line-2" src="img/line-4.svg" alt="new" />
               </div>
             </div>
