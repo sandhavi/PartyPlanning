@@ -214,3 +214,6 @@ VALUES (
     'vendor',
     'theme'
 );
+
+
+ALTER TABLE `reservation` ADD `status` VARCHAR(255) NOT NULL AFTER `theme`;
