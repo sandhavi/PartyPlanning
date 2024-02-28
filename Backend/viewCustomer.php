@@ -6,51 +6,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Data</title>
     <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin-top: 20px;
-        }
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #252525; /* Dark background for modern look */
+        color: #f4f4f4; /* Light text for contrast */
+        margin: 0;
+        padding: 20px;
+    }
 
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
+    h2 {
+        color: #e2e2e2; /* Slightly dimmed color for headings */
+        text-align: center;
+    }
 
-        th {
-            background-color: #f2f2f2;
-        }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Add shadow for depth */
+    }
 
-        .edit-popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            z-index: 2;
-        }
+    th, td {
+        border: 1px solid #393939; /* Dark borders for table cells */
+        padding: 12px;
+        text-align: left;
+        color: #f4f4f4; /* Light text color */
+    }
 
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
-    </style>
+    th {
+        background-color: #6D7FCC; /* Color based on site's primary color */
+        color: #ffffff;
+    }
+
+    tr:nth-child(even) {
+        background-color: #333333; /* Zebra striping for rows */
+    }
+
+    tr:hover {
+        background-color: #575757; /* Hover effect for rows */
+    }
+
+    .edit-popup, .overlay {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        z-index: 2;
+        color: #000; /* Default text color for pop-up */
+        border-radius: 8px; /* Rounded corners for pop-up */
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7); /* Darker overlay for better focus on pop-up */
+        z-index: 1;
+    }
+
+    button {
+        background-color: #39004b; /* Primary action color */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+        margin-right: 5px;
+    }
+
+    button:hover {
+        background-color: #51006A; /* Hover effect for buttons */
+    }
+
+    .delete-button {
+        background-color: #f44336; /* Delete button color */
+    }
+
+    .delete-button:hover {
+        background-color: #e53935; /* Hover effect for delete button */
+    }
+</style>
+
+
 </head>
 
 <body>
     <?php
-    include './Include/connectin.php';
+    include '../Include/connectin.php';
 
     // Process of edit form submission and update the database, this works fine, don't do anything to it
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_user'])) {

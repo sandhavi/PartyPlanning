@@ -6,39 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Data</title>
     <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #252525; /* Dark background for modern look */
+            color: #f4f4f4; /* Light text for contrast */
+            padding: 20px;
+        }
+
+        h2 {
+            color: #e2e2e2; /* Slightly dimmed color for headings */
+            text-align: center;
+        }
+
         table {
             border-collapse: collapse;
             width: 100%;
             margin-top: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Add shadow for depth */
         }
 
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 8px;
+        th, td {
+            border: 1px solid #393939; /* Dark borders for table cells */
+            padding: 12px;
             text-align: left;
+            color: #f4f4f4; /* Light text color */
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: #6D7FCC; /* Color based on site's primary color */
+            color: #ffffff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #333333; /* Zebra striping for rows */
+        }
+
+        tr:hover {
+            background-color: #575757; /* Hover effect for rows */
         }
 
         .delete-btn,
         .update-btn {
             cursor: pointer;
-            background-color: #4CAF50;
+            background-color: #f44336; /* Delete button color */
             color: white;
             padding: 8px 16px;
             border: none;
             border-radius: 4px;
+            margin-right: 5px;
         }
+
+        .update-btn {
+            background-color: #4CAF50; /* Update button color */
+        }
+
+        .delete-btn:hover,
+        .update-btn:hover {
+            opacity: 0.8;
+        }
+
     </style>
 </head>
 
 <body>
     <?php
     // Include the database connection file
-    include './Include/connectin.php';
+    include '../Include/connectin.php';
 
     // Process delete form submission
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_form'])) {
@@ -107,7 +141,7 @@
                 // Create a form dynamically to submit the delete action
                 var deleteForm = document.createElement('form');
                 deleteForm.method = 'post';
-                deleteForm.action = '<?php echo $_SERVER['PHP_SELF']; ?>';
+                deleteForm.action = window.location.href; // PHP_SELF alternative for better XSS protection
 
                 // Create an input field for form ID
                 var formIdInput = document.createElement('input');

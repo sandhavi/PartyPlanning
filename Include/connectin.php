@@ -17,14 +17,13 @@
     }
     // echo 'connected successfully';
 
-    echo "<hr>";
-    $db = mysqli_select_db($conn, 'party'); 
+    $db = mysqli_select_db($conn, 'party');
 
     // if (!$db) {
     //     echo 'select the database first';
     // } else {
     //     echo 'Database selected';
-       
+
     // }
     ?>
 </body>

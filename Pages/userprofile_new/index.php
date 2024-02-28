@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  include '../../Include/connectin.php';
+  include '../../Template/navbar.php';
+  ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,6 +10,7 @@
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="styleguide.css" />
     <link rel="stylesheet" href="style.css" />
+    
   </head>
   <body>
     <div class="user-profile">

@@ -5,25 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vendor Data</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #252525; /* Dark background for modern look */
+            color: #f4f4f4; /* Light text for contrast */
+            padding: 20px;
+        }
+
+        h2 {
+            color: #e2e2e2; /* Slightly dimmed color for headings */
+            text-align: center;
+        }
+
         table {
             border-collapse: collapse;
             width: 100%;
             margin-top: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Add shadow for depth */
         }
 
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 8px;
+        th, td {
+            border: 1px solid #393939; /* Dark borders for table cells */
+            padding: 12px;
             text-align: left;
+            color: #f4f4f4; /* Light text color */
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: #6D7FCC; /* Color based on site's primary color */
+            color: #ffffff;
         }
 
-        .edit-popup {
+        tr:nth-child(even) {
+            background-color: #333333; /* Zebra striping for rows */
+        }
+
+        tr:hover {
+            background-color: #575757; /* Hover effect for rows */
+        }
+
+        .edit-popup, .overlay {
             display: none;
             position: fixed;
             top: 50%;
@@ -33,6 +57,8 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             z-index: 2;
+            border-radius: 5px;
+            transition: all 0.3s ease; /* Smooth transition for popup */
         }
 
         .overlay {
@@ -42,15 +68,73 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.7);
             z-index: 1;
         }
+
+        button {
+            cursor: pointer;
+            background-color: #4CAF50; /* Update button color */
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            margin-right: 5px;
+            transition: opacity 0.3s ease; /* Transition for button opacity */
+        }
+
+        .delete-btn {
+            background-color: #f44336; /* Delete button color */
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        /* Adjust button style inside the form */
+        form button[type=submit], form button[type=button] {
+            background-color: #6D7FCC; /* Matching primary color */
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        form button[type=button] {
+            background-color: #888; /* Grey for cancel */
+        }
+
+        form button:hover {
+            background-color: #7a7a7a;
+        }
+
+        /* Style for adding new vendors */
+        .add-vendor-btn {
+            display: block;
+            width: max-content;
+            margin: 20px auto;
+            background-color: #FFD700; /* Yellow for add new vendor */
+            color: #333;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .add-vendor-btn:hover {
+            background-color: #f0c040; /* Darker yellow on hover */
+            transform: scale(1.05); /* Slight scale on hover */
+        }
+
     </style>
+
 </head>
 
 <body>
     <?php
-    include './Include/connectin.php';
+    include '../Include/connectin.php';
 
     // Process of edit form submission and update the database, this works fine, don't do anything to it
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_vendor'])) {
@@ -121,7 +205,7 @@
         <table>
             <tr>
                 <th>ID</th>
-                <th>Admin ID</th>
+                <th>AdminID</th>
                 <th>Name</th>
                 <th>Description</th>
                 <th>Type</th>
@@ -235,6 +319,10 @@
             // Close the add pop-up
             document.getElementById('addPopup').style.display = 'none';
             document.getElementById('addOverlay').style.display = 'none';
+
+            // Clear the input fields
+            document.querySelectorAll('#addPopup input').forEach(input => input.value = '');
+
         }
     </script>
 

@@ -5,31 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venue Data</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #f4f4f4;
+            /* Light text */
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            color: #252525;
+            /* Slightly dimmed color for headings */
+            text-align: center;
+        }
+
         table {
             border-collapse: collapse;
             width: 100%;
             margin-top: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            /* Add shadow for depth */
         }
 
         th,
         td {
-            border: 1px solid #ddd;
-            padding: 8px;
+            border: 1px solid #5C376F;
+            /* Dark borders for table cells */
+            padding: 15px;
             text-align: left;
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: #39004b;
+            /* Header color based on site's primary color */
         }
 
-        .edit-popup {
+        tr:nth-child(even) {
+            background-color: #252525;
+            /* Zebra striping for rows */
+        }
+
+        tr:hover {
+            background-color: #575757;
+            /* Hover effect for rows */
+        }
+
+        .edit-popup,
+        .overlay {
             display: none;
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: #fff;
+            background-color: #95517D;
+            /* Light background color for popups */
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             z-index: 2;
@@ -45,12 +77,90 @@
             background: rgba(0, 0, 0, 0.5);
             z-index: 1;
         }
+
+        .edit-popup h3 {
+            color: #252525;
+            /* Headings in popups */
+        }
+
+        input[type="text"],
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            color: black;
+        }
+
+        input[type="text"] {
+            background-color: whitesmoke;
+                /* Dark input fields */
+                color: yellow;
+            /* Light text */
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #6D7FCC;
+            /* Focus color */
+        }
+
+        button {
+            background-color: #663399;
+            /* Update button color */
+            color: #ffffff;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+            /* Smooth transition for buttons */
+        }
+
+        button:hover {
+            background-color: #663399;
+            /* Hover color */
+        }
+
+        .delete-btn {
+            background-color: #f44336;
+            /* Delete button color */
+        }
+
+        .delete-btn:hover {
+            background-color: #d32f2f;
+            /* Hover color */
+        }
+
+        /* Add Venue Button */
+        .add-button {
+            background-color: #FFD700;
+            /* Yellow for add new venue */
+            color: #252525;
+            /* Dark text */
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .add-button:hover {
+            transform: scale(1.05);
+            /* Scale effect on hover */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .no-results {
+            color: #f4f4f4;
+            /* Light text color for no results message */
+        }
     </style>
 </head>
 
 <body>
     <?php
-    include './Include/connectin.php';
+    include '../Include/connectin.php';
 
     // Process of edit form submission and update the database, this works fine, don't do anything to it
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_venue'])) {
