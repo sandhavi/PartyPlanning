@@ -15,17 +15,17 @@
     if (!$conn) {
         die('Could not connect: ' . mysqli_connect_error());
     }
-    echo 'connected successfully';
+    // echo 'connected successfully';
 
     echo "<hr>";
     $db = mysqli_select_db($conn, 'party'); 
 
-    if (!$db) {
-        echo 'select the database first';
-    } else {
-        echo 'Database selected';
+    // if (!$db) {
+    //     echo 'select the database first';
+    // } else {
+    //     echo 'Database selected';
        
-    }
+    // }
     ?>
 </body>
 
