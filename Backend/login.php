@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
 
     // Query the database to check if the user exists
-    $stmt = $conn->prepare("SELECT id, username, password FROM user WHERE username = ?");
+    $stmt = $conn->prepare("SELECT id, username, password FROM customer WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $stmt->store_result();
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_result($user_id, $db_username, $db_password);
         $stmt->fetch();
 
-        if ($password === $db_password) {
+        if ($password == $db_password) {
             // Password is correct, user is authenticated
             session_start();
             $_SESSION['id'] = $user_id;
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Redirect to a dashboard or another page
             echo "<script>alert('Login successful'); 
-            window.location.href = '../Pages/HomePage-Ordinary_User/index.html';</script>";
+            window.location.href = '../Pages/HomePage-Ordinary_User/index.php';</script>";
             exit();
         } else {
             // Incorrect password
