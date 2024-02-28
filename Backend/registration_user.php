@@ -23,7 +23,7 @@ if (empty($email)) {
 } else {
 
     require "../Include/connectin.php";
-    $rs = $db::search("SELECT * FROM `user` WHERE `email` = '" . $email . "'");
+    $rs = $db::search("SELECT * FROM `customers` WHERE `email` = '" . $email . "'");
     $n = $rs->num_rows;
 
     if ($n > 0) {
