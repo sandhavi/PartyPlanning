@@ -7,7 +7,7 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
-include '../Include/connectin.php';
+include 'C:\xampp\htdocs\PartyPlanning\Include\connectin.php';
 
 function getCount($table, $conn)
 {
@@ -131,9 +131,7 @@ $feedbackCount = getCount('form', $conn);
 
 <body>
 
-        <?php
-        include 'C:\xampp\htdocs\PartyPlanning\Template\navbar.php'
-        ?>
+
     <div class="dashboard-container">
         <div class="dashboard-box">
             <i class="fas fa-users"></i>
@@ -171,13 +169,44 @@ $feedbackCount = getCount('form', $conn);
             <p><?php echo $adminCount; ?></p>
         </div>
         <div class="dashboard-box">
-            <i class="fas fa-cog"></i>
-            <h3>Settings</h3>
-            <a href="settings.php" class="manage">Manage</a>
+            <i class="fa fa-fire" aria-hidden="true"></i>
+            <h3>Users</h3>
+            <a href="./viewCustomer.php" class="manage">Check Users</a>
+        </div>
+
+        <div class="dashboard-box">
+            <i class="fa fa-fire" aria-hidden="true"></i>
+                <h3>Vendor</h3>
+                <a href="./vendorView.php" class="manage">Check Vendors</a>
+        </div>
+
+        <div class="dashboard-box">
+            <i class="fa fa-fire" aria-hidden="true"></i>
+            <h3>Reservations</h3>
+            <a href="./viewReservation.php" class="manage">Check Reservations</a>
+        </div>
+
+        <div class="dashboard-box">
+            <i class="fa fa-fire" aria-hidden="true"></i>
+            <h3>Theme</h3>
+            <a href="./viewTheme.php" class="manage">Check Theme</a>
+        </div>
+
+        <div class="dashboard-box">
+            <i class="fa fa-fire" aria-hidden="true"></i>
+            <h3>Feedback</h3>
+            <a href="./viewForm.php" class="manage">Check Feedback</a>
+        </div>
+
+        <div class="dashboard-box">
+            <i class="fa fa-fire" aria-hidden="true"></i>
+
+            <h3>Venue</h3>
+            <a href="./viewVennue.php" class="manage">Check Venue</a>
         </div>
     </div>
 
-    <a href="./Pages/Login-Admin/logout.php" class="logout-link">Logout</a>
+    <a href="../Pages/Login-Admin/index.html" class="logout-link">Logout</a>
 </body>
 
 </html>

@@ -1,0 +1,53 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #39004b; /* Adjust color to match the exact hue of the navbar */
+    padding: 10px 20px;
+    color: white;
+    font-size: x-large;
+  }
+  
+  .logo a {
+    color: #FFD700; /* Gold color for the logo, adjust if necessary */
+    text-decoration: none;
+    font-size: 24px;
+  }
+  
+  .nav-links {
+    list-style: none;
+  }
+  
+  .nav-links li {
+    display: inline;
+    margin-left: 20px;
+    padding: 20px;
+    font-size: 30px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-size: large;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: none;
+    color: blanchedalmond;
+  }
+  
+  @media (max-width: 768px) {
+    /* Responsive design for smaller screens */
+    .nav-links {
+      display: none; /* Hide the navigation on small screens */
+      /* You might want to add a JavaScript toggle button here */
+    }
+  }
+  
