@@ -52,7 +52,7 @@
     <?php
     include './Include/connectin.php';
 
-    // Process of edit form submission and update the database, this works fine, dont do anything t
+    // Process of edit form submission and update the database, this works fine, don't do anything to it
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_user'])) {
         $editUserId = $_POST['edit_user_id'];
         $editUserName = $_POST['edit_user_name'];
@@ -71,6 +71,19 @@
             echo "Record updated successfully";
         } else {
             echo "Error updating record: " . $conn->error;
+        }
+    }
+
+    // Process of delete form submission and delete the record from the database
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_user'])) {
+        $deleteUserId = $_POST['delete_user_id'];
+
+        $deleteSql = "DELETE FROM customer WHERE id = $deleteUserId";
+
+        if ($conn->query($deleteSql) === TRUE) {
+            echo "Record deleted successfully";
+        } else {
+            echo "Error deleting record: " . $conn->error;
         }
     }
 
@@ -111,55 +124,45 @@
                     <td><?php echo $row['username']; ?></td>
                     <td><?php echo $row['email']; ?></td>
                     <td>
-
-                        <button onclick="openEditPopup(<?php echo $row['id']; ?>)">Edit</button>
+                        <!-- Change "Edit" button to "Delete" button -->
+                        <button onclick="openDeletePopup(<?php echo $row['id']; ?>)">Delete</button>
                     </td>
                 </tr>
             <?php endforeach; ?>
         </table>
+
+        <!-- Delete pop-up window -->
+        <div class="overlay" id="deleteOverlay"></div>
+        <div class="edit-popup" id="deletePopup">
+            <h3>Delete User</h3>
+            <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                <input type="hidden" name="delete_user_id" id="deleteUserId" value="">
+                <p>Are you sure you want to delete this user?</p>
+                <button type="submit" name="delete_user">Yes</button>
+                <button type="button" onclick="closeDeletePopup()">No</button>
+            </form>
+        </div>
+
     <?php else : ?>
         <p>No results found.</p>
     <?php endif; ?>
 
-    <!-- Edit pop-up window-->
-    <div class="overlay" id="overlay"></div>
-    <div class="edit-popup" id="editPopup">
-        <h3>Edit User</h3>
-        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-            <input type="hidden" name="edit_user_id" id="editUserId" value="">
-            Name: <input type="text" name="edit_user_name" id="editUserName" required><br>
-            Age: <input type="text" name="edit_user_age" id="editUserAge" required><br>
-            Address: <input type="text" name="edit_user_address" id="editUserAddress" required><br>
-            Email: <input type="text" name="edit_user_email" id="editUserEmail" required><br>
-            <button type="submit" name="edit_user">Save</button>
-            <button type="button" onclick="closeEditPopup()">Cancel</button>
-        </form>
-    </div>
-
     <!-- JS -->
     <script>
-        function openEditPopup(userId) {
-            var user = <?php echo json_encode($rows); ?>.find(u => u.id == userId);
+        function openDeletePopup(userId) {
+            document.getElementById('deleteUserId').value = userId;
 
-            if (user) {
-                document.getElementById('editUserId').value = user.id;
-                document.getElementById('editUserName').value = user.name;
-                document.getElementById('editUserAge').value = user.age;
-                document.getElementById('editUserAddress').value = user.address;
-                document.getElementById('editUserEmail').value = user.email;
-
-                // Display the edit pop-up
-                document.getElementById('editPopup').style.display = 'block';
-                document.getElementById('overlay').style.display = 'block';
-            }
+            // Display the delete pop-up
+            document.getElementById('deletePopup').style.display = 'block';
+            document.getElementById('deleteOverlay').style.display = 'block';
         }
 
-        function closeEditPopup() {
-            // Close the edit pop-up
-            document.getElementById('editPopup').style.display = 'none';
-            document.getElementById('overlay').style.display = 'none';
+        function closeDeletePopup() {
+            // Close the delete pop-up
+            document.getElementById('deletePopup').style.display = 'none';
+            document.getElementById('deleteOverlay').style.display = 'none';
         }
     </script>
-</body>
 
+</body>
 </html>
