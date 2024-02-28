@@ -6,24 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vendor Data</title>
     <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff; /* Set background to white */
+            color: #333; /* General text color */
+            padding: 20px;
+        }
+
+        h2 {
+            color: #4B0082; /* Purple heading */
+            text-align: center;
+        }
+
         table {
             border-collapse: collapse;
             width: 100%;
             margin-top: 20px;
+            box-shadow: 0px 0px 10px #ccc; /* Subtle shadow for depth */
         }
 
-        th,
-        td {
+        th, td {
             border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
+            background-color: #fefefe; /* Slightly off-white cells for subtle contrast */
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: #4B0082; /* Purple heading background */
+            color: #ffffff; /* White text for headings */
         }
 
-        .edit-popup {
+        tr:nth-child(even) {
+            background-color: #f7f7f7; /* Light zebra striping for rows */
+        }
+
+        tr:hover {
+            background-color: #f0f0f0; /* Hover effect for rows */
+        }
+
+        .edit-popup, .overlay {
             display: none;
             position: fixed;
             top: 50%;
@@ -31,8 +54,9 @@
             transform: translate(-50%, -50%);
             background-color: #fff;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
             z-index: 2;
+            border-radius: 5px; /* Rounded corners */
         }
 
         .overlay {
@@ -45,6 +69,69 @@
             background: rgba(0, 0, 0, 0.5);
             z-index: 1;
         }
+
+        button {
+            cursor: pointer;
+            background-color: #4B0082; /* Purple buttons */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            margin-right: 5px;
+            transition: background-color 0.3s ease; /* Transition for button background color */
+        }
+
+        button:hover {
+            background-color: #6f42c1; /* Lighter purple on hover */
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2); /* Shadow on hover */
+        }
+
+        /* Additional styling for buttons */
+        .edit-btn {
+            background-color: #ffca28; /* Amber for edit */
+            color: #333;
+        }
+
+        .edit-btn:hover {
+            background-color: #ffc107; /* Darker amber on hover */
+        }
+
+        .delete-btn {
+            background-color: #f44336; /* Red for delete */
+        }
+
+        .delete-btn:hover {
+            background-color: #e53935; /* Darker red on hover */
+        }
+
+        /* Style for the popup forms */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input[type=text] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        form button {
+            width: auto;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        /* Adjust button style inside the form */
+        form button[type=submit] {
+            background-color: #4CAF50; /* Green for submit */
+        }
+
+        form button[type=button] {
+            background-color: #6c757d; /* Grey for cancel */
+        }
+
     </style>
 </head>
 

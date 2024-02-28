@@ -6,24 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Theme Data</title>
     <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff; /* White background */
+            color: #333;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #4B0082; /* Purple heading */
+            text-align: center;
+            transition: color 0.3s ease;
+        }
+
+        h2:hover {
+            color: #9370DB; /* Lighter purple on hover */
+        }
+
         table {
             border-collapse: collapse;
             width: 100%;
             margin-top: 20px;
+            animation: fadeIn 0.5s ease-in-out;
         }
 
-        th,
-        td {
+        th, td {
             border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
+            background-color: #fefefe;
+            transition: background-color 0.3s ease;
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: #4B0082; /* Purple header */
+            color: #ffffff;
         }
 
-        .edit-popup {
+        td {
+            color: #333; /* Dark text for content */
+        }
+
+        tr:nth-child(even) {
+            background-color: #f7f7f7;
+        }
+
+        tr:hover {
+            background-color: #f0f0f0; /* Hover effect for rows */
+        }
+
+        button {
+            cursor: pointer;
+            background-color: #FFD700; /* Yellow buttons */
+            color: #4B0082; /* Text color purple */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            margin-right: 5px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .edit-popup, .overlay {
             display: none;
             position: fixed;
             top: 50%;
@@ -31,8 +80,10 @@
             transform: translate(-50%, -50%);
             background-color: #fff;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
             z-index: 2;
+            border-radius: 5px;
+            animation: zoomIn 0.3s ease-in-out;
         }
 
         .overlay {
@@ -42,9 +93,54 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.7);
             z-index: 1;
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* Styles for input fields */
+        input[type="text"] {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: calc(100% - 22px); /* Adjust width to account for padding and border */
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #4B0082; /* Purple border for focus */
+        }
+
+        /* Style for the popup forms */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form button[type="submit"] {
+            background-color: #4CAF50; /* Green for submit */
+            color: #fff;
+        }
+
+        form button[type="button"] {
+            background-color: #6c757d; /* Grey for cancel */
+            color: #fff;
+        }
+
+        form button[type="submit"]:hover, form button[type="button"]:hover {
+            background-color: darken(#4CAF50, 10%); /* Darken function is not native CSS, replace with actual color */
+        }
+
     </style>
 </head>
 

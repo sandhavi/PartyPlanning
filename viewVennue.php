@@ -5,7 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venue Data</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
     <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            color: #663399;
+        }
+
         table {
             border-collapse: collapse;
             width: 100%;
@@ -14,8 +28,8 @@
 
         th,
         td {
-            border: 1px solid #ddd;
-            padding: 8px;
+            border: 1px solid #dddddd;
+            padding: 15px;
             text-align: left;
         }
 
@@ -29,7 +43,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: #fff;
+            background-color: #ffffff;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             z-index: 2;
@@ -44,6 +58,66 @@
             height: 100%;
             background: rgba(0, 0, 0, 0.5);
             z-index: 1;
+        }
+
+        .edit-popup h3 {
+            color: #663399;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #663399;
+            color: #ffffff;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #4d2673;
+        }
+
+        .delete-popup button {
+            background-color: #ff6347;
+            color: #ffffff;
+        }
+
+        .delete-popup button:hover {
+            background-color: #d94025;
+        }
+
+        .add-popup button {
+            background-color: #ffd700;
+            color: #000000;
+        }
+
+        .add-popup button:hover {
+            background-color: #e5b800;
+        }
+
+        .no-results {
+            color: #663399;
+        }
+
+        /* Add Venue Button */
+        .add-button {
+            background-color: #663399;
+            color: #ffffff;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .add-button:hover {
+            background-color: #4d2673;
         }
     </style>
 </head>
