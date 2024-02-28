@@ -124,7 +124,7 @@
 
 <body>
     <?php
-    include './Include/connectin.php';
+    include '../Include/connectin.php';
 
     // Process of edit form submission and update the database, this works fine, don't do anything to it
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_venue'])) {

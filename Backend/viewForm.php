@@ -72,7 +72,7 @@
 <body>
     <?php
     // Include the database connection file
-    include './Include/connectin.php';
+    include '../Include/connectin.php';
 
     // Process delete form submission
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_form'])) {

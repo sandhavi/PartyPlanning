@@ -7,7 +7,7 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
-include './Include/connectin.php';
+include '../Include/connectin.php';
 
 function getCount($table, $conn)
 {
