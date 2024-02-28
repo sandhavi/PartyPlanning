@@ -50,10 +50,9 @@
 
 <body>
     <?php
-    // Include the database connection file
     include './Include/connectin.php';
 
-    // Process edit form submission
+    // Process of edit form submission and update the database, this works fine, dont do anything t
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_user'])) {
         $editUserId = $_POST['edit_user_id'];
         $editUserName = $_POST['edit_user_name'];
@@ -112,7 +111,7 @@
                     <td><?php echo $row['username']; ?></td>
                     <td><?php echo $row['email']; ?></td>
                     <td>
-                        <!-- Edit button with onclick event to open edit pop-up -->
+
                         <button onclick="openEditPopup(<?php echo $row['id']; ?>)">Edit</button>
                     </td>
                 </tr>
@@ -122,7 +121,7 @@
         <p>No results found.</p>
     <?php endif; ?>
 
-    <!-- Edit pop-up -->
+    <!-- Edit pop-up window-->
     <div class="overlay" id="overlay"></div>
     <div class="edit-popup" id="editPopup">
         <h3>Edit User</h3>
@@ -137,7 +136,7 @@
         </form>
     </div>
 
-    <!-- JavaScript code for handling edit pop-up -->
+    <!-- JS -->
     <script>
         function openEditPopup(userId) {
             var user = <?php echo json_encode($rows); ?>.find(u => u.id == userId);
@@ -149,14 +148,14 @@
                 document.getElementById('editUserAddress').value = user.address;
                 document.getElementById('editUserEmail').value = user.email;
 
-                // Display the edit pop-up and overlay
+                // Display the edit pop-up
                 document.getElementById('editPopup').style.display = 'block';
                 document.getElementById('overlay').style.display = 'block';
             }
         }
 
         function closeEditPopup() {
-            // Close the edit pop-up and overlay
+            // Close the edit pop-up
             document.getElementById('editPopup').style.display = 'none';
             document.getElementById('overlay').style.display = 'none';
         }
