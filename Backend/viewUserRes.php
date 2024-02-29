@@ -9,7 +9,6 @@
 
     <title>Reservation Box</title>
     <style>
-        /* Base Styles */
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #f4f4f4;
