@@ -1,27 +1,49 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+}
+
+#profile-form {
+    width: 80%;
+    margin: 20px auto;
     padding: 20px;
-    line-height: 1.6;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border-color: #39004b;
 }
 
-button {
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-button:hover {
-    opacity: 0.9;
-}
-
-input[type="text"], input[type="number"], input[type="email"] {
-    padding: 10px;
-    margin: 5px 0;
-    width: 200px;
+label {
     display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="name"],
+input[type="password"],
+input[type="number"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    position: relative;
+    width: 30%;
+    font-size: large;
+    padding: 10px;
+    background-color: #39004b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+input[type="submit"]:hover {
+    background-color: darkslateblue;
 }

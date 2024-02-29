@@ -9,13 +9,13 @@
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
-            background-color: #252525; /* Dark background for modern look */
-            color: #f4f4f4; /* Light text for contrast */
+            background-color: #252525; 
+            color: #f4f4f4;
             padding: 20px;
         }
 
         h2 {
-            color: #e2e2e2; /* Slightly dimmed color for headings */
+            color: #e2e2e2; 
             text-align: center;
         }
 
@@ -23,33 +23,33 @@
             border-collapse: collapse;
             width: 100%;
             margin-top: 20px;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Add shadow for depth */
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
         }
 
         th, td {
-            border: 1px solid #393939; /* Dark borders for table cells */
+            border: 1px solid #393939; 
             padding: 12px;
             text-align: left;
-            color: #f4f4f4; /* Light text color */
+            color: #f4f4f4; 
         }
 
         th {
-            background-color: #6D7FCC; /* Color based on site's primary color */
+            background-color: #6D7FCC; 
             color: #ffffff;
         }
 
         tr:nth-child(even) {
-            background-color: #333333; /* Zebra striping for rows */
+            background-color: #333333;
         }
 
         tr:hover {
-            background-color: #575757; /* Hover effect for rows */
+            background-color: #575757; 
         }
 
         .delete-btn,
         .update-btn {
             cursor: pointer;
-            background-color: #f44336; /* Delete button color */
+            background-color: #f44336; 
             color: white;
             padding: 8px 16px;
             border: none;
@@ -58,7 +58,7 @@
         }
 
         .update-btn {
-            background-color: #4CAF50; /* Update button color */
+            background-color: #4CAF50; 
         }
 
         .delete-btn:hover,
@@ -71,10 +71,8 @@
 
 <body>
     <?php
-    // Include the database connection file
     include '../Include/connectin.php';
 
-    // Process delete form submission
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_form'])) {
         $deleteFormId = $_POST['delete_form_id'];
 
@@ -87,11 +85,9 @@
         }
     }
 
-    // Query the database for form data
     $formSql = "SELECT * FROM form";
     $formResult = $conn->query($formSql);
 
-    // Process the results
     $formRows = array();
     if ($formResult->num_rows > 0) {
         while ($formRow = $formResult->fetch_assoc()) {
@@ -99,7 +95,6 @@
         }
     }
 
-    // Close the connection
     $conn->close();
     ?>
 
@@ -124,7 +119,6 @@
                     <td><?php echo $formRow['email']; ?></td>
                     <td><?php echo $formRow['customer_id']; ?></td>
                     <td>
-                        <!-- Delete button with onclick event to delete row -->
                         <button class="delete-btn" onclick="deleteFormRow(<?php echo $formRow['id']; ?>)">Delete</button>
                     </td>
                 </tr>
@@ -134,30 +128,25 @@
         <p>No results found.</p>
     <?php endif; ?>
 
-    <!-- JavaScript code for handling delete and update actions -->
     <script>
         function deleteFormRow(formId) {
             if (confirm('Are you sure you want to delete this row?')) {
-                // Create a form dynamically to submit the delete action
                 var deleteForm = document.createElement('form');
                 deleteForm.method = 'post';
                 deleteForm.action = window.location.href; // PHP_SELF alternative for better XSS protection
 
-                // Create an input field for form ID
                 var formIdInput = document.createElement('input');
                 formIdInput.type = 'hidden';
                 formIdInput.name = 'delete_form_id';
                 formIdInput.value = formId;
 
-                // Create a submit button
                 var submitBtn = document.createElement('button');
                 submitBtn.type = 'submit';
                 submitBtn.name = 'delete_form';
-                submitBtn.style.display = 'none'; // Hide the button
+                submitBtn.style.display = 'none';
                 deleteForm.appendChild(formIdInput);
                 deleteForm.appendChild(submitBtn);
 
-                // Append the form to the body and submit it
                 document.body.appendChild(deleteForm);
                 submitBtn.click();
             }

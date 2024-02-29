@@ -55,14 +55,14 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #EDF2F4; /* Dark background for modern look */
-            color: #f4f4f4; /* Light text for contrast */
+            background-color: #EDF2F4;
+            color: #f4f4f4;
             margin: 0;
             padding: 20px;
         }
 
         h2 {
-            color: #2B2D42; /* Slightly dimmed color for headings */
+            color: #2B2D42;
             text-align: center;
         }
 
@@ -70,27 +70,27 @@
             border-collapse: collapse;
             width: 100%;
             margin-top: 20px;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Add shadow for depth */
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
         }
 
         th, td {
-            border: 1px solid #393939; /* Dark borders for table cells */
+            border: 1px solid #393939;
             padding: 12px;
             text-align: left;
-            color: #2B2D42; /* Light text color */
+            color: #2B2D42;
         }
 
         th {
-            background-color: #6D7FCC; /* Color based on site's primary color */
+            background-color: #6D7FCC;
             color: #ffffff;
         }
 
         tr:nth-child(even) {
-            background-color: transparent; /* Zebra striping for rows */
+            background-color: transparent; 
         }
 
         tr:hover {
-            background-color: bisque; /* Hover effect for rows */
+            background-color: bisque; 
         }
 
         .edit-popup, .overlay {
@@ -99,7 +99,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: #363636; /* Slightly lighter shade for the popup background */
+            background-color: #363636;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             z-index: 2;
@@ -127,8 +127,8 @@
             box-sizing: border-box;
             border-radius: 4px;
             border: 1px solid #ddd;
-            background-color: #333; /* Dark input fields */
-            color: #f4f4f4; /* Light text color */
+            background-color: #333; 
+            color: #f4f4f4;
             transition: border-color 0.3s;
         }
 
@@ -137,37 +137,37 @@
         input[type="time"]:focus,
         input[type="number"]:focus {
             outline: none;
-            border-color: #6D7FCC; /* Focus color */
+            border-color: #6D7FCC;
         }
 
         button {
-            background-color: #39004b; /* Update button color */
+            background-color: #39004b;
             color: #ffffff;
             padding: 10px 20px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for buttons */
+            transition: background-color 0.3s ease, transform 0.2s ease; 
             margin-right: 10px;
         }
 
         button:hover {
-            background-color: #39004b; /* Hover color */
-            transform: translateY(-3px); /* Slight lift on hover */
+            background-color: #39004b; 
+            transform: translateY(-3px);
         }
 
         .delete-btn {
-            background-color: #f44336; /* Delete button color */
+            background-color: #f44336; 
         }
 
         .delete-btn:hover {
-            background-color: #d32f2f; /* Hover color */
+            background-color: #d32f2f; 
         }
 
         /* Add Reservation Button */
         .add-button {
-            background-color: #FFD700; /* Yellow for add new reservation */
-            color: #252525; /* Dark text */
+            background-color: #FFD700; 
+            color: #252525;
             padding: 10px 20px;
             border: none;
             cursor: pointer;
@@ -176,12 +176,11 @@
         }
 
         .add-button:hover {
-            background-color: #e5b800; /* Darker yellow on hover */
-            transform: scale(1.05); /* Scale effect on hover */
+            background-color: #e5b800;
+            transform: scale(1.05);
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
-        /* No results style */
         .no-results {
             text-align: center;
             margin-top: 20px;
@@ -192,7 +191,6 @@
     <?php
     include '../Include/connectin.php';
 
-    // Process of edit form submission and update the database, this works fine, don't do anything to it
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_reservation'])) {
         $editReservationId = $_POST['edit_reservation_id'];
         $editReservationDate = $_POST['edit_reservation_date'];

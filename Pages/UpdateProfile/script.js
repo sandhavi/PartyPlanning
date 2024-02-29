@@ -1,33 +1,23 @@
-document.getElementById('editProfileBtn').addEventListener('click', function() {
-    document.getElementById('editProfileForm').style.display = 'block';
-});
+document.addEventListener("DOMContentLoaded", function () {
+    const updateForm = document.getElementById("update-form");
 
-document.getElementById('saveProfileBtn').addEventListener('click', function() {
-    var formData = {
-        name: document.getElementById('editName').value,
-        age: document.getElementById('editAge').value,
-        email: document.getElementById('editEmail').value,
-        address: document.getElementById('editAddress').value,
-    };
+    updateForm.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "update_profile.php", true);
-    xhr.setRequestHeader("Content-Type", "application/json");
+        // Fetch form data
+        const formData = new FormData(updateForm);
 
-    xhr.onload = function() {
-        if (xhr.status == 200) {
-            // Update display values
-            document.getElementById('userName').textContent = formData.name;
-            document.getElementById('userAge').textContent = formData.age;
-            document.getElementById('userEmail').textContent = formData.email;
-            document.getElementById('userAddress').textContent = formData.address;
-            // Hide form
-            document.getElementById('editProfileForm').style.display = 'none';
-            alert('Profile updated successfully.');
-        } else {
-            alert('Error updating profile.');
-        }
-    };
-
-    xhr.send(JSON.stringify(formData));
+        // Use fetch API to send a POST request
+        fetch("../../Backend/updateProfile.php", {
+            method: "POST",
+            body: formData,
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
+    });
 });

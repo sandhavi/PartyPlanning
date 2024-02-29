@@ -8,14 +8,14 @@
     <style>
     body {
         font-family: 'Arial', sans-serif;
-        background-color: #252525; /* Dark background for modern look */
-        color: #f4f4f4; /* Light text for contrast */
+        background-color: #252525; 
+        color: #f4f4f4; 
         margin: 0;
         padding: 20px;
     }
 
     h2 {
-        color: #e2e2e2; /* Slightly dimmed color for headings */
+        color: #e2e2e2; 
         text-align: center;
     }
 
@@ -23,27 +23,27 @@
         border-collapse: collapse;
         width: 100%;
         margin-top: 20px;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Add shadow for depth */
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     }
 
     th, td {
-        border: 1px solid #393939; /* Dark borders for table cells */
+        border: 1px solid #393939;
         padding: 12px;
         text-align: left;
-        color: #f4f4f4; /* Light text color */
+        color: #f4f4f4;
     }
 
     th {
-        background-color: #6D7FCC; /* Color based on site's primary color */
+        background-color: #6D7FCC; 
         color: #ffffff;
     }
 
     tr:nth-child(even) {
-        background-color: #333333; /* Zebra striping for rows */
+        background-color: #333333;
     }
 
     tr:hover {
-        background-color: #575757; /* Hover effect for rows */
+        background-color: #575757;
     }
 
     .edit-popup, .overlay {
@@ -56,8 +56,8 @@
         padding: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         z-index: 2;
-        color: #000; /* Default text color for pop-up */
-        border-radius: 8px; /* Rounded corners for pop-up */
+        color: #000;
+        border-radius: 8px; 
     }
 
     .overlay {
@@ -67,12 +67,12 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.7); /* Darker overlay for better focus on pop-up */
+        background: rgba(0, 0, 0, 0.7); 
         z-index: 1;
     }
 
     button {
-        background-color: #39004b; /* Primary action color */
+        background-color: #39004b; 
         color: white;
         padding: 10px 20px;
         border: none;
@@ -83,15 +83,15 @@
     }
 
     button:hover {
-        background-color: #51006A; /* Hover effect for buttons */
+        background-color: #51006A;
     }
 
     .delete-button {
-        background-color: #f44336; /* Delete button color */
+        background-color: #f44336;
     }
 
     .delete-button:hover {
-        background-color: #e53935; /* Hover effect for delete button */
+        background-color: #e53935; 
     }
 </style>
 
@@ -102,7 +102,6 @@
     <?php
     include '../Include/connectin.php';
 
-    // Process of edit form submission and update the database, this works fine, don't do anything to it
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_user'])) {
         $editUserId = $_POST['edit_user_id'];
         $editUserName = $_POST['edit_user_name'];
@@ -124,7 +123,6 @@
         }
     }
 
-    // Process of delete form submission and delete the record from the database
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_user'])) {
         $deleteUserId = $_POST['delete_user_id'];
 
@@ -137,7 +135,6 @@
         }
     }
 
-    // Query the database
     $sql = "SELECT * FROM customer";
     $result = $conn->query($sql);
 
@@ -149,7 +146,6 @@
         }
     }
 
-    // Close the connection
     $conn->close();
     ?>
 
@@ -174,14 +170,12 @@
                     <td><?php echo $row['username']; ?></td>
                     <td><?php echo $row['email']; ?></td>
                     <td>
-                        <!-- Change "Edit" button to "Delete" button -->
                         <button onclick="openDeletePopup(<?php echo $row['id']; ?>)">Delete</button>
                     </td>
                 </tr>
             <?php endforeach; ?>
         </table>
 
-        <!-- Delete pop-up window -->
         <div class="overlay" id="deleteOverlay"></div>
         <div class="edit-popup" id="deletePopup">
             <h3>Delete User</h3>

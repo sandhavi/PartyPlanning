@@ -10,13 +10,13 @@
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background-color: #252525; /* Dark background for modern look */
-            color: #f4f4f4; /* Light text for contrast */
+            background-color: #252525; 
+            color: #f4f4f4;
             padding: 20px;
         }
 
         h2 {
-            color: #e2e2e2; /* Slightly dimmed color for headings */
+            color: #e2e2e2; 
             text-align: center;
         }
 
@@ -24,27 +24,27 @@
             border-collapse: collapse;
             width: 100%;
             margin-top: 20px;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Add shadow for depth */
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
         }
 
         th, td {
-            border: 1px solid #393939; /* Dark borders for table cells */
+            border: 1px solid #393939; 
             padding: 12px;
             text-align: left;
-            color: #f4f4f4; /* Light text color */
+            color: #f4f4f4;
         }
 
         th {
-            background-color: #6D7FCC; /* Color based on site's primary color */
+            background-color: #6D7FCC;
             color: #ffffff;
         }
 
         tr:nth-child(even) {
-            background-color: #333333; /* Zebra striping for rows */
+            background-color: #333333; 
         }
 
         tr:hover {
-            background-color: #575757; /* Hover effect for rows */
+            background-color: #575757; 
         }
 
         .edit-popup, .overlay {
@@ -58,7 +58,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             z-index: 2;
             border-radius: 5px;
-            transition: all 0.3s ease; /* Smooth transition for popup */
+            transition: all 0.3s ease; 
         }
 
         .overlay {
@@ -74,17 +74,17 @@
 
         button {
             cursor: pointer;
-            background-color: #4CAF50; /* Update button color */
+            background-color: #3C1C60; 
             color: white;
             padding: 8px 16px;
             border: none;
             border-radius: 4px;
             margin-right: 5px;
-            transition: opacity 0.3s ease; /* Transition for button opacity */
+            transition: opacity 0.3s ease; 
         }
 
         .delete-btn {
-            background-color: #f44336; /* Delete button color */
+            background-color: #f44336; 
         }
 
         button:hover {
@@ -93,7 +93,7 @@
 
         /* Adjust button style inside the form */
         form button[type=submit], form button[type=button] {
-            background-color: #6D7FCC; /* Matching primary color */
+            background-color: #6D7FCC; 
             color: white;
             padding: 10px;
             margin-top: 10px;
@@ -103,7 +103,7 @@
         }
 
         form button[type=button] {
-            background-color: #888; /* Grey for cancel */
+            background-color: #888; 
         }
 
         form button:hover {
@@ -115,7 +115,7 @@
             display: block;
             width: max-content;
             margin: 20px auto;
-            background-color: #FFD700; /* Yellow for add new vendor */
+            background-color: #FFD700;
             color: #333;
             font-size: 16px;
             padding: 10px 20px;
@@ -124,8 +124,8 @@
         }
 
         .add-vendor-btn:hover {
-            background-color: #f0c040; /* Darker yellow on hover */
-            transform: scale(1.05); /* Slight scale on hover */
+            background-color: #f0c040; 
+            transform: scale(1.05);
         }
 
     </style>
@@ -136,7 +136,6 @@
     <?php
     include '../Include/connectin.php';
 
-    // Process of edit form submission and update the database, this works fine, don't do anything to it
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_vendor'])) {
         $editVendorId = $_POST['edit_vendor_id'];
         $editVendorName = $_POST['edit_vendor_name'];
@@ -156,7 +155,7 @@
         }
     }
 
-    // Process of delete form submission and delete the record from the database
+  
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_vendor'])) {
         $deleteVendorId = $_POST['delete_vendor_id'];
 
@@ -169,7 +168,6 @@
         }
     }
 
-    // Process of add form submission and insert a new record into the database
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_vendor'])) {
         $addVendorName = $_POST['add_vendor_name'];
         $addVendorDescription = $_POST['add_vendor_description'];
@@ -184,11 +182,9 @@
         }
     }
 
-    // Query the database
     $sql = "SELECT * FROM vendor";
     $result = $conn->query($sql);
 
-    // Process the results
     $rows = array();
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
@@ -196,7 +192,6 @@
         }
     }
 
-    // Close the connection
     $conn->close();
     ?>
 
@@ -226,7 +221,6 @@
             <?php endforeach; ?>
         </table>
 
-        <!-- Edit pop-up window-->
         <div class="overlay" id="editOverlay"></div>
         <div class="edit-popup" id="editPopup">
             <h3>Edit Vendor</h3>
@@ -240,7 +234,6 @@
             </form>
         </div>
 
-        <!-- Delete pop-up window -->
         <div class="overlay" id="deleteOverlay"></div>
         <div class="edit-popup" id="deletePopup">
             <h3>Delete Vendor</h3>
@@ -252,7 +245,7 @@
             </form>
         </div>
 
-        <!-- Add pop-up window -->
+       
         <div class="overlay" id="addOverlay"></div>
         <div class="edit-popup" id="addPopup">
             <h3>Add Vendor</h3>
@@ -265,7 +258,6 @@
             </form>
         </div>
 
-        <!-- Add Vendor Button -->
         <button onclick="openAddPopup()">Add New Vendor</button>
 
     <?php else : ?>
@@ -283,14 +275,12 @@
                 document.getElementById('editVendorDescription').value = vendor.description;
                 document.getElementById('editVendorType').value = vendor.type;
 
-                // Display the edit pop-up
                 document.getElementById('editPopup').style.display = 'block';
                 document.getElementById('editOverlay').style.display = 'block';
             }
         }
 
-        function closeEditPopup() {
-            // Close the edit pop-up
+        function closeEditPopup() {     
             document.getElementById('editPopup').style.display = 'none';
             document.getElementById('editOverlay').style.display = 'none';
         }
@@ -298,29 +288,27 @@
         function openDeletePopup(vendorId) {
             document.getElementById('deleteVendorId').value = vendorId;
 
-            // Display the delete pop-up
+          
             document.getElementById('deletePopup').style.display = 'block';
             document.getElementById('deleteOverlay').style.display = 'block';
         }
 
         function closeDeletePopup() {
-            // Close the delete pop-up
+           
             document.getElementById('deletePopup').style.display = 'none';
             document.getElementById('deleteOverlay').style.display = 'none';
         }
 
         function openAddPopup() {
-            // Display the add pop-up
+          
             document.getElementById('addPopup').style.display = 'block';
             document.getElementById('addOverlay').style.display = 'block';
         }
 
         function closeAddPopup() {
-            // Close the add pop-up
             document.getElementById('addPopup').style.display = 'none';
             document.getElementById('addOverlay').style.display = 'none';
 
-            // Clear the input fields
             document.querySelectorAll('#addPopup input').forEach(input => input.value = '');
 
         }

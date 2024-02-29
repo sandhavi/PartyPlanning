@@ -11,14 +11,12 @@
             font-family: 'Poppins', sans-serif;
             background-color: #f4f4f4;
             color: #f4f4f4;
-            /* Light text */
             margin: 0;
             padding: 0;
         }
 
         h2 {
             color: #252525;
-            /* Slightly dimmed color for headings */
             text-align: center;
         }
 
@@ -27,30 +25,25 @@
             width: 100%;
             margin-top: 20px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            /* Add shadow for depth */
         }
 
         th,
         td {
             border: 1px solid #5C376F;
-            /* Dark borders for table cells */
             padding: 15px;
             text-align: left;
         }
 
         th {
             background-color: #39004b;
-            /* Header color based on site's primary color */
         }
 
         tr:nth-child(even) {
             background-color: #252525;
-            /* Zebra striping for rows */
         }
 
         tr:hover {
             background-color: #575757;
-            /* Hover effect for rows */
         }
 
         .edit-popup,
@@ -61,7 +54,6 @@
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: #95517D;
-            /* Light background color for popups */
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             z-index: 2;
@@ -80,7 +72,6 @@
 
         .edit-popup h3 {
             color: #252525;
-            /* Headings in popups */
         }
 
         input[type="text"],
@@ -96,48 +87,37 @@
 
         input[type="text"] {
             background-color: whitesmoke;
-                /* Dark input fields */
                 color: yellow;
-            /* Light text */
         }
 
         input[type="text"]:focus {
             outline: none;
             border-color: #6D7FCC;
-            /* Focus color */
         }
 
         button {
             background-color: #663399;
-            /* Update button color */
             color: #ffffff;
             cursor: pointer;
             margin-right: 10px;
             transition: background-color 0.3s ease;
-            /* Smooth transition for buttons */
         }
 
         button:hover {
             background-color: #663399;
-            /* Hover color */
         }
 
         .delete-btn {
             background-color: #f44336;
-            /* Delete button color */
         }
 
         .delete-btn:hover {
             background-color: #d32f2f;
-            /* Hover color */
         }
 
-        /* Add Venue Button */
         .add-button {
             background-color: #FFD700;
-            /* Yellow for add new venue */
             color: #252525;
-            /* Dark text */
             padding: 10px 15px;
             border: none;
             cursor: pointer;
@@ -147,13 +127,11 @@
 
         .add-button:hover {
             transform: scale(1.05);
-            /* Scale effect on hover */
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
         .no-results {
             color: #f4f4f4;
-            /* Light text color for no results message */
         }
     </style>
 </head>
@@ -162,7 +140,6 @@
     <?php
     include '../Include/connectin.php';
 
-    // Process of edit form submission and update the database, this works fine, don't do anything to it
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_venue'])) {
         $editVenueId = $_POST['edit_venue_id'];
         $editVenueName = $_POST['edit_venue_name'];
@@ -180,7 +157,6 @@
         }
     }
 
-    // Process of delete form submission and delete the record from the database
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_venue'])) {
         $deleteVenueId = $_POST['delete_venue_id'];
 
@@ -193,7 +169,6 @@
         }
     }
 
-    // Process of add form submission and insert a new record into the database
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_venue'])) {
         $addVenueName = $_POST['add_venue_name'];
         $addVenueDescription = $_POST['add_venue_description'];
@@ -207,11 +182,9 @@
         }
     }
 
-    // Query the database
     $sql = "SELECT * FROM venue";
     $result = $conn->query($sql);
 
-    // Process the results
     $rows = array();
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
@@ -219,7 +192,6 @@
         }
     }
 
-    // Close the connection
     $conn->close();
     ?>
 
@@ -247,7 +219,6 @@
             <?php endforeach; ?>
         </table>
 
-        <!-- Edit pop-up window-->
         <div class="overlay" id="editOverlay"></div>
         <div class="edit-popup" id="editPopup">
             <h3>Edit Venue</h3>
@@ -260,7 +231,6 @@
             </form>
         </div>
 
-        <!-- Delete pop-up window -->
         <div class="overlay" id="deleteOverlay"></div>
         <div class="edit-popup" id="deletePopup">
             <h3>Delete Venue</h3>
@@ -272,7 +242,6 @@
             </form>
         </div>
 
-        <!-- Add pop-up window -->
         <div class="overlay" id="addOverlay"></div>
         <div class="edit-popup" id="addPopup">
             <h3>Add Venue</h3>
@@ -284,7 +253,6 @@
             </form>
         </div>
 
-        <!-- Add Venue Button -->
         <button onclick="openAddPopup()">Add New Venue</button>
 
     <?php else : ?>
@@ -301,14 +269,13 @@
                 document.getElementById('editVenueName').value = venue.name;
                 document.getElementById('editVenueDescription').value = venue.description;
 
-                // Display the edit pop-up
                 document.getElementById('editPopup').style.display = 'block';
                 document.getElementById('editOverlay').style.display = 'block';
             }
         }
 
         function closeEditPopup() {
-            // Close the edit pop-up
+
             document.getElementById('editPopup').style.display = 'none';
             document.getElementById('editOverlay').style.display = 'none';
         }
@@ -316,25 +283,21 @@
         function openDeletePopup(venueId) {
             document.getElementById('deleteVenueId').value = venueId;
 
-            // Display the delete pop-up
             document.getElementById('deletePopup').style.display = 'block';
             document.getElementById('deleteOverlay').style.display = 'block';
         }
 
         function closeDeletePopup() {
-            // Close the delete pop-up
             document.getElementById('deletePopup').style.display = 'none';
             document.getElementById('deleteOverlay').style.display = 'none';
         }
 
         function openAddPopup() {
-            // Display the add pop-up
             document.getElementById('addPopup').style.display = 'block';
             document.getElementById('addOverlay').style.display = 'block';
         }
 
         function closeAddPopup() {
-            // Close the add pop-up
             document.getElementById('addPopup').style.display = 'none';
             document.getElementById('addOverlay').style.display = 'none';
         }
