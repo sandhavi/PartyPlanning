@@ -182,11 +182,9 @@
         }
     }
 
-    // Query the database
     $sql = "SELECT * FROM vendor";
     $result = $conn->query($sql);
 
-    // Process the results
     $rows = array();
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
@@ -194,7 +192,6 @@
         }
     }
 
-    // Close the connection
     $conn->close();
     ?>
 
@@ -224,7 +221,6 @@
             <?php endforeach; ?>
         </table>
 
-        <!-- Edit pop-up window-->
         <div class="overlay" id="editOverlay"></div>
         <div class="edit-popup" id="editPopup">
             <h3>Edit Vendor</h3>
@@ -238,7 +234,6 @@
             </form>
         </div>
 
-        <!-- Delete pop-up window -->
         <div class="overlay" id="deleteOverlay"></div>
         <div class="edit-popup" id="deletePopup">
             <h3>Delete Vendor</h3>
@@ -250,7 +245,7 @@
             </form>
         </div>
 
-        <!-- Add pop-up window -->
+       
         <div class="overlay" id="addOverlay"></div>
         <div class="edit-popup" id="addPopup">
             <h3>Add Vendor</h3>
@@ -263,7 +258,6 @@
             </form>
         </div>
 
-        <!-- Add Vendor Button -->
         <button onclick="openAddPopup()">Add New Vendor</button>
 
     <?php else : ?>
@@ -281,14 +275,12 @@
                 document.getElementById('editVendorDescription').value = vendor.description;
                 document.getElementById('editVendorType').value = vendor.type;
 
-                // Display the edit pop-up
                 document.getElementById('editPopup').style.display = 'block';
                 document.getElementById('editOverlay').style.display = 'block';
             }
         }
 
-        function closeEditPopup() {
-            // Close the edit pop-up
+        function closeEditPopup() {     
             document.getElementById('editPopup').style.display = 'none';
             document.getElementById('editOverlay').style.display = 'none';
         }
@@ -296,29 +288,27 @@
         function openDeletePopup(vendorId) {
             document.getElementById('deleteVendorId').value = vendorId;
 
-            // Display the delete pop-up
+          
             document.getElementById('deletePopup').style.display = 'block';
             document.getElementById('deleteOverlay').style.display = 'block';
         }
 
         function closeDeletePopup() {
-            // Close the delete pop-up
+           
             document.getElementById('deletePopup').style.display = 'none';
             document.getElementById('deleteOverlay').style.display = 'none';
         }
 
         function openAddPopup() {
-            // Display the add pop-up
+          
             document.getElementById('addPopup').style.display = 'block';
             document.getElementById('addOverlay').style.display = 'block';
         }
 
         function closeAddPopup() {
-            // Close the add pop-up
             document.getElementById('addPopup').style.display = 'none';
             document.getElementById('addOverlay').style.display = 'none';
 
-            // Clear the input fields
             document.querySelectorAll('#addPopup input').forEach(input => input.value = '');
 
         }
