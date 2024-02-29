@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-  <?php
+<?php
 session_start();
 
 if (isset($_SESSION['id'])) {
@@ -31,6 +31,7 @@ if (isset($_SESSION['id'])) {
     $userName = "Log In";
 }
 ?>
+
     <div class="planning-process">
       <div class="div">
         <div class="div-2">
@@ -49,27 +50,30 @@ if (isset($_SESSION['id'])) {
           </div>
           <div class="menu">
             <div class="menu-2">
-              <div class="text-wrapper-2">Home</div>
+              <div class="text-wrapper-2"><a href="../Home/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">
+                    Home
+                </a>
+</div>
               <div class="about">
-                <div class="text-wrapper-3">About</div>
+                <div class="text-wrapper-3"><a href="../about us/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">About</a></div>
                 <img class="line" src="img/line-4.svg" alt="new" />
               </div>
               <div class="pages">
                 <div class="div-wrapper">
-                  <div class="text-wrapper-4">Pricing</div>
+                  <div class="text-wrapper-4"><a href="../Pricing/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Pricing</a></div>
                 </div>
                 <img class="line" src="img/line-4.svg" alt="new" />
               </div>
               <div class="project">
-                <div class="text-wrapper-3">My Projects</div>
+                <div class="text-wrapper-3"><a href="../my projects/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">My Projects</a></div>
                 <img class="line" src="img/line-4.svg" alt="new" />
               </div>
               <div class="contact">
-                <div class="text-wrapper-3">Features</div>
+                <div class="text-wrapper-3"><a href="../Help/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Help</a></div>
                 <img class="line" src="img/line-4.svg" alt="new" />
               </div>
               <div class="contact-2">
-                <div class="text-wrapper-3">SignIn</div>
+                <div class="text-wrapper-3"><a href="../Login/Loginuser.php" style="color:aliceblue; font-size:large;  text-decoration: none;">SignIn</a></div>
                 <img class="line" src="img/line-4.svg" alt="new" />
               </div>
             </div>
@@ -101,21 +105,24 @@ if (isset($_SESSION['id'])) {
             <img class="img-2" src="img/neutral-decision.png" alt="new" />
           </div>
           <div class="text-wrapper-5">Step 01</div>
-          <p class="choose-time-date-no">Date, Time, Venue, No of Guests</p>
+          <p class="choose-time-date-no"> <a href="../planing2/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">
+                   Date, Time, Venue, No of Guests
+                </a>
+</p>
           <div class="text-wrapper-6">Step 02</div>
-          <div class="text-wrapper-7">Select theme</div>
+          <div class="text-wrapper-7"><a href="../planing3/planning-process-03.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Select theme</a></div>
           <div class="text-wrapper-8">Step 03</div>
-          <div class="text-wrapper-9">Choose venue</div>
+          <div class="text-wrapper-9"><a href="../planing4/planning-process-04.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Choose venue</a></div>
           <div class="text-wrapper-10">Step 04</div>
-          <div class="text-wrapper-11">Decide culinary , decoration</div>
+          <div class="text-wrapper-11"><a href="../planing5/planning-process-05.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Decide culinary , decoration</a></div>
           <div class="text-wrapper-12">Step 05</div>
-          <div class="text-wrapper-13">Choose vendors</div>
+          <div class="text-wrapper-13"><a href="../planing6/planning-process-06.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Choose vendors</a></div>
           <div class="text-wrapper-14">Step 06</div>
-          <div class="text-wrapper-15">Invitation management</div>
+          <div class="text-wrapper-15"><a href="../planing7/planning-process-07.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Invitation management</a></div>
           <div class="text-wrapper-16">Step 07</div>
-          <div class="text-wrapper-17">Create custom checklist</div>
+          <div class="text-wrapper-17"><a href="../planing8/planning-process-08.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Create custom checklist</a></div>
           <div class="text-wrapper-18">Step 08</div>
-          <div class="text-wrapper-19">Generate printable plan</div>
+          <div class="text-wrapper-19"><a href="../planing9/planning-process-09.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Generate printable plan</a></div>
         </div>
         <p class="set-the-scene">Set date, time, venue &amp; no of guests</p>
         <footer class="footer">
@@ -200,7 +207,7 @@ if (isset($_SESSION['id'])) {
         </footer>
         <div class="button-row">
           <button class="label-wrapper">
-            <div class="label">Next: Select Theme</div>
+            <div class="label"><a href="../planing3/planning-process-03.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Next: Select Theme</a></div>
           </button>
         </div>
         <div class="overlap-3">
@@ -236,7 +243,7 @@ if (isset($_SESSION['id'])) {
                 <div class="label-2">Guests</div>
               </div>
             </div>
-            <button class="button-3"><div class="label-3">Done</div></button>
+            <button class="button-3"><div class="label-3"><a href="../planing3/planning-process-03.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Search</a></div></button>
           </div>
           <img class="clock" src="img/clock.png" alt="new" />
           <img class="schedule" src="img/schedule.png" alt="new" />
