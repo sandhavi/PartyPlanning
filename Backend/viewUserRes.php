@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <title>Reservation Box</title>
     <style>
         /* Base Styles */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             background-color: #f4f4f4;
             color: #333;
         }
@@ -36,24 +37,27 @@
         .reservation-box p {
             color: #555;
             line-height: 1.5;
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+            color: #39004b;
+            font-weight: bold;
+
+ 
         }
 
-        .reservation-box p:first-child {
-            margin-top: 0;
+        .reservation-box hr {
+            border-color: #eee;
         }
 
-        .reservation-box p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* Icons using FontAwesome - Ensure you include FontAwesome in your HTML */
+ 
         .reservation-box i {
             margin-right: 8px;
-            color: #007bff;
-            /* Bootstrap primary color for example */
+            font-family: Arial, Helvetica, sans-serif;
+            color: #013220;
+  
         }
 
-        /* Animations */
+    
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -70,22 +74,39 @@
             animation: fadeIn 0.5s ease-out;
         }
 
-        /* Additional Styling */
-        /* Feel free to add more styles as needed */
+
+        .reservation-box p {
+            margin-bottom: 15px;
+        }
+
+
+        .reservation-box p span {
+            font-weight: bold;
+
+        }
+
+
+        @media (max-width: 768px) {
+            .reservation-box {
+                width: 90%;
+                padding: 15px;
+            }
+        }
     </style>
+
 </head>
 
 <body>
     <?php
-    include '../Include/connectin.php';
-    session_start();
+    include '/xampp/htdocs/PartyPlanning/Include/connectin.php';
+
 
 
 
     if (isset($_SESSION['id'])) {
         $userId = $_SESSION['id'];
 
-        // Fetch reservation data for the logged-in user
+
         $sql = "SELECT * FROM reservation WHERE customer_id = $userId";
         $result = $conn->query($sql);
 
@@ -93,15 +114,15 @@
             // Display reservation data in a box
             echo '<div class="reservation-box">';
             while ($row = $result->fetch_assoc()) {
-                echo "<p>Reservation ID: {$row['id']}</p>";
-                echo "<p>Date: {$row['date']}</p>";
-                echo "<p>Time: {$row['time']}</p>";
-                echo "<p>Description: {$row['description']}</p>";
-                echo "<p>Location: {$row['venue']}</p>";
-                echo "<p>Number of Guests: {$row['no_guests']}</p>";
-                echo "<p>Reservation Status: {$row['status']}</p>";
-
-                // Add more fields as needed
+                echo "<p>Reservation ID: <i>{$row['id']}</i></p>";
+                echo "<p>Date: <i>{$row['date']}</i></p>";
+                echo "<p>Time: <i>{$row['time']}</i></p>";
+                echo "<p>Description: <i>{$row['description']}</i></p>";
+                echo "<p>Location: <i>{$row['venue']}</i> </p>";
+                echo "<p>Number of Guests: <i>{$row['no_guests']}</i></p>";
+                echo "<p>Reservation Status: <i>{$row['status']}</i></p>";
+                echo "<hr>";
+    
             }
             echo '</div>';
         } else {

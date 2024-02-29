@@ -72,7 +72,11 @@
             </div>
 
         </form>
+        <?php
+        include '../../Backend/viewUserRes.php'
+    ?>
     </div>
+
     <script src="script.js"></script>
 </body>
 
