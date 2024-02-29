@@ -11,17 +11,17 @@
         /* Base Styles */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: ghostwhite;
+            background-color: #f4f4f4;
             color: #333;
         }
 
         .reservation-box {
-            border: 1px solid #39004b;
+            border: 1px solid #ccc;
             padding: 20px;
             margin: 20px auto;
             width: 80%;
             max-width: 600px;
-            background-color: transparent;
+            background-color: #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -34,7 +34,7 @@
 
         /* Typography & Colors */
         .reservation-box p {
-            color:#333;
+            color: #555;
             line-height: 1.5;
         }
 
@@ -49,8 +49,8 @@
         /* Icons using FontAwesome - Ensure you include FontAwesome in your HTML */
         .reservation-box i {
             margin-right: 8px;
-            color: #39004b;
-           
+            color: #007bff;
+            /* Bootstrap primary color for example */
         }
 
         /* Animations */
@@ -71,19 +71,6 @@
         }
 
         /* Additional Styling */
-        /* Specific styling for Reservation ID label and value */
-        .reservation-box p.reservation-id-label {
-            color: #39004b; /* Set font color to blue */
-            font-weight: bold; /* Optionally make it bold */
-            display: inline-block; /* Ensure both labels and values are in the same line */
-        }
-
-        .reservation-box p.reservation-id-value {
-            color: black; /* Set font color to red */
-            display: inline-block; /* Ensure both labels and values are in the same line */
-            padding-left: 20px;
-        }
-
         /* Feel free to add more styles as needed */
     </style>
 </head>
@@ -92,6 +79,8 @@
     <?php
     include '../Include/connectin.php';
     session_start();
+
+
 
     if (isset($_SESSION['id'])) {
         $userId = $_SESSION['id'];
@@ -104,12 +93,11 @@
             // Display reservation data in a box
             echo '<div class="reservation-box">';
             while ($row = $result->fetch_assoc()) {
-                echo "<p class='reservation-id-label'>Reservation ID:</p>";
-                echo "<p class='reservation-id-value'>{$row['id']}</p>";
+                echo "<p>Reservation ID: {$row['id']}</p>";
                 echo "<p>Date: {$row['date']}</p>";
                 echo "<p>Time: {$row['time']}</p>";
                 echo "<p>Description: {$row['description']}</p>";
-                echo "<p>Description: {$row['venue']}</p>";
+                echo "<p>Location: {$row['venue']}</p>";
                 echo "<p>Number of Guests: {$row['no_guests']}</p>";
                 echo "<p>Reservation Status: {$row['status']}</p>";
 
