@@ -9,19 +9,19 @@
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
-            background-color: #ffffff; /* White background */
+            background-color: #ffffff; 
             color: #333;
             padding: 20px;
         }
 
         h2 {
-            color: #4B0082; /* Purple heading */
+            color: #4B0082; 
             text-align: center;
             transition: color 0.3s ease;
         }
 
         h2:hover {
-            color: #9370DB; /* Lighter purple on hover */
+            color: #9370DB; 
         }
 
         table {
@@ -40,12 +40,12 @@
         }
 
         th {
-            background-color: #4B0082; /* Purple header */
+            background-color: #4B0082;
             color: #ffffff;
         }
 
         td {
-            color: #333; /* Dark text for content */
+            color: #333; 
         }
 
         tr:nth-child(even) {
@@ -53,13 +53,13 @@
         }
 
         tr:hover {
-            background-color: #f0f0f0; /* Hover effect for rows */
+            background-color: #f0f0f0; 
         }
 
         button {
             cursor: pointer;
-            background-color: #FFD700; /* Yellow buttons */
-            color: #4B0082; /* Text color purple */
+            background-color: #FFD700;
+            color: #4B0082; 
             padding: 10px 20px;
             border: none;
             border-radius: 4px;
@@ -106,39 +106,36 @@
             from { transform: scale(0.5); opacity: 0; }
             to { transform: scale(1); opacity: 1; }
         }
-
-        /* Styles for input fields */
         input[type="text"] {
             border: 1px solid #ddd;
             border-radius: 4px;
             padding: 10px;
             margin-bottom: 10px;
-            width: calc(100% - 22px); /* Adjust width to account for padding and border */
+            width: calc(100% - 22px);
             transition: border-color 0.3s ease;
         }
 
         input[type="text"]:focus {
-            border-color: #4B0082; /* Purple border for focus */
+            border-color: #4B0082; 
         }
 
-        /* Style for the popup forms */
         form {
             display: flex;
             flex-direction: column;
         }
 
         form button[type="submit"] {
-            background-color: #4CAF50; /* Green for submit */
+            background-color: #4CAF50;
             color: #fff;
         }
 
         form button[type="button"] {
-            background-color: #6c757d; /* Grey for cancel */
+            background-color: #6c757d; 
             color: #fff;
         }
 
         form button[type="submit"]:hover, form button[type="button"]:hover {
-            background-color: darken(#4CAF50, 10%); /* Darken function is not native CSS, replace with actual color */
+            background-color: darken(#4CAF50, 10%); 
         }
 
     </style>
@@ -148,7 +145,7 @@
     <?php
     include '../Include/connectin.php';
 
-    // Process of edit form submission and update the database, this works fine, don't do anything to it
+    
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_theme'])) {
         $editThemeId = $_POST['edit_theme_id'];
         $editThemeName = $_POST['edit_theme_name'];
@@ -168,7 +165,6 @@
         }
     }
 
-    // Process of delete form submission and delete the record from the database
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_theme'])) {
         $deleteThemeId = $_POST['delete_theme_id'];
 
@@ -181,7 +177,6 @@
         }
     }
 
-    // Process of add form submission and insert a new record into the database
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_theme'])) {
         $addThemeName = $_POST['add_theme_name'];
         $addThemeDescription = $_POST['add_theme_description'];
@@ -196,11 +191,9 @@
         }
     }
 
-    // Query the database
     $sql = "SELECT * FROM theme";
     $result = $conn->query($sql);
 
-    // Process the results
     $rows = array();
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
@@ -208,7 +201,6 @@
         }
     }
 
-    // Close the connection
     $conn->close();
     ?>
 
@@ -238,7 +230,6 @@
             <?php endforeach; ?>
         </table>
 
-        <!-- Edit pop-up window-->
         <div class="overlay" id="editOverlay"></div>
         <div class="edit-popup" id="editPopup">
             <h3>Edit Theme</h3>
@@ -252,7 +243,6 @@
             </form>
         </div>
 
-        <!-- Delete pop-up window -->
         <div class="overlay" id="deleteOverlay"></div>
         <div class="edit-popup" id="deletePopup">
             <h3>Delete Theme</h3>
@@ -264,7 +254,6 @@
             </form>
         </div>
 
-        <!-- Add pop-up window -->
         <div class="overlay" id="addOverlay"></div>
         <div class="edit-popup" id="addPopup">
             <h3>Add Theme</h3>
@@ -278,14 +267,12 @@
             </form>
         </div>
 
-        <!-- Add Theme Button -->
         <button onclick="openAddPopup()">Add New Theme</button>
 
     <?php else : ?>
         <p>No results found.</p>
     <?php endif; ?>
 
-    <!-- JS -->
     <script>
         function openEditPopup(themeId) {
             var theme = <?php echo json_encode($rows); ?>.find(t => t.id == themeId);
