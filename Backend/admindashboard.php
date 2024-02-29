@@ -1,7 +1,6 @@
 <?php
 
-session_start(); // Ensure you call session_start() before using $_SESSION
-
+session_start(); 
 if (!isset($_SESSION['username'])) {
     header("Location: index.php");
     exit();
