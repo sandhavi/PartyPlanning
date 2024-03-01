@@ -27,7 +27,7 @@ if (isset($_SESSION['id'])) {
         $row = $result->fetch_assoc();
         $userName = $row['name'];
     } else {
-        // User not found, set a default name
+        
         $userName = "Log In";
     }
     $conn->close();
