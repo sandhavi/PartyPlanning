@@ -1,0 +1,2100 @@
+.DASHBOARD {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.DASHBOARD .div {
+  background-color: var(--colorwhite);
+  overflow: hidden;
+  width: 1280px;
+  height: 1500px;
+  position: relative;
+}
+
+.DASHBOARD .header {
+  position: absolute;
+  width: 1319px;
+  height: 110px;
+  top: 0;
+  left: 0;
+}
+
+.DASHBOARD .overlap {
+  position: relative;
+  height: 110px;
+}
+
+.DASHBOARD .overlap-group {
+  width: 1280px;
+  height: 110px;
+  background-image: url(./img/background.svg);
+  background-size: 100% 100%;
+}
+
+.DASHBOARD .logo-header {
+  display: flex;
+  width: 824px;
+  align-items: center;
+  gap: 167.62px;
+  position: relative;
+  top: 43px;
+  left: 40px;
+}
+
+.DASHBOARD .logo {
+  position: relative;
+  width: 125.51px;
+  height: 24px;
+}
+
+.DASHBOARD .text-wrapper {
+  position: absolute;
+  top: 0;
+  left: 26px;
+  font-family: "Rubik", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 20.6px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.DASHBOARD .pattern {
+  top: 3px;
+  left: 1px;
+  transform: rotate(-30deg);
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: #ffb82b;
+}
+
+.DASHBOARD .pattern-2 {
+  top: 12px;
+  left: 3px;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: #ffb82b;
+}
+
+.DASHBOARD .pattern-3 {
+  top: 3px;
+  left: 12px;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: #ffb82b;
+}
+
+.DASHBOARD .pattern-4 {
+  top: 12px;
+  left: 12px;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: #ffb82b;
+}
+
+.DASHBOARD .menu {
+  position: absolute;
+  top: 45px;
+  left: 804px;
+  width: 453px;
+  height: 15px;
+}
+
+.DASHBOARD .menu-2 {
+  display: flex;
+  align-items: center;
+  gap: 20.61px;
+  position: relative;
+  width: 453px;
+  height: 15px;
+}
+
+.DASHBOARD .text-wrapper-2 {
+  position: relative;
+  width: fit-content;
+  margin-top: -0.63px;
+  font-family: "Krub", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 11px;
+  letter-spacing: 0;
+  line-height: 14.8px;
+  white-space: nowrap;
+}
+
+.DASHBOARD .about {
+  position: relative;
+  width: 54.61px;
+  height: 15px;
+}
+
+.DASHBOARD .text-wrapper-3 {
+  position: absolute;
+  top: 0;
+  left: 21px;
+  font-family: "Krub", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 11px;
+  letter-spacing: 0;
+  line-height: 14.8px;
+  white-space: nowrap;
+}
+
+.DASHBOARD .line {
+  position: absolute;
+  width: 1px;
+  height: 13px;
+  top: 1px;
+  left: -1px;
+}
+
+.DASHBOARD .pages {
+  position: relative;
+  width: 58.61px;
+  height: 15px;
+}
+
+.DASHBOARD .div-wrapper {
+  position: absolute;
+  width: 40px;
+  height: 15px;
+  top: 0;
+  left: 21px;
+}
+
+.DASHBOARD .text-wrapper-4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Krub", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 11px;
+  letter-spacing: 0;
+  line-height: 14.8px;
+  white-space: nowrap;
+}
+
+.DASHBOARD .project {
+  position: relative;
+  width: 83.61px;
+  height: 15px;
+}
+
+.DASHBOARD .contact {
+  width: 68.61px;
+  position: relative;
+  height: 15px;
+}
+
+.DASHBOARD .contact-2 {
+  width: 56.61px;
+  position: relative;
+  height: 15px;
+}
+
+.DASHBOARD .overlap-2 {
+  position: absolute;
+  width: 1125px;
+  height: 647px;
+  top: 127px;
+  left: 63px;
+}
+
+.DASHBOARD .frame {
+  flex-direction: column;
+  width: 1125px;
+  height: 647px;
+  justify-content: center;
+  gap: 6.84px;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+
+.DASHBOARD .group {
+  position: relative;
+  width: 1043.23px;
+  height: 647px;
+}
+
+.DASHBOARD .overlap-wrapper {
+  width: 1043px;
+  height: 647px;
+}
+
+.DASHBOARD .overlap-3 {
+  position: relative;
+  height: 647px;
+}
+
+.DASHBOARD .group-2 {
+  position: absolute;
+  width: 1043px;
+  height: 647px;
+  top: 0;
+  left: 0;
+}
+
+.DASHBOARD .overlap-group-wrapper {
+  height: 647px;
+}
+
+.DASHBOARD .overlap-4 {
+  position: relative;
+  width: 1043px;
+  height: 647px;
+}
+
+.DASHBOARD .overlap-5 {
+  position: absolute;
+  width: 1047px;
+  height: 523px;
+  top: 124px;
+  left: 0;
+}
+
+.DASHBOARD .rectangle {
+  width: 1043px;
+  height: 523px;
+  top: 0;
+  background-color: #39004b;
+  border-radius: 2.74px;
+  position: absolute;
+  left: 0;
+}
+
+.DASHBOARD .group-3 {
+  position: absolute;
+  width: 1047px;
+  height: 503px;
+  top: 0;
+  left: 0;
+}
+
+.DASHBOARD .overlap-6 {
+  position: absolute;
+  width: 1043px;
+  height: 37px;
+  top: 0;
+  left: 0;
+  background-color: #582084;
+}
+
+.DASHBOARD .text-wrapper-5 {
+  position: absolute;
+  width: 70px;
+  top: 5px;
+  left: 57px;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 22.6px;
+}
+
+.DASHBOARD .group-4 {
+  position: absolute;
+  width: 114px;
+  height: 23px;
+  top: 7px;
+  left: 236px;
+}
+
+.DASHBOARD .text-wrapper-6 {
+  position: absolute;
+  width: 101px;
+  top: 0;
+  left: 0;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 22.6px;
+}
+
+.DASHBOARD .img {
+  position: absolute;
+  width: 7px;
+  height: 11px;
+  top: 8px;
+  left: 106px;
+}
+
+.DASHBOARD .group-5 {
+  position: absolute;
+  width: 74px;
+  height: 23px;
+  top: 5px;
+  left: 412px;
+}
+
+.DASHBOARD .text-wrapper-7 {
+  width: 61px;
+  top: 0;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 22.6px;
+  position: absolute;
+  left: 0;
+}
+
+.DASHBOARD .group-6 {
+  position: absolute;
+  width: 7px;
+  height: 11px;
+  top: 8px;
+  left: 66px;
+}
+
+.DASHBOARD .group-7 {
+  position: absolute;
+  width: 61px;
+  height: 23px;
+  top: 5px;
+  left: 570px;
+}
+
+.DASHBOARD .text-wrapper-8 {
+  position: absolute;
+  width: 48px;
+  top: 0;
+  left: 0;
+  font-size: 15px;
+  line-height: 22.6px;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: 0;
+}
+
+.DASHBOARD .group-8 {
+  position: absolute;
+  width: 7px;
+  height: 11px;
+  top: 8px;
+  left: 53px;
+}
+
+.DASHBOARD .group-9 {
+  position: absolute;
+  width: 99px;
+  height: 23px;
+  top: 5px;
+  left: 713px;
+}
+
+.DASHBOARD .text-wrapper-9 {
+  position: absolute;
+  width: 86px;
+  top: 0;
+  left: 0;
+  color: #ff8b37;
+  font-size: 15px;
+  line-height: 22.6px;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.DASHBOARD .group-10 {
+  position: absolute;
+  width: 7px;
+  height: 11px;
+  top: 8px;
+  left: 91px;
+}
+
+.DASHBOARD .text-wrapper-10 {
+  position: absolute;
+  width: 44px;
+  top: 475px;
+  left: 887px;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 22.6px;
+}
+
+.DASHBOARD .frame-2 {
+  width: 81px;
+  height: 32px;
+  justify-content: center;
+  gap: 6.16px;
+  top: 471px;
+  left: 941px;
+  background-color: #39004b;
+  border: 2.05px solid;
+  border-color: #9b9b9b;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+
+.DASHBOARD .text-wrapper-11 {
+  position: relative;
+  width: fit-content;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 13.7px;
+  letter-spacing: 0;
+  line-height: 20.5px;
+  white-space: nowrap;
+}
+
+.DASHBOARD .group-11 {
+  position: relative;
+  width: 6.5px;
+  height: 11.26px;
+}
+
+.DASHBOARD .group-12 {
+  position: absolute;
+  width: 1045px;
+  height: 90px;
+  top: 0;
+  left: 0;
+}
+
+.DASHBOARD .text-wrapper-12 {
+  position: absolute;
+  width: 164px;
+  top: 0;
+  left: 0;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 17.8px;
+  letter-spacing: 0;
+  line-height: 26.7px;
+}
+
+.DASHBOARD .frame-3 {
+  width: 203px;
+  height: 36px;
+  gap: 6.84px;
+  padding: 11.63px;
+  top: 54px;
+  left: 0;
+  background-color: #45115e;
+  border: 2.74px solid;
+  border-color: #6f6f6f87;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+
+.DASHBOARD .text-wrapper-13 {
+  position: relative;
+  width: fit-content;
+  margin-top: -8.74px;
+  margin-bottom: -3.27px;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+  white-space: nowrap;
+}
+
+.DASHBOARD .frame-4 {
+  width: 166px;
+  height: 36px;
+  gap: 6.84px;
+  padding: 11.63px;
+  top: 54px;
+  left: 395px;
+  background-color: #45115e;
+  border: 2.74px solid;
+  border-color: #6f6f6f87;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+
+.DASHBOARD .text-wrapper-14 {
+  position: relative;
+  width: fit-content;
+  margin-top: -8.74px;
+  margin-bottom: -3.27px;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ff8b37;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+  white-space: nowrap;
+}
+
+.DASHBOARD .iconly-light-arrow {
+  width: 16.41px;
+  height: 16.41px;
+  margin-top: -1.71px;
+  margin-bottom: -1.71px;
+  background-image: url(./img/iconly-light-arrow-down-2.svg);
+  position: relative;
+  background-size: 100% 100%;
+}
+
+.DASHBOARD .frame-5 {
+  width: 166px;
+  height: 36px;
+  gap: 6.84px;
+  padding: 11.63px;
+  top: 54px;
+  left: 217px;
+  background-color: #45115e;
+  border: 2.74px solid;
+  border-color: #6f6f6f87;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+
+.DASHBOARD .iconly-light-arrow-2 {
+  width: 11.23px;
+  height: 11.23px;
+  background-image: url(./img/iconly-light-arrow-down-2-3.svg);
+  position: relative;
+  background-size: 100% 100%;
+}
+
+.DASHBOARD .frame-6 {
+  width: 139px;
+  height: 36px;
+  justify-content: space-between;
+  padding: 6.84px 23.94px 6.84px 20.52px;
+  top: 54px;
+  left: 905px;
+  border-radius: 3.42px;
+  border: 1.37px solid;
+  border-color: #6f6f6f87;
+  background: linear-gradient(180deg, rgba(250.75, 107.13, 3.13, 0.8) 0%, rgba(255, 139.15, 55.25, 0.8) 100%);
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+
+.DASHBOARD .text-wrapper-15 {
+  position: relative;
+  width: 10.94px;
+  height: 29.41px;
+  margin-top: -4.79px;
+  margin-bottom: -2.05px;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 17.8px;
+  letter-spacing: 0;
+  line-height: 26.7px;
+  white-space: nowrap;
+}
+
+.DASHBOARD .text-wrapper-16 {
+  position: relative;
+  width: fit-content;
+  margin-top: -2.58px;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+  white-space: nowrap;
+}
+
+.DASHBOARD .group-13 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 57px;
+  left: 570px;
+}
+
+.DASHBOARD .overlap-group-2 {
+  position: relative;
+  width: 31px;
+  height: 31px;
+  top: -1px;
+  left: -1px;
+}
+
+.DASHBOARD .iconly-light-wrapper {
+  position: absolute;
+  width: 7px;
+  height: 8px;
+  top: 11px;
+  left: 12px;
+}
+
+.DASHBOARD .iconly-light {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -4px;
+  left: -6px;
+}
+
+.DASHBOARD .more-square {
+  position: absolute;
+  width: 31px;
+  height: 31px;
+  top: 0;
+  left: 0;
+}
+
+.DASHBOARD .group-wrapper {
+  position: absolute;
+  width: 791px;
+  height: 404px;
+  top: 131px;
+  left: 12px;
+}
+
+.DASHBOARD .group-14 {
+  position: relative;
+  height: 404px;
+}
+
+.DASHBOARD .group-15 {
+  position: absolute;
+  width: 24px;
+  height: 401px;
+  top: 0;
+  left: 0;
+}
+
+.DASHBOARD .group-16 {
+  position: absolute;
+  width: 133px;
+  height: 353px;
+  top: 50px;
+  left: 81px;
+}
+
+.DASHBOARD .text-wrapper-17 {
+  position: absolute;
+  width: 91px;
+  top: 0;
+  left: 3px;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .text-wrapper-18 {
+  position: absolute;
+  width: 81px;
+  top: 123px;
+  left: 3px;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .text-wrapper-19 {
+  position: absolute;
+  width: 111px;
+  top: 164px;
+  left: 3px;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .text-wrapper-20 {
+  position: absolute;
+  width: 94px;
+  top: 205px;
+  left: 3px;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .text-wrapper-21 {
+  position: absolute;
+  width: 101px;
+  top: 246px;
+  left: 3px;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .text-wrapper-22 {
+  position: absolute;
+  width: 111px;
+  top: 287px;
+  left: 3px;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .text-wrapper-23 {
+  position: absolute;
+  width: 108px;
+  top: 328px;
+  left: 0;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .text-wrapper-24 {
+  position: absolute;
+  width: 93px;
+  top: 82px;
+  left: 3px;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .text-wrapper-25 {
+  position: absolute;
+  width: 85px;
+  top: 41px;
+  left: 3px;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .group-17 {
+  position: absolute;
+  width: 158px;
+  height: 353px;
+  top: 50px;
+  left: 228px;
+}
+
+.DASHBOARD .text-wrapper-26 {
+  position: absolute;
+  width: 132px;
+  top: 0;
+  left: 0;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .text-wrapper-27 {
+  position: absolute;
+  width: 130px;
+  top: 123px;
+  left: 0;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .text-wrapper-28 {
+  position: absolute;
+  width: 140px;
+  top: 164px;
+  left: 0;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .text-wrapper-29 {
+  position: absolute;
+  width: 134px;
+  top: 205px;
+  left: 0;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .text-wrapper-30 {
+  position: absolute;
+  width: 135px;
+  top: 246px;
+  left: 0;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .text-wrapper-31 {
+  position: absolute;
+  width: 137px;
+  top: 287px;
+  left: 0;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .text-wrapper-32 {
+  position: absolute;
+  width: 132px;
+  top: 328px;
+  left: 0;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .text-wrapper-33 {
+  position: absolute;
+  width: 124px;
+  top: 82px;
+  left: 0;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .text-wrapper-34 {
+  position: absolute;
+  width: 128px;
+  top: 41px;
+  left: 0;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .overlap-7 {
+  position: absolute;
+  width: 299px;
+  height: 354px;
+  top: 50px;
+  left: 400px;
+}
+
+.DASHBOARD .group-18 {
+  position: absolute;
+  width: 140px;
+  height: 353px;
+  top: 1px;
+  left: 159px;
+}
+
+.DASHBOARD .text-wrapper-35 {
+  width: 102px;
+  top: 82px;
+  position: absolute;
+  left: 0;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .text-wrapper-36 {
+  width: 118px;
+  top: 287px;
+  position: absolute;
+  left: 0;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .text-wrapper-37 {
+  width: 118px;
+  top: 328px;
+  position: absolute;
+  left: 0;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .text-wrapper-38 {
+  width: 122px;
+  top: 41px;
+  position: absolute;
+  left: 0;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .text-wrapper-39 {
+  width: 122px;
+  top: 0;
+  position: absolute;
+  left: 0;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .text-wrapper-40 {
+  width: 97px;
+  top: 205px;
+  position: absolute;
+  left: 0;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .text-wrapper-41 {
+  width: 106px;
+  top: 246px;
+  position: absolute;
+  left: 0;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .text-wrapper-42 {
+  width: 100px;
+  top: 123px;
+  position: absolute;
+  left: 0;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .text-wrapper-43 {
+  position: absolute;
+  width: 108px;
+  top: 164px;
+  left: 0;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .group-19 {
+  position: absolute;
+  width: 160px;
+  height: 353px;
+  top: 0;
+  left: 0;
+}
+
+.DASHBOARD .group-20 {
+  position: absolute;
+  width: 162px;
+  height: 25px;
+  top: 0;
+  left: 0;
+}
+
+.DASHBOARD .p {
+  position: absolute;
+  width: 145px;
+  top: 0;
+  left: 15px;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .span {
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16.4px;
+  letter-spacing: 0;
+  line-height: 24.6px;
+}
+
+.DASHBOARD .text-wrapper-44 {
+  font-size: 13.7px;
+  line-height: 20.5px;
+}
+
+.DASHBOARD .location {
+  width: 9px;
+  height: 11px;
+  top: 8px;
+  position: absolute;
+  left: 0;
+}
+
+.DASHBOARD .ellipse-wrapper {
+  position: relative;
+  width: 10px;
+  height: 12px;
+  top: -1px;
+  left: -1px;
+  background-image: url(./img/path-33958.svg);
+  background-size: 100% 100%;
+}
+
+.DASHBOARD .ellipse {
+  position: relative;
+  width: 4px;
+  height: 4px;
+  top: 3px;
+  left: 3px;
+  border-radius: 1.95px/1.99px;
+  border: 1.03px solid;
+  border-color: #b591da;
+}
+
+.DASHBOARD .group-21 {
+  position: absolute;
+  width: 162px;
+  height: 25px;
+  top: 41px;
+  left: 0;
+}
+
+.DASHBOARD .overlap-group-3 {
+  position: relative;
+  width: 10px;
+  height: 12px;
+  top: -1px;
+  left: -1px;
+  background-image: url(./img/path-33958-1.svg);
+  background-size: 100% 100%;
+}
+
+.DASHBOARD .group-22 {
+  position: absolute;
+  width: 162px;
+  height: 25px;
+  top: 82px;
+  left: 0;
+}
+
+.DASHBOARD .overlap-group-4 {
+  position: relative;
+  width: 10px;
+  height: 12px;
+  top: -1px;
+  left: -1px;
+  background-image: url(./img/path-33958-2.svg);
+  background-size: 100% 100%;
+}
+
+.DASHBOARD .group-23 {
+  position: absolute;
+  width: 162px;
+  height: 25px;
+  top: 123px;
+  left: 0;
+}
+
+.DASHBOARD .overlap-group-5 {
+  position: relative;
+  width: 10px;
+  height: 12px;
+  top: -1px;
+  left: -1px;
+  background-image: url(./img/path-33958-3.svg);
+  background-size: 100% 100%;
+}
+
+.DASHBOARD .group-24 {
+  position: absolute;
+  width: 162px;
+  height: 25px;
+  top: 164px;
+  left: 0;
+}
+
+.DASHBOARD .overlap-group-6 {
+  position: relative;
+  width: 10px;
+  height: 12px;
+  top: -1px;
+  left: -1px;
+  background-image: url(./img/path-33958-4.svg);
+  background-size: 100% 100%;
+}
+
+.DASHBOARD .group-25 {
+  position: absolute;
+  width: 162px;
+  height: 25px;
+  top: 205px;
+  left: 0;
+}
+
+.DASHBOARD .overlap-group-7 {
+  position: relative;
+  width: 10px;
+  height: 12px;
+  top: -1px;
+  left: -1px;
+  background-image: url(./img/path-33958-5.svg);
+  background-size: 100% 100%;
+}
+
+.DASHBOARD .group-26 {
+  position: absolute;
+  width: 162px;
+  height: 25px;
+  top: 246px;
+  left: 0;
+}
+
+.DASHBOARD .overlap-group-8 {
+  position: relative;
+  width: 10px;
+  height: 12px;
+  top: -1px;
+  left: -1px;
+  background-image: url(./img/path-33958-6.svg);
+  background-size: 100% 100%;
+}
+
+.DASHBOARD .group-27 {
+  position: absolute;
+  width: 162px;
+  height: 25px;
+  top: 287px;
+  left: 0;
+}
+
+.DASHBOARD .overlap-group-9 {
+  position: relative;
+  width: 10px;
+  height: 12px;
+  top: -1px;
+  left: -1px;
+  background-image: url(./img/path-33958-7.svg);
+  background-size: 100% 100%;
+}
+
+.DASHBOARD .group-28 {
+  position: absolute;
+  width: 162px;
+  height: 25px;
+  top: 328px;
+  left: 0;
+}
+
+.DASHBOARD .overlap-group-10 {
+  position: relative;
+  width: 10px;
+  height: 12px;
+  top: -1px;
+  left: -1px;
+  background-image: url(./img/path-33958-8.svg);
+  background-size: 100% 100%;
+}
+
+.DASHBOARD .group-29 {
+  position: absolute;
+  width: 23px;
+  height: 353px;
+  top: 49px;
+  left: 46px;
+}
+
+.DASHBOARD .group-30 {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 0;
+  left: 0;
+  background-image: url(./img/ellipse-2.svg);
+  background-size: 100% 100%;
+}
+
+.DASHBOARD .ellipse-2 {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  top: 16px;
+  left: 15px;
+  background-color: #4ade80;
+  border-radius: 3.45px/3.42px;
+}
+
+.DASHBOARD .group-31 {
+  position: absolute;
+  width: 23px;
+  height: 24px;
+  top: 41px;
+  left: 0;
+}
+
+.DASHBOARD .overlap-group-11 {
+  position: relative;
+  height: 24px;
+}
+
+.DASHBOARD .ellipse-3 {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 0;
+  left: 0;
+}
+
+.DASHBOARD .ellipse-4 {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  top: 17px;
+  left: 15px;
+  background-color: #4ade80;
+  border-radius: 3.45px/3.42px;
+}
+
+.DASHBOARD .group-32 {
+  position: absolute;
+  width: 23px;
+  height: 24px;
+  top: 83px;
+  left: 0;
+}
+
+.DASHBOARD .group-33 {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 124px;
+  left: 0;
+  background-image: url(./img/ellipse-6.svg);
+  background-size: 100% 100%;
+}
+
+.DASHBOARD .group-34 {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 166px;
+  left: 0;
+  background-image: url(./img/ellipse-5.svg);
+  background-size: 100% 100%;
+}
+
+.DASHBOARD .group-35 {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 207px;
+  left: 0;
+  background-image: url(./img/ellipse-4.svg);
+  background-size: 100% 100%;
+}
+
+.DASHBOARD .group-36 {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 248px;
+  left: 0;
+  background-image: url(./img/ellipse-3.svg);
+  background-size: 100% 100%;
+}
+
+.DASHBOARD .group-37 {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 289px;
+  left: 0;
+  background-image: url(./img/ellipse-9.svg);
+  background-size: 100% 100%;
+}
+
+.DASHBOARD .group-38 {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 330px;
+  left: 0;
+  background-image: url(./img/ellipse-10.svg);
+  background-size: 100% 100%;
+}
+
+.DASHBOARD .group-39 {
+  position: absolute;
+  width: 90px;
+  height: 353px;
+  top: 51px;
+  left: 701px;
+}
+
+.DASHBOARD .group-40 {
+  position: absolute;
+  width: 62px;
+  height: 23px;
+  top: 0;
+  left: 0;
+}
+
+.DASHBOARD .overlap-group-12 {
+  position: relative;
+  width: 60px;
+  height: 23px;
+}
+
+.DASHBOARD .rectangle-2 {
+  width: 60px;
+  height: 20px;
+  top: 3px;
+  background-color: #de6666;
+  border-radius: 2.05px;
+  position: absolute;
+  left: 0;
+}
+
+.DASHBOARD .text-wrapper-45 {
+  position: absolute;
+  width: 46px;
+  top: 0;
+  left: 5px;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 22.6px;
+}
+
+.DASHBOARD .group-41 {
+  position: absolute;
+  width: 62px;
+  height: 23px;
+  top: 42px;
+  left: 0;
+}
+
+.DASHBOARD .group-42 {
+  position: absolute;
+  width: 62px;
+  height: 23px;
+  top: 83px;
+  left: 0;
+}
+
+.DASHBOARD .rectangle-3 {
+  width: 60px;
+  height: 20px;
+  top: 2px;
+  background-color: #de6666;
+  border-radius: 2.05px;
+  position: absolute;
+  left: 0;
+}
+
+.DASHBOARD .group-43 {
+  position: absolute;
+  width: 62px;
+  height: 23px;
+  top: 205px;
+  left: 0;
+}
+
+.DASHBOARD .rectangle-4 {
+  width: 60px;
+  height: 20px;
+  top: 2px;
+  background-color: #1f2024;
+  border-radius: 2.05px;
+  position: absolute;
+  left: 0;
+}
+
+.DASHBOARD .text-wrapper-46 {
+  position: absolute;
+  width: 48px;
+  top: 0;
+  left: 5px;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 22.6px;
+}
+
+.DASHBOARD .group-44 {
+  position: absolute;
+  width: 92px;
+  height: 23px;
+  top: 247px;
+  left: 0;
+}
+
+.DASHBOARD .overlap-8 {
+  position: relative;
+  width: 90px;
+  height: 23px;
+}
+
+.DASHBOARD .rectangle-5 {
+  width: 90px;
+  height: 20px;
+  top: 2px;
+  background-color: #015e8552;
+  border-radius: 2.05px;
+  position: absolute;
+  left: 0;
+}
+
+.DASHBOARD .text-wrapper-47 {
+  position: absolute;
+  width: 81px;
+  top: 0;
+  left: 5px;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 22.6px;
+}
+
+.DASHBOARD .group-45 {
+  position: absolute;
+  width: 92px;
+  height: 23px;
+  top: 163px;
+  left: 0;
+}
+
+.DASHBOARD .group-46 {
+  position: absolute;
+  width: 92px;
+  height: 23px;
+  top: 123px;
+  left: 0;
+}
+
+.DASHBOARD .rectangle-6 {
+  width: 90px;
+  height: 20px;
+  top: 3px;
+  background-color: #015e8552;
+  border-radius: 2.05px;
+  position: absolute;
+  left: 0;
+}
+
+.DASHBOARD .group-47 {
+  position: absolute;
+  width: 92px;
+  height: 23px;
+  top: 330px;
+  left: 0;
+}
+
+.DASHBOARD .group-48 {
+  position: absolute;
+  width: 92px;
+  height: 23px;
+  top: 288px;
+  left: 0;
+}
+
+.DASHBOARD .group-49 {
+  position: absolute;
+  width: 949px;
+  height: 484px;
+  top: 134px;
+  left: 41px;
+}
+
+.DASHBOARD .group-50 {
+  position: absolute;
+  width: 270px;
+  height: 31px;
+  top: 453px;
+  left: 0;
+}
+
+.DASHBOARD .group-51 {
+  position: absolute;
+  width: 222px;
+  height: 31px;
+  top: 0;
+  left: 0;
+}
+
+.DASHBOARD .group-52 {
+  position: absolute;
+  width: 13px;
+  height: 3px;
+  top: 16px;
+  left: 175px;
+}
+
+.DASHBOARD .group-53 {
+  position: absolute;
+  width: 19px;
+  height: 17px;
+  top: 8px;
+  left: 48px;
+}
+
+.DASHBOARD .overlap-group-13 {
+  position: relative;
+  width: 17px;
+  height: 17px;
+  background-color: #d76a1b;
+  border-radius: 8.62px/8.55px;
+}
+
+.DASHBOARD .text-wrapper-48 {
+  width: 6px;
+  position: absolute;
+  top: 0;
+  left: 6px;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 10.9px;
+  letter-spacing: 0;
+  line-height: 16.4px;
+}
+
+.DASHBOARD .group-54 {
+  position: absolute;
+  width: 19px;
+  height: 17px;
+  top: 8px;
+  left: 77px;
+}
+
+.DASHBOARD .overlap-9 {
+  position: relative;
+  width: 17px;
+  height: 17px;
+  background-color: #494949;
+  border-radius: 8.62px/8.55px;
+}
+
+.DASHBOARD .group-55 {
+  position: absolute;
+  width: 19px;
+  height: 17px;
+  top: 8px;
+  left: 111px;
+}
+
+.DASHBOARD .group-56 {
+  position: absolute;
+  width: 19px;
+  height: 17px;
+  top: 9px;
+  left: 145px;
+}
+
+.DASHBOARD .group-57 {
+  position: absolute;
+  width: 20px;
+  height: 17px;
+  top: 8px;
+  left: 203px;
+}
+
+.DASHBOARD .overlap-10 {
+  position: relative;
+  width: 18px;
+  height: 17px;
+}
+
+.DASHBOARD .ellipse-5 {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  top: 0;
+  left: 0;
+  background-color: #494949;
+  border-radius: 8.62px/8.55px;
+}
+
+.DASHBOARD .text-wrapper-49 {
+  width: 12px;
+  position: absolute;
+  top: 0;
+  left: 6px;
+  font-family: "Basic", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 10.9px;
+  letter-spacing: 0;
+  line-height: 16.4px;
+}
+
+.DASHBOARD .iconly-light-arrow-wrapper {
+  position: absolute;
+  width: 31px;
+  height: 31px;
+  top: 0;
+  left: 0;
+  background-color: #2c2c2c;
+  border-radius: 15.52px/15.39px;
+}
+
+.DASHBOARD .iconly-light-arrow-3 {
+  position: absolute;
+  width: 17px;
+  height: 16px;
+  top: 8px;
+  left: 8px;
+}
+
+.DASHBOARD .stroke-wrapper {
+  position: absolute;
+  width: 31px;
+  height: 31px;
+  top: 0;
+  left: 239px;
+  background-color: #2c2c2c;
+  border-radius: 15.52px/15.39px;
+}
+
+.DASHBOARD .stroke {
+  position: absolute;
+  width: 6px;
+  height: 11px;
+  top: 10px;
+  left: 13px;
+}
+
+.DASHBOARD .group-58 {
+  position: absolute;
+  width: 18px;
+  height: 396px;
+  top: -1px;
+  left: 930px;
+}
+
+.DASHBOARD .frame-7 {
+  width: 139px;
+  height: 36px;
+  justify-content: space-between;
+  padding: 6.84px 23.94px 6.84px 20.52px;
+  top: 54px;
+  left: 797px;
+  border-radius: 3.42px;
+  border: 1.37px solid;
+  border-color: #6f6f6f87;
+  background: linear-gradient(180deg, rgba(250.75, 107.13, 3.13, 0.8) 0%, rgba(255, 139.15, 55.25, 0.8) 100%);
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+
+.DASHBOARD .footer {
+  position: absolute;
+  width: 1319px;
+  height: 669px;
+  top: 831px;
+  left: -14px;
+  background-color: transparent;
+}
+
+.DASHBOARD .overlap-11 {
+  position: relative;
+  width: 1319px;
+  height: 669px;
+}
+
+.DASHBOARD .background {
+  position: absolute;
+  width: 1319px;
+  height: 386px;
+  top: 283px;
+  left: 0;
+  background-color: #2f0941;
+}
+
+.DASHBOARD .background-2 {
+  position: absolute;
+  width: 1280px;
+  height: 79px;
+  top: 282px;
+  left: 14px;
+}
+
+.DASHBOARD .copyright {
+  position: absolute;
+  width: 1319px;
+  height: 39px;
+  top: 619px;
+  left: 0;
+}
+
+.DASHBOARD .line-2 {
+  position: absolute;
+  width: 1280px;
+  height: 1px;
+  top: -1px;
+  left: 14px;
+}
+
+.DASHBOARD .copyright-partypro-wrapper {
+  display: flex;
+  width: 821px;
+  align-items: center;
+  gap: 163.5px;
+  position: absolute;
+  top: 12px;
+  left: 455px;
+}
+
+.DASHBOARD .copyright-partypro {
+  position: relative;
+  width: fit-content;
+  margin-top: -0.69px;
+  font-family: "Krub", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 11px;
+  letter-spacing: 0;
+  line-height: 27.5px;
+  white-space: nowrap;
+}
+
+.DASHBOARD .text-wrapper-50 {
+  font-family: "Krub", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 11px;
+  letter-spacing: 0;
+  line-height: 27.5px;
+}
+
+.DASHBOARD .content {
+  position: absolute;
+  width: 899px;
+  height: 218px;
+  top: 382px;
+  left: 225px;
+}
+
+.DASHBOARD .about-us-our-team-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 59px;
+  align-items: flex-start;
+  gap: 50.84px;
+  position: absolute;
+  top: 0;
+  left: 524px;
+}
+
+.DASHBOARD .about-us-our-team {
+  position: relative;
+  width: fit-content;
+  margin-top: -0.69px;
+  font-family: "Krub", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 11px;
+  letter-spacing: 0;
+  line-height: 27.5px;
+}
+
+.DASHBOARD .subscribe {
+  display: flex;
+  flex-direction: column;
+  width: 218px;
+  align-items: flex-start;
+  gap: 58.39px;
+  position: absolute;
+  top: 5px;
+  left: 681px;
+}
+
+.DASHBOARD .content-2 {
+  display: flex;
+  flex-direction: column;
+  width: 217.77px;
+  align-items: flex-start;
+  gap: 13.74px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.DASHBOARD .name {
+  position: relative;
+  width: 219.77px;
+  height: 41.22px;
+  margin-right: -2px;
+}
+
+.DASHBOARD .overlap-group-14 {
+  position: relative;
+  width: 218px;
+  height: 41px;
+  border: 0.69px solid;
+  border-color: #4d5682;
+}
+
+.DASHBOARD .text-wrapper-51 {
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  font-family: "League Spartan", Helvetica;
+  font-weight: 400;
+  color: #999999;
+  font-size: 13.7px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.DASHBOARD .button {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  width: 208.31px;
+  gap: 24.04px;
+  align-items: center;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.DASHBOARD .button-2 {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  gap: 6.87px;
+  padding: 13.05px 24.73px;
+  background: linear-gradient(
+    180deg,
+    rgb(255, 182.39, 41.44) 0%,
+    rgb(255, 217.83, 86.06) 50.72%,
+    rgb(255, 214.51, 165.75) 100%
+  );
+  align-items: center;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.DASHBOARD .text-wrapper-52 {
+  position: relative;
+  width: fit-content;
+  margin-top: -0.69px;
+  font-family: "Krub", Helvetica;
+  font-weight: 600;
+  color: #22202a;
+  font-size: 11px;
+  letter-spacing: 0;
+  line-height: 14.8px;
+  white-space: nowrap;
+}
+
+.DASHBOARD .follow {
+  position: relative;
+  width: 82.59px;
+}
+
+.DASHBOARD .logo-2 {
+  position: absolute;
+  width: 126px;
+  height: 24px;
+  top: 5px;
+  left: 0;
+}
+
+.DASHBOARD .content-3 {
+  display: flex;
+  flex-direction: column;
+  width: 219px;
+  align-items: flex-start;
+  gap: 22.67px;
+  position: absolute;
+  top: 0;
+  left: 230px;
+}
+
+.DASHBOARD .join-the-partypro {
+  position: relative;
+  width: 219.15px;
+  margin-top: -0.69px;
+  font-family: "Krub", Helvetica;
+  font-weight: 500;
+  color: #e7e7e7;
+  font-size: 11px;
+  letter-spacing: 0;
+  line-height: 16.7px;
+}
+
+.DASHBOARD .address {
+  display: flex;
+  flex-direction: column;
+  width: 155.94px;
+  align-items: flex-start;
+  gap: 20.61px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.DASHBOARD .email {
+  position: relative;
+  width: 155.9px;
+  height: 43.28px;
+}
+
+.DASHBOARD .text-wrapper-53 {
+  position: absolute;
+  top: 8px;
+  left: 53px;
+  font-family: "Krub", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 9.6px;
+  letter-spacing: 0;
+  line-height: 13px;
+}
+
+.DASHBOARD .icon {
+  position: absolute;
+  width: 43px;
+  height: 43px;
+  top: 0;
+  left: 0;
+  background-color: #101b55;
+  border-radius: 21.64px;
+  border: 0.69px solid;
+  border-color: #26326f;
+}
+
+.DASHBOARD .vector-wrapper {
+  position: relative;
+  width: 14px;
+  height: 11px;
+  top: 15px;
+  left: 15px;
+  background-image: url(./img/vector.svg);
+  background-size: 100% 100%;
+}
+
+.DASHBOARD .vector {
+  position: absolute;
+  width: 14px;
+  height: 6px;
+  top: 0;
+  left: 0;
+}
+
+.DASHBOARD .call {
+  position: relative;
+  width: 128.9px;
+  height: 46.56px;
+}
+
+.DASHBOARD .vector-2 {
+  position: absolute;
+  width: 13px;
+  height: 12px;
+  top: 14px;
+  left: 15px;
+}
+
+.DASHBOARD .image {
+  position: absolute;
+  width: 1280px;
+  height: 283px;
+  top: 0;
+  left: 14px;
+}
