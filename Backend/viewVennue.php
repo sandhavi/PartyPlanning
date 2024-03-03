@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venue Data</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon-icon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f4;
+            background-image: url('./images/admin5.webp');
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             color: #f4f4f4;
             margin: 0;
             padding: 0;

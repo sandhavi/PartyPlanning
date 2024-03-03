@@ -4,96 +4,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/favicon-icon.svg">
     <title>User Data</title>
     <style>
-    body {
-        font-family: 'Arial', sans-serif;
-        background-color: #252525; 
-        color: #f4f4f4; 
-        margin: 0;
-        padding: 20px;
-    }
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            background-image: url('./images/admin5.webp');
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
 
-    h2 {
-        color: #e2e2e2; 
-        text-align: center;
-    }
+        h2 {
+            color: #e2e2e2;
+            text-align: center;
+        }
 
-    table {
-        border-collapse: collapse;
-        width: 100%;
-        margin-top: 20px;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
 
-    th, td {
-        border: 1px solid #393939;
-        padding: 12px;
-        text-align: left;
-        color: #f4f4f4;
-    }
+        th,
+        td {
+            border: 1px solid #393939;
+            padding: 12px;
+            text-align: left;
+            color: #f4f4f4;
+        }
 
-    th {
-        background-color: #6D7FCC; 
-        color: #ffffff;
-    }
+        th {
+            background-color: #6D7FCC;
+            color: #ffffff;
+        }
 
-    tr:nth-child(even) {
-        background-color: #333333;
-    }
+        tr:nth-child(even) {
+            background-color: #333333;
+        }
 
-    tr:hover {
-        background-color: #575757;
-    }
+        tr:hover {
+            background-color: #575757;
+        }
 
-    .edit-popup, .overlay {
-        display: none;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #fff;
-        padding: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        z-index: 2;
-        color: #000;
-        border-radius: 8px; 
-    }
+        .edit-popup,
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 2;
+            color: #000;
+            border-radius: 8px;
+        }
 
-    .overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.7); 
-        z-index: 1;
-    }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
 
-    button {
-        background-color: #39004b; 
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 1rem;
-        margin-right: 5px;
-    }
+        button {
+            background-color: #39004b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-right: 5px;
+        }
 
-    button:hover {
-        background-color: #51006A;
-    }
+        button:hover {
+            background-color: #51006A;
+        }
 
-    .delete-button {
-        background-color: #f44336;
-    }
+        .delete-button {
+            background-color: #f44336;
+        }
 
-    .delete-button:hover {
-        background-color: #e53935; 
-    }
-</style>
+        .delete-button:hover {
+            background-color: #e53935;
+        }
+    </style>
 
 
 </head>
@@ -209,4 +214,5 @@
     </script>
 
 </body>
+
 </html>

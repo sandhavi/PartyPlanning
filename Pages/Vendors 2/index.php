@@ -5,6 +5,7 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="styleguide.css" />
+    <link rel="icon" type="image/x-icon" href="../../Include/favicon-icon.svg">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
