@@ -76,7 +76,7 @@ $feedbackCount = getCount('form', $conn);
 
         .dashboard-box:hover {
             transform: translateY(-10px);
-            color: #000080;
+            color: #660066;
         }
 
         .dashboard-box i {
@@ -89,13 +89,24 @@ $feedbackCount = getCount('form', $conn);
 
         .dashboard-box h3 {
             font-size: 1.5em;
-            color: #39004b;
+            color: #000080;
+        }
+        .dashboard-box h3:hover {
+            font-size: 1.5em;
+            color: #660066;
         }
 
         .dashboard-box p {
             font-size: 3em;
             font-weight: bold;
             margin: 0;
+        }
+        
+        .dashboard-box p:hover {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 0;
+            color: #4d004d;
         }
 
         .logout-link {
@@ -124,8 +135,21 @@ $feedbackCount = getCount('form', $conn);
             text-decoration: none;
         }
 
+        .manage:hover {
+            display: block;
+            background-color: #003300;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            text-decoration: wavy;
+            color:  #EDECE6;
+        }
+
         .logout-link:hover {
-            background-color: #39004b;
+            background-color: #4d004d;
         }
 
         /* Responsive grid */

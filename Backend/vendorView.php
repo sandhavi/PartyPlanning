@@ -10,13 +10,13 @@
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background-color: #252525; 
+            background-color: #252525;
             color: #f4f4f4;
             padding: 20px;
         }
 
         h2 {
-            color: #e2e2e2; 
+            color: #e2e2e2;
             text-align: center;
         }
 
@@ -24,11 +24,12 @@
             border-collapse: collapse;
             width: 100%;
             margin-top: 20px;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         }
 
-        th, td {
-            border: 1px solid #393939; 
+        th,
+        td {
+            border: 1px solid #393939;
             padding: 12px;
             text-align: left;
             color: #f4f4f4;
@@ -40,25 +41,26 @@
         }
 
         tr:nth-child(even) {
-            background-color: #333333; 
+            background-color: #333333;
         }
 
         tr:hover {
-            background-color: #575757; 
+            background-color: #575757;
         }
 
-        .edit-popup, .overlay {
+        .edit-popup,
+        .overlay {
             display: none;
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: #fff;
+            background-color: #241E5C;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             z-index: 2;
             border-radius: 5px;
-            transition: all 0.3s ease; 
+            transition: all 0.3s ease;
         }
 
         .overlay {
@@ -74,17 +76,17 @@
 
         button {
             cursor: pointer;
-            background-color: #3C1C60; 
+            background-color: #3C1C60;
             color: white;
             padding: 8px 16px;
             border: none;
             border-radius: 4px;
             margin-right: 5px;
-            transition: opacity 0.3s ease; 
+            transition: opacity 0.3s ease;
         }
 
         .delete-btn {
-            background-color: #f44336; 
+            background-color: #f44336;
         }
 
         button:hover {
@@ -92,8 +94,9 @@
         }
 
         /* Adjust button style inside the form */
-        form button[type=submit], form button[type=button] {
-            background-color: #6D7FCC; 
+        form button[type=submit],
+        form button[type=button] {
+            background-color: #6D7FCC;
             color: white;
             padding: 10px;
             margin-top: 10px;
@@ -103,7 +106,7 @@
         }
 
         form button[type=button] {
-            background-color: #888; 
+            background-color: #888;
         }
 
         form button:hover {
@@ -124,10 +127,9 @@
         }
 
         .add-vendor-btn:hover {
-            background-color: #f0c040; 
+            background-color: #f0c040;
             transform: scale(1.05);
         }
-
     </style>
 
 </head>
@@ -155,7 +157,7 @@
         }
     }
 
-  
+
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_vendor'])) {
         $deleteVendorId = $_POST['delete_vendor_id'];
 
@@ -169,11 +171,12 @@
     }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_vendor'])) {
+        $addAdminId = $_POST['add_admin_id'];
         $addVendorName = $_POST['add_vendor_name'];
         $addVendorDescription = $_POST['add_vendor_description'];
         $addVendorType = $_POST['add_vendor_type'];
 
-        $addSql = "INSERT INTO vendor (name, description, type) VALUES ('$addVendorName', '$addVendorDescription', '$addVendorType')";
+        $addSql = "INSERT INTO vendor (admin_id, name, description, type) VALUES ('$addAdminId','$addVendorName', '$addVendorDescription', '$addVendorType')";
 
         if ($conn->query($addSql) === TRUE) {
             echo "Record added successfully";
@@ -245,11 +248,12 @@
             </form>
         </div>
 
-       
+
         <div class="overlay" id="addOverlay"></div>
         <div class="edit-popup" id="addPopup">
             <h3>Add Vendor</h3>
             <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                Admin ID: <input type="text" name="add_admin_id" required><br>
                 Name: <input type="text" name="add_vendor_name" required><br>
                 Description: <input type="text" name="add_vendor_description" required><br>
                 Type: <input type="text" name="add_vendor_type" required><br>
@@ -280,7 +284,7 @@
             }
         }
 
-        function closeEditPopup() {     
+        function closeEditPopup() {
             document.getElementById('editPopup').style.display = 'none';
             document.getElementById('editOverlay').style.display = 'none';
         }
@@ -288,19 +292,19 @@
         function openDeletePopup(vendorId) {
             document.getElementById('deleteVendorId').value = vendorId;
 
-          
+
             document.getElementById('deletePopup').style.display = 'block';
             document.getElementById('deleteOverlay').style.display = 'block';
         }
 
         function closeDeletePopup() {
-           
+
             document.getElementById('deletePopup').style.display = 'none';
             document.getElementById('deleteOverlay').style.display = 'none';
         }
 
         function openAddPopup() {
-          
+
             document.getElementById('addPopup').style.display = 'block';
             document.getElementById('addOverlay').style.display = 'block';
         }
