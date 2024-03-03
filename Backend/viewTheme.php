@@ -9,7 +9,9 @@
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
-            background-color: #ffffff; 
+            background-image: url('./images/admin5.webp');
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             color: #333;
             padding: 20px;
         }

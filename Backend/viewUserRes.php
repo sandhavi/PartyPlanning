@@ -11,7 +11,9 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f4;
+            background-image: url('./images/admin5.webp');
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             color: #333;
         }
 
