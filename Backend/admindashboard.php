@@ -1,6 +1,6 @@
 <?php
 
-session_start(); 
+session_start();
 if (!isset($_SESSION['username'])) {
     header("Location: index.php");
     exit();
@@ -39,13 +39,18 @@ $feedbackCount = getCount('form', $conn);
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-image: url('./images/admin4.webp');
-            
-            color: #252525;
+            background-image: url('./images/admin5.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             margin: 0;
             padding: 20px;
             transition: background-color 0.5s;
+
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
+
 
         .dashboard-container {
             max-width: 1200px;
@@ -54,6 +59,8 @@ $feedbackCount = getCount('form', $conn);
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             grid-gap: 20px;
             text-align: center;
+            z-index: 100;
+
         }
 
         .dashboard-box {
@@ -69,6 +76,7 @@ $feedbackCount = getCount('form', $conn);
 
         .dashboard-box:hover {
             transform: translateY(-10px);
+            color: #000080;
         }
 
         .dashboard-box i {
@@ -176,8 +184,8 @@ $feedbackCount = getCount('form', $conn);
 
         <div class="dashboard-box">
             <i class="fa fa-fire" aria-hidden="true"></i>
-                <h3>Vendor</h3>
-                <a href="./vendorView.php" class="manage">Check Vendors</a>
+            <h3>Vendor</h3>
+            <a href="./vendorView.php" class="manage">Check Vendors</a>
         </div>
 
         <div class="dashboard-box">
