@@ -13,6 +13,7 @@ body {
     padding: 20px;
 }
 
+
 th,
 td {
     border: 1px solid #ddd;
@@ -88,8 +89,11 @@ tr:hover {
     left: 50%;
     
     transform: translate(-50%, -50%);
-    background-color: #FFFFFF;
+    background-color: #ede9fe;
+    
+
     padding: 30px;
+    color: rgb(0, 0, 0);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 2;
     border-radius: 10px;
@@ -116,10 +120,10 @@ input[type="number"] {
     padding: 10px;
     margin: 10px 0;
     box-sizing: border-box;
-    border-radius: 4px;
+    border-radius: 10px;
     border: 1px solid #ddd;
-    background-color: #333; 
-    color: #D5A6E7;
+    background-color: #ffffff; 
+    color: #3e0b52;
     transition: border-color 0.3s;
 }
 
