@@ -39,7 +39,8 @@ $feedbackCount = getCount('form', $conn);
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            background-image: url('./images/admin4.webp');
+            
             color: #252525;
             margin: 0;
             padding: 20px;
