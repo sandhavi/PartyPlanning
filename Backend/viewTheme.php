@@ -35,15 +35,15 @@
         }
 
         th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
+            border: 1px solid #393939;
+            padding: 12px;
             text-align: left;
-            background-color: #fefefe;
+            background-color: transparent;
             transition: background-color 0.3s ease;
         }
 
         th {
-            background-color: #4B0082;
+            background-color: #d699ff;
             color: #ffffff;
         }
 
@@ -52,25 +52,29 @@
         }
 
         tr:nth-child(even) {
-            background-color: #f7f7f7;
+            background-color: transparent;
         }
 
         tr:hover {
-            background-color: #f0f0f0; 
+            background-color: #f2f2f2; 
         }
 
         button {
             cursor: pointer;
-            background-color: #FFD700;
-            color: #4B0082; 
+            background-color: #39004b;
+            color: #FFFFFF; 
             padding: 10px 20px;
             border: none;
             border-radius: 4px;
-            margin-right: 5px;
+            cursor: pointer;
+           margin-top: 10px;
+            margin-right: 10px;
+            align-items: center;    
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         button:hover {
+           background-color: #4B0082;
             transform: translateY(-3px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
