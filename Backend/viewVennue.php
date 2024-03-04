@@ -35,18 +35,19 @@
             border: 1px solid #5C376F;
             padding: 15px;
             text-align: left;
+            color:black;
         }
 
         th {
-            background-color: #39004b;
+            background-color:#d699ff;
         }
 
         tr:nth-child(even) {
-            background-color: #252525;
+            background-color: transparent;
         }
 
         tr:hover {
-            background-color: #575757;
+            background-color: #DEBDED;
         }
 
         .edit-popup,
