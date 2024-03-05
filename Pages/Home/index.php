@@ -163,9 +163,7 @@
           </div>
           <div class="frame-2"></div>
         </div>
-        <button class="button-2">
-          <div class="text-wrapper-9"><a href="../planing1/index.php" font-size:large; text-decoration: none;">Create a new project</a></div>
-        </button>
+    
         <div class="group">
           <div class="services">
             <div class="heading">
