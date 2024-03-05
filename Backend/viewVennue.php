@@ -108,6 +108,7 @@
             cursor: pointer;
             margin-right: 10px;
             transition: background-color 0.3s ease;
+            width: 40%;
         }
 
         button:hover {
@@ -122,6 +123,7 @@
             cursor: pointer;
             margin-bottom: 20px;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            
         }
 
         .add-button:hover {
