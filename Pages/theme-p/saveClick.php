@@ -1,6 +1,6 @@
 <?php
 // Include your database connection file
-include('../../Include/connectin.php'); // Adjust this path
+include('../../Include/connectin.php'); 
 
 $theme_id = $_POST['theme_id'];
 

@@ -110,7 +110,7 @@ if (isset($_SESSION['id'])) {
                 <div class="group-12"></div>
                 <div class="overlap-group-wrapper">
                   <button type="submit" class="overlap-group">
-                    <div class="text-wrapper-10"><a href="../Home/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Login</a></div>
+                    <div class="text-wrapper-10">Login</div>
                   </button>
                 </div>
               </div>

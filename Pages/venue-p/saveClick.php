@@ -2,9 +2,9 @@
 // Include your database connection file
 include('../../Include/connectin.php'); 
 
-$vendor_id = $_POST['vendor_id'];
+$venue_id = $_POST['venue_id'];
 
-$sql = "INSERT INTO reservation (vendor_id) VALUES (?)";
+$sql = "INSERT INTO reservation (venue_id) VALUES (?)";
 $stmt = $conn->prepare($sql);
 
 if (!$stmt) {
@@ -12,7 +12,7 @@ if (!$stmt) {
     exit;
 }
 
-$stmt->bind_param("i", $vendor_id);
+$stmt->bind_param("i", $venue_id);
 
 if (!$stmt->execute()) {
     echo 'Execute failed: ' . $stmt->error;

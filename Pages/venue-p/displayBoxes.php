@@ -1,7 +1,7 @@
 <?php
 // Include your database connection file
 include('../../Include/connectin.php');
-$sql = "SELECT * FROM vendor";
+$sql = "SELECT * FROM venue";
 $result = $conn->query($sql);
 ?>
 
@@ -81,22 +81,21 @@ $result = $conn->query($sql);
 
 </head>
 <body>
-  <h1>VENDOR</h1>
+  <h1>venue</h1>
 <?php if ($result->num_rows > 0): ?>
   <?php while ($row = $result->fetch_assoc()): ?>
     <div class="database-box" onclick="saveAndRedirect(<?= $row['id'] ?>)">
       <?= $row['name'] ?>
         <h5><?= $row['description'] ?></h5>
 
-
     </div>
   <?php endwhile; ?>
 <?php endif; ?>
 
 <script>
-function saveAndRedirect(vendorId) {
+function saveAndRedirect(venueId) {
   const formData = new FormData();
-  formData.append('vendor_id', vendorId);
+  formData.append('venue_id', venueId);
 
   fetch('saveClick.php', {
     method: 'POST',
@@ -104,7 +103,7 @@ function saveAndRedirect(vendorId) {
   })
   .then(response => {
     if (response.ok) {
-      window.location.href = "../venue-p/displayBoxes.php";// Specify your redirect page
+      window.location.href = "https://app.flocus.com/"; // Specify your redirect page
     } else {
       alert('Error saving click.');
     }
