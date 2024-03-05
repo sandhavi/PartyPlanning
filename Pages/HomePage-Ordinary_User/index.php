@@ -27,7 +27,7 @@ session_start();
 
 if (isset($_SESSION['id'])) {
     include '../../Include/connectin.php';
-include '../../Template/navbar.php';
+
     $userId = $_SESSION['id'];
     $sql = "SELECT name FROM customer WHERE id = $userId";
     $result = $conn->query($sql);
@@ -40,13 +40,13 @@ include '../../Template/navbar.php';
         // User not found, set a default name
         $userName = "Log In";
     }
-    $conn->close();
+   
 } else {
     $userName = "Log In";
 }
 ?>
 <div class="home-page-ordinary-user">
-    <!-- <header class="header">
+    <header class="header">
       <img class="background-icon" alt="" src="./public/background.svg" alt="new" />
 
       <div class="rectangle">
@@ -78,7 +78,7 @@ include '../../Template/navbar.php';
         <div class="icon4"></div>
         <div class="user-welcome"> <a href="../my projects/index.html" style="color:aliceblue; font-size:large;  text-decoration: none;"> <?php echo $userName; ?></a></div>
       </div>
-    </header> -->
+    </header>
     <img class="background-icon1" alt="" src="./public/background.svg" alt="new" />
 
     <div class="background"></div>
@@ -96,7 +96,7 @@ include '../../Template/navbar.php';
 
             <div class="join-the-community">
               <button class="button">
-                <div class="create-a-new"><a href="../planing1/index.php" style="color:purple; font-size:large;  text-decoration: none;">Create a new project</a>
+               <a href="../theme-p/displayBoxes.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Join the Community</a>
 </div>
               </button>
             </div>
