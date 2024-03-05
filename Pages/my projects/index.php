@@ -27,7 +27,7 @@
         <div class="text-wrapper-5">Includes taxes and fees</div>
         <div class="text-wrapper-6">4.5 (1200 Reviews)</div>
         <div class="div-wrapper">
-          <div class="text-wrapper-7">View party details</div>
+          <div class="text-wrapper-7"><a href="../Checkout/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Go to Checkout</a></div>
         </div>
         <img class="group" src="img/group-5.png" alt="new" />
         <div class="frame-2">
@@ -51,27 +51,27 @@
         </div>
         <div class="menu">
           <div class="menu-2">
-            <div class="text-wrapper-10">Home</div>
+            <div class="text-wrapper-10"><a href="../Home/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Home</a></div>
             <div class="about">
-              <div class="text-wrapper-11">About</div>
+              <div class="text-wrapper-11"><a href="../aboutus/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">About Us</a></div>
               <img class="line" src="img/line-4-1.svg" alt="new" />
             </div>
             <div class="pages">
               <div class="pages-2">
-                <div class="text-wrapper-12">Pricing</div>
+                <div class="text-wrapper-12"><a href="../Pricing/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Pricing</a></div>
               </div>
               <img class="line" src="img/line-4-1.svg" alt="new" />
             </div>
             <div class="project">
-              <div class="text-wrapper-11">My Projects</div>
+              <div class="text-wrapper-11"><a href="../my projects/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">My Projects</a></div>
               <img class="line" src="img/line-4-1.svg" alt="new" />
             </div>
             <div class="contact">
-              <div class="text-wrapper-11">Features</div>
+              <div class="text-wrapper-11"><a href="../help/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Help</a></div>
               <img class="line" src="img/line-4-1.svg" alt="new" />
             </div>
             <div class="contact-2">
-              <div class="text-wrapper-11">SignIn</div>
+              <div class="text-wrapper-11"><a href="../Login/Loginuser.php" style="color:aliceblue; font-size:large;  text-decoration: none;">SignIn</a></div>
               <img class="line" src="img/line-4-1.svg" alt="new" />
             </div>
           </div>

@@ -215,7 +215,7 @@ if (isset($_SESSION['id'])) {
                 <p class="about-us-our-team">
                   <a href="../about us/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">About Us</a> <br />
                   <a href="../Vendors 1/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Our Team</a> <br />
-                  <a href="../my projects/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">OurProject</a><br />
+                  <a href="../my projects/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Our Project</a><br />
                   <a href="../Pricing/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Pricing</a><br />
                   <a href="../Help/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Contact</a>
                 </p>
@@ -304,35 +304,35 @@ if (isset($_SESSION['id'])) {
           </div>
           <div class="menu">
             <div class="menu-2">
-              <div class="text-wrapper-24"><a href="./index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">
+              <div class="text-wrapper-24"><a href="../home/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">
                     Home
                 </a></div>
               <div class="about">
-                <div class="text-wrapper-25"><a href="../about us/index.html" style="color:aliceblue; font-size:large;  text-decoration: none;">
-                    About
+                <div class="text-wrapper-25"><a href="../aboutus/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">
+                    About Us
                 </a></div>
                 <img class="line-2" src="img/line-4.svg" alt="new" />
               </div>
               <div class="pages-2">
                 <div class="pages-3">
-                  <div class="text-wrapper-26"> <a href="../Pricing/index.html" style="color:aliceblue; font-size:large;  text-decoration: none;">
+                  <div class="text-wrapper-26"> <a href="../Pricing/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">
                         Pricing
                     </a></div>
                 </div>
                 <img class="line-2" src="img/line-4.svg" alt="new" />
               </div>
               <div class="project">
-                <div class="text-wrapper-25"> <a href="../my projects/index.html" style="color:aliceblue; font-size:large;  text-decoration: none;">
+                <div class="text-wrapper-25"> <a href="../my projects/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">
                     My Projects
                 </a></div>
                 <img class="line-2" src="img/line-4.svg" alt="new" />
               </div>
               <div class="contact">
-                <div class="text-wrapper-25">Features</div>
+                <div class="text-wrapper-25"><a href="../KeyOfferings/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Features</a></div>
                 <img class="line-2" src="img/line-4.svg" alt="new" />
               </div>
               <div class="contact-2">
-                <div class="text-wrapper-25"><a href="../my projects/index.html" style="color:aliceblue; font-size:large;  text-decoration: none;">
+                <div class="text-wrapper-25"><a href="../Login/LoginUser.php" style="color:aliceblue; font-size:large;  text-decoration: none;">
                     <?php echo $userName; ?>
                 </a></div>
                 <img class="line-2" src="img/line-4.svg" alt="new" />

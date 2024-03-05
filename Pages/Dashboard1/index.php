@@ -9,6 +9,28 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+ <?php
+session_start();
+
+if (isset($_SESSION['id'])) {
+    include '../../Include/connectin.php';
+    $userId = $_SESSION['id'];
+    $sql = "SELECT name FROM customer WHERE id = $userId";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // User found, get the name
+        $row = $result->fetch_assoc();
+        $userName = $row['name'];
+    } else {
+        // User not found, set a default name
+        $userName = "Log In";
+    }
+    $conn->close();
+} else {
+    $userName = "Log In";
+}
+?>
     <div class="admin-dashboard">
       <div class="div">
         <div class="side-menu">
@@ -19,7 +41,7 @@
             </div>
             <div class="div-2">
               <img class="student" src="img/student.svg" alt="new" />
-              <div class="email">Users</div>
+              <div class="email"><a href="../Dashboard2/admmindashboard.php">Users</a> </div>
             </div>
             <div class="food"></div>
             <div class="div-2"><div class="student"></div></div>

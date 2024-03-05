@@ -110,7 +110,7 @@ if (isset($_SESSION['id'])) {
             <div class="content">
               <div class="about-us-our-team-wrapper">
                 <p class="about-us-our-team">
-                  <a href="../about us/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">About Us</a> <br />
+                  <a href="../aboutus/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">About Us</a> <br />
                   <a href="../Vendors 1/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Our Team</a> <br />
                   <a href="../my projects/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">OurProject</a><br />
                   <a href="../Pricing/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Pricing</a><br />

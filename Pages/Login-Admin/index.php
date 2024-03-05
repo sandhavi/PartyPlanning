@@ -9,6 +9,28 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+ <?php
+session_start();
+
+if (isset($_SESSION['id'])) {
+    include '../../Include/connectin.php';
+    $userId = $_SESSION['id'];
+    $sql = "SELECT name FROM customer WHERE id = $userId";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // User found, get the name
+        $row = $result->fetch_assoc();
+        $userName = $row['name'];
+    } else {
+        // User not found, set a default name
+        $userName = "Log In";
+    }
+    $conn->close();
+} else {
+    $userName = "Log In";
+}
+?>
     <div class="login-admin">
       <div class="div">
         <div class="overlap">
@@ -81,7 +103,7 @@
                 <div class="group-12"></div>
                 <div class="overlap-group-wrapper">
                   <button type="submit" class="overlap-group">
-                    <div class="text-wrapper-10">Login</div>
+                    <div class="text-wrapper-10"><a href="../Home-Admin/index.php" style="color:aliceblue;" >Login</div>
                   </button>
                 </div>
               </div>

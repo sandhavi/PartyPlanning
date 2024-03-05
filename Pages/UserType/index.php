@@ -44,15 +44,16 @@
     </style>
   </head>
   <body>
+    
     <div class="container">
-      <a href="../Login/LoginUser.html" class="card">
+      <a href="../Login/LoginUser.php" class="card">
         <img
           src="img/friends-celebrating-christmas-at-party.png"
           alt="Party Planner"
         />
         <h2 style="padding-top: 30px">Party Planner</h2>
       </a>
-      <a href="../Login-Admin/index.html" class="card">
+      <a href="../Login-Admin/index.php" class="card">
         <img
           src="img/woman-connects-a-laptop-to-the-server.png"
           alt="Administrator"
@@ -61,7 +62,7 @@
       </a>
     </div>
     <a
-      href="../Home/index.html"
+      href="../Home/index.php"
       style="color: white; position: absolute; top: 20px; left: 20px"
       >← Back to the website</a
     >

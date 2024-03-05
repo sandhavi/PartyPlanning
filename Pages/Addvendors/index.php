@@ -8,6 +8,28 @@
     <link rel="icon" type="image/x-icon" href="../../Include/favicon-icon.svg">
   </head>
   <body>
+<?php
+session_start();
+
+if (isset($_SESSION['id'])) {
+    include '../../Include/connectin.php';
+    $userId = $_SESSION['id'];
+    $sql = "SELECT name FROM customer WHERE id = $userId";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // User found, get the name
+        $row = $result->fetch_assoc();
+        $userName = $row['name'];
+    } else {
+        // User not found, set a default name
+        $userName = "Log In";
+    }
+    $conn->close();
+} else {
+    $userName = "Log In";
+}
+?>
     <div class="add-vendors">
       <div class="div">
         <footer class="footer">
@@ -98,25 +120,28 @@
           </div>
           <div class="menu">
             <div class="menu-2">
-              <div class="text-wrapper-4">Home</div>
+              <div class="text-wrapper-4"><a href="../Home/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Home</a></div>
               <div class="about">
-                <div class="text-wrapper-5">About</div>
+                <div class="text-wrapper-5"><a href="../aboutus/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">About Us</a></div>
                 <img class="line-2" src="img/line-4.svg" />
               </div>
               <div class="pages-2">
-                <div class="pages-3"><div class="text-wrapper-6">Pricing</div></div>
+                <div class="pages-3"><div class="text-wrapper-6"><a href="../Pricing/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;"><pre> &nbsp;&nbsp; Pricing</pre></a>
+</div></div>
                 <img class="line-2" src="img/line-4.svg" />
               </div>
               <div class="project">
-                <div class="text-wrapper-5">My Projects</div>
+                <div class="text-wrapper-5"><a href="../my projects/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;"> &nbsp; &nbsp; My Projects</a></div>
                 <img class="line-2" src="img/line-4.svg" />
               </div>
               <div class="contact">
-                <div class="text-wrapper-5">Features</div>
+                <div class="text-wrapper-5"><a href="../help/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;"> &nbsp; &nbsp; &nbsp;&nbsp; Help</a>
+</div>
                 <img class="line-2" src="img/line-4.svg" />
               </div>
               <div class="contact-2">
-                <div class="text-wrapper-5">SignIn</div>
+                <div class="text-wrapper-5"><a href="../Login/Loginuser.php" style="color:aliceblue; font-size:large;  text-decoration: none;">SignIn</a>
+</div>
                 <img class="line-2" src="img/line-4.svg" />
               </div>
             </div>

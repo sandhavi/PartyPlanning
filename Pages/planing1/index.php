@@ -143,22 +143,31 @@ if (isset($_SESSION['id'])) {
             <div class="content">
               <div class="about-us-our-team-wrapper">
                 <p class="about-us-our-team">
-                  About Us <br />Our Team <br />Our Project<br />Pricing
-                  <br />Contact
+                  <a href="../about us/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">About Us</a> <br />
+                  <a href="../Vendors 1/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Our Team</a> <br />
+                  <a href="../my projects/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">OurProject</a><br />
+                  <a href="../Pricing/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Pricing</a><br />
+                  <a href="../Help/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Contact</a>
+                
                 </p>
               </div>
               <div class="subscribe">
                 <div class="content-2">
                   <div class="name">
                     <div class="overlap-group-2">
-                      <div class="text-wrapper-20">Email here*</div>
+                      <input 
+                            class="text-wrapper-20"
+                            placeholder="Email here*"
+                      /> 
                     </div>
                   </div>
                   <button class="button">
                     <button class="button-2">
-                      <div class="text-wrapper-21">Send Now</div>
+                      <input type="submit" class="text-wrapper-21" value="Send Now">
+                   
                     </button>
-                    <img class="follow" src="img/follow.svg" alt="new" />
+                    <a href="https://www.linkedin.com"><img class="follow" src="img/follow.svg" alt="new" /></a>
+                 
                   </button>
                 </div>
               </div>

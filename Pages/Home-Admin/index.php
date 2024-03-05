@@ -8,6 +8,28 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+ <?php
+session_start();
+
+if (isset($_SESSION['id'])) {
+    include '../../Include/connectin.php';
+    $userId = $_SESSION['id'];
+    $sql = "SELECT name FROM customer WHERE id = $userId";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // User found, get the name
+        $row = $result->fetch_assoc();
+        $userName = $row['name'];
+    } else {
+        // User not found, set a default name
+        $userName = "Log In";
+    }
+    $conn->close();
+} else {
+    $userName = "Log In";
+}
+?>
     <div class="home-page-admin">
       <div class="div">
         <footer class="footer">
@@ -387,27 +409,29 @@
               <div class="menu-2">
                 <div class="menu-3">
                   <div class="menu-4">
-                    <div class="text-wrapper-23">Home</div>
+                    <div class="text-wrapper-23"><a href="../Home/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Home</a></div>
                     <div class="about-2">
-                      <div class="text-wrapper-24">About</div>
+                      <div class="text-wrapper-24"><a href="../aboutus/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">About Us</a></div>
                       <img class="line-4" src="img/line-4-1.svg" alt="new" />
                     </div>
                     <div class="pages-2">
                       <div class="pages-3">
-                        <div class="text-wrapper-25">Pricing</div>
+                        <div class="text-wrapper-25"><a href="../Pricing/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Pricing</a></div>
                       </div>
                       <img class="line-4" src="img/line-4-1.svg" alt="new" />
                     </div>
                     <div class="project-2">
-                      <div class="text-wrapper-24">My Projects</div>
+                      <div class="text-wrapper-24"><a href="../my projects/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">My Projects</a></div>
                       <img class="line-4" src="img/line-4-1.svg" alt="new" />
                     </div>
                     <div class="contact">
-                      <div class="text-wrapper-24">Features</div>
+                      <div class="text-wrapper-24">
+<a href="../Key Offerings/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Features</a>
+</div>
                       <img class="line-4" src="img/line-4-1.svg" alt="new" />
                     </div>
                     <div class="contact-2">
-                      <div class="text-wrapper-24">Admin</div>
+                      <div class="text-wrapper-24"><a href="../Dashboard1/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Admin</a></div>
                       <img class="line-4" src="img/line-4-1.svg" alt="new" />
                     </div>
                   </div>

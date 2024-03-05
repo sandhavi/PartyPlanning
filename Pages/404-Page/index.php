@@ -58,7 +58,7 @@ if (isset($_SESSION['id'])) {
                 <div class="menu-2">
                   <div class="text-wrapper-2"><a href="../Home/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;"> Home </a></div>
                   <div class="about">
-                    <div class="text-wrapper-3"><a href="../about us/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">
+                    <div class="text-wrapper-3"><a href="../aboutus/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">
                     About Us
                 </a></div>
                     <img class="line" src="img/line-4.svg" alt="new" />
