@@ -37,7 +37,7 @@ if (isset($_SESSION['id'])) {
           <div class="group"><div class="group-2"></div></div>
           <div class="back-to-website">
             <div class="text-wrapper">
-              <a href="www.google.com" style="color: whitesmoke"
+              <a href="../../index.php" style="color: whitesmoke"
                 >Back to the website</a
               >
             </div>
