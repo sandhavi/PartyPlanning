@@ -16,12 +16,36 @@
 
 <body>
 
-  <?php
-  session_start();
-  include '../../Include/connectin.php';
-  include '../../Template/navbar.php';
-  ?>
-  <div class="home-page-ordinary-user">
+ //<?php
+ //session_start();
+ //include '../../Include/connectin.php';
+ //include '../../Template/navbar.php';
+ //?> 
+
+   <?php
+session_start();
+
+if (isset($_SESSION['id'])) {
+    include '../../Include/connectin.php';
+include '../../Template/navbar.php';
+    $userId = $_SESSION['id'];
+    $sql = "SELECT name FROM customer WHERE id = $userId";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // User found, get the name
+        $row = $result->fetch_assoc();
+        $userName = $row['name'];
+    } else {
+        // User not found, set a default name
+        $userName = "Log In";
+    }
+    $conn->close();
+} else {
+    $userName = "Log In";
+}
+?>
+<div class="home-page-ordinary-user">
     <!-- <header class="header">
       <img class="background-icon" alt="" src="./public/background.svg" alt="new" />
 
@@ -38,17 +62,17 @@
       </div>
       <div class="line">
         <div class="home">
-          <a href="./index.php" style="color:aliceblue; font-size:large;  text-decoration: none;"> Home</a>
+          <a href="../Home/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;"> Home</a>
 
         </div>
         <div class="icon"></div>
-        <div class="about"> <a href="../about us/index.html" style="color:aliceblue; font-size:large;  text-decoration: none;"> About</a></div>
+        <div class="about"> <a href="../aboutus/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">About Us</a></div>
         <div class="icon1"></div>
         <div class="email">
-          <div class="pricing"> <a href="../Pricing/index.html" style="color:aliceblue; font-size:large;  text-decoration: none;"> Pricing</a></div>
+          <div class="pricing"> <a href="../Pricing/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Pricing</a></div>
         </div>
         <div class="icon2"></div>
-        <div class="my-projects"> <a href="../my projects/index.html" style="color:aliceblue; font-size:large;  text-decoration: none;"> My Projects</a></div>
+        <div class="my-projects"> <<a href="../my projects/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">My Projects</a></div>
         <div class="icon3"></div>
         <div class="features">Features</div>
         <div class="icon4"></div>
@@ -72,7 +96,8 @@
 
             <div class="join-the-community">
               <button class="button">
-                <div class="create-a-new">Create a new project</div>
+                <div class="create-a-new"><a href="../planing1/index.php" style="color:purple; font-size:large;  text-decoration: none;">Create a new project</a>
+</div>
               </button>
             </div>
           </div>
