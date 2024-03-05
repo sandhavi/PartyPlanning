@@ -41,7 +41,7 @@ if (isset($_SESSION['id'])) {
             </div>
             <div class="div-2">
               <img class="student" src="img/student.svg" alt="new" />
-              <div class="email">Users</div>
+              <div class="email"><a href="../Dashboard2/admmindashboard.php">Users</a> </div>
             </div>
             <div class="food"></div>
             <div class="div-2"><div class="student"></div></div>
