@@ -10,7 +10,28 @@
 </head>
 
 <body>
+<?php
+  session_start();
 
+  if (isset($_SESSION['id'])) {
+    include '../../Include/connectin.php';
+
+    $userId = $_SESSION['id'];
+    $sql = "SELECT name FROM customer WHERE id = $userId";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+      // User found, get the name
+      $row = $result->fetch_assoc();
+      $userName = $row['name'];
+    } else {
+      // User not found, set a default name
+      $userName = "Log In";
+    }
+  } else {
+    $userName = "Log In";
+  }
+  ?>
   <div class="home-page">
     <div class="div">
       <footer class="footer">
@@ -142,9 +163,7 @@
           </div>
           <div class="frame-2"></div>
         </div>
-        <button class="button-2">
-          <div class="text-wrapper-9"><a href="../planing1/index.php" font-size:large; text-decoration: none;">Create a new project</a></div>
-        </button>
+    
         <div class="group">
           <div class="services">
             <div class="heading">
@@ -383,7 +402,7 @@
                     <img class="line-4" src="img/line-4.svg" alt="new" />
                   </div>
                   <div class="contact-2">
-                    <div class="text-wrapper-24"><a href="../Login/Loginuser.php" style="color:aliceblue; font-size:large;  text-decoration: none;">SignIn</a></div>
+                    <div class="text-wrapper-24"><a href="../Login/Loginuser.php" style="color:aliceblue; font-size:large;  text-decoration: none;" <?php echo $userName; ?></a></div>
                     <img class="line-4" src="img/line-4.svg" alt="new" />
                   </div>
 

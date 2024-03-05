@@ -16,35 +16,7 @@
 
 <body>
 
-  //<?php
-    //session_start();
-    //include '../../Include/connectin.php';
-    //include '../../Template/navbar.php';
-    //
-    ?>
-
-  <?php
-  session_start();
-
-  if (isset($_SESSION['id'])) {
-    include '../../Include/connectin.php';
-
-    $userId = $_SESSION['id'];
-    $sql = "SELECT name FROM customer WHERE id = $userId";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-      // User found, get the name
-      $row = $result->fetch_assoc();
-      $userName = $row['name'];
-    } else {
-      // User not found, set a default name
-      $userName = "Log In";
-    }
-  } else {
-    $userName = "Log In";
-  }
-  ?>
+ 
   <div class="home-page-ordinary-user">
     <header class="header">
       <img class="background-icon" alt="" src="./public/background.svg" alt="new" />
@@ -72,13 +44,11 @@
           <div class="pricing"> <a href="../Pricing/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Pricing</a></div>
         </div>
         <div class="icon2"></div>
-        <div class="my-projects">
-          <<a href="../my projects/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">My Projects</a>
-        </div>
+      
         <div class="icon3"></div>
         <div class="features">Features</div>
         <div class="icon4"></div>
-        <div class="user-welcome"> <a href="../my projects/index.html" style="color:aliceblue; font-size:large;  text-decoration: none;"> <?php echo $userName; ?></a></div>
+        <div class="user-welcome"> <a href="../my projects/index.html" style="color:aliceblue; font-size:large;  text-decoration: none;"></a></div>
       </div>
     </header>
     <img class="background-icon1" alt="" src="./public/background.svg" alt="new" />
@@ -98,7 +68,7 @@
 
             <div class="join-the-community">
               <button class="button">
-                <a href="../theme-p/displayBoxes.php" style="color:purple;  font-size:large;  text-decoration: none;" Create Reservation </a>
+               <a href="../Login/LoginUser.php">LOG IN</a>
 
               </button>
             </div>

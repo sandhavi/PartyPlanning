@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             
             echo "<script>alert('Login successful'); 
-            window.location.href = '../Pages/HomePage-Ordinary_User/index.php';</script>";
+            window.location.href = '../Pages/Home/index.php';</script>";
             exit();
         } else {
            
