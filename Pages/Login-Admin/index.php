@@ -37,7 +37,7 @@ if (isset($_SESSION['id'])) {
           <div class="group"><div class="group-2"></div></div>
           <div class="back-to-website">
             <div class="text-wrapper">
-              <a href="../UserType/index.html" style="color: whitesmoke"
+              <a href="../../index.php" style="color: whitesmoke"
                 >Back to the website</a
               >
             </div>
@@ -103,7 +103,7 @@ if (isset($_SESSION['id'])) {
                 <div class="group-12"></div>
                 <div class="overlap-group-wrapper">
                   <button type="submit" class="overlap-group">
-                    <div class="text-wrapper-10"><a href="../Home-Admin/index.php" style="color:aliceblue;" >Login</div>
+                    <div class="text-wrapper-10">Login</div>
                   </button>
                 </div>
               </div>
