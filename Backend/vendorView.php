@@ -11,13 +11,15 @@
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background-color: #252525;
-            color: #f4f4f4;
+            background-image: url('./images/admin5.webp');
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: #0A0909;
             padding: 20px;
         }
 
         h2 {
-            color: #e2e2e2;
+            color: #252525;
             text-align: center;
         }
 
@@ -25,28 +27,30 @@
             border-collapse: collapse;
             width: 100%;
             margin-top: 20px;
+            margin-bottom: 10px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         }
 
         th,
         td {
-            border: 1px solid #393939;
+            border: 1px solid #FFFFFF;
             padding: 12px;
             text-align: left;
-            color: #f4f4f4;
+            color: #000000;
         }
 
         th {
             background-color: #6D7FCC;
-            color: #ffffff;
+            color: #000000;
+            text-align: center;
         }
 
-        tr:nth-child(even) {
-            background-color: #333333;
+        tr:nth(even) {
+            background-color: transparent;
         }
 
         tr:hover {
-            background-color: #575757;
+            background-color: rgba(222, 189, 237,0.25);
         }
 
         .edit-popup,
@@ -56,7 +60,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: #241E5C;
+            background-color: rgba(222,189,237,0.9);
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             z-index: 2;
@@ -97,7 +101,7 @@
         /* Adjust button style inside the form */
         form button[type=submit],
         form button[type=button] {
-            background-color: #6D7FCC;
+            background-color: #3C1C60;
             color: white;
             padding: 10px;
             margin-top: 10px;
@@ -131,6 +135,20 @@
             background-color: #f0c040;
             transform: scale(1.05);
         }
+        input[type="text"] {
+            background-color: transparent;
+            margin-left: 10px;
+            margin-right: 10px;
+            color: black;
+            
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #6D7FCC;
+         
+        }
+       
     </style>
 
 </head>
@@ -262,8 +280,11 @@
                 <button type="button" onclick="closeAddPopup()">Cancel</button>
             </form>
         </div>
+                <div class="b2">
+                    <button onclick="openAddPopup()">Add New Vendor</button>
+                </div>
 
-        <button onclick="openAddPopup()">Add New Vendor</button>
+        
 
     <?php else : ?>
         <p>No results found.</p>

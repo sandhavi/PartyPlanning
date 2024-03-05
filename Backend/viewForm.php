@@ -18,7 +18,7 @@
         }
 
         h2 {
-            color: #e2e2e2; 
+            color: #252525;
             text-align: center;
         }
 
@@ -30,7 +30,7 @@
         }
 
         th, td {
-            border: 1px solid #393939; 
+            border: 1px solid #FFEDED; 
             padding: 12px;
             text-align: left;
             color: #f4f4f4; 
@@ -41,8 +41,8 @@
             color: #ffffff;
         }
 
-        tr:nth-child(even) {
-            background-color: #333333;
+        tr:nth(even) {
+            background-color: transparent;
         }
 
         tr:hover {
