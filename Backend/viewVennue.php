@@ -35,18 +35,19 @@
             border: 1px solid #5C376F;
             padding: 15px;
             text-align: left;
+            color: black;
         }
 
         th {
-            background-color: #39004b;
+            background-color: #d699ff;
         }
 
         tr:nth-child(even) {
-            background-color: #252525;
+            background-color: transparent;
         }
 
         tr:hover {
-            background-color: #575757;
+            background-color: rgba(222, 189, 237,0.25);
         }
 
         .edit-popup,
@@ -56,8 +57,9 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: #95517D;
+            background-color: rgba(140, 146, 172, 0.9);
             padding: 20px;
+            border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             z-index: 2;
         }
@@ -89,13 +91,15 @@
         }
 
         input[type="text"] {
-            background-color: whitesmoke;
-                color: yellow;
+            background-color: transparent;
+            color: black;
+            
         }
 
         input[type="text"]:focus {
             outline: none;
-            border-color: #6D7FCC;
+            border-color: #E510E5;
+         
         }
 
         button {
@@ -104,28 +108,22 @@
             cursor: pointer;
             margin-right: 10px;
             transition: background-color 0.3s ease;
+            width: 40%;
         }
 
         button:hover {
             background-color: #663399;
         }
 
-        .delete-btn {
-            background-color: #f44336;
-        }
-
-        .delete-btn:hover {
-            background-color: #d32f2f;
-        }
-
         .add-button {
-            background-color: #FFD700;
+            background-color: #514B27;
             color: #252525;
             padding: 10px 15px;
             border: none;
             cursor: pointer;
             margin-bottom: 20px;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            
         }
 
         .add-button:hover {
@@ -173,10 +171,11 @@
     }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_venue'])) {
+        $addAdminId = $_POST['add_admin_id'];
         $addVenueName = $_POST['add_venue_name'];
         $addVenueDescription = $_POST['add_venue_description'];
 
-        $addSql = "INSERT INTO venue (name, description) VALUES ('$addVenueName', '$addVenueDescription')";
+        $addSql = "INSERT INTO venue (admin_id, name, description) VALUES ('$addAdminId','$addVenueName', '$addVenueDescription')";
 
         if ($conn->query($addSql) === TRUE) {
             echo "Record added successfully";
@@ -249,6 +248,7 @@
         <div class="edit-popup" id="addPopup">
             <h3>Add Venue</h3>
             <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                Admin ID: <input type="text" name="add_admin_id" id="addAdminId" required><br>
                 Name: <input type="text" name="add_venue_name" required><br>
                 Description: <input type="text" name="add_venue_description" required><br>
                 <button type="submit" name="add_venue">Add</button>

@@ -1,12 +1,24 @@
 <?php
 
 session_start();
-if (!isset($_SESSION['username'])) {
-    header("Location: index.php");
-    exit();
-}
 
 include 'C:\xampp\htdocs\PartyPlanning\Include\connectin.php';
+
+if (isset($_SESSION['id'])) {
+       
+    $adminId = $_SESSION['id'];
+    $sql = "SELECT name FROM admin WHERE id = $adminId";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        
+        $row = $result->fetch_assoc();
+        $userName = $row['name'];
+    } 
+  
+} 
+
+
 
 function getCount($table, $conn)
 {
@@ -20,6 +32,7 @@ function getCount($table, $conn)
     }
 }
 
+// $adminName = 
 $customerCount = getCount('customer', $conn);
 $reservationCount = getCount('reservation', $conn);
 $themeCount = getCount('theme', $conn);
@@ -149,6 +162,18 @@ $feedbackCount = getCount('form', $conn);
             color:  #EDECE6;
         }
 
+        h1{
+            color:#39004b;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1:hover{
+            color:#650184;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
         .logout-link:hover {
             background-color: #4d004d;
         }
@@ -164,6 +189,7 @@ $feedbackCount = getCount('form', $conn);
 
 <body>
 
+<h1>Welcome, <?php echo $userName?></h1>
 
     <div class="dashboard-container">
         <div class="dashboard-box">

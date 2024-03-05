@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            color: #f4f4f4;
+            color: #FFEBEB;
             margin: 0;
             padding: 20px;
             background-image: url('./images/admin5.webp');
@@ -18,7 +18,7 @@
         }
 
         h2 {
-            color: #e2e2e2;
+            color: #39004b;
             text-align: center;
         }
 
@@ -34,7 +34,7 @@
             border: 1px solid #393939;
             padding: 12px;
             text-align: left;
-            color: #f4f4f4;
+            color: #000000;
         }
 
         th {
@@ -42,12 +42,12 @@
             color: #ffffff;
         }
 
-        tr:nth-child(even) {
+        tr:nth(even) {
             background-color: #333333;
         }
 
         tr:hover {
-            background-color: #575757;
+            background-color:rgba(248, 211, 228, 0.3);
         }
 
         .edit-popup,
@@ -63,6 +63,7 @@
             z-index: 2;
             color: #000;
             border-radius: 8px;
+            background-color:rgba(248, 211, 228, 0.9);
         }
 
         .overlay {

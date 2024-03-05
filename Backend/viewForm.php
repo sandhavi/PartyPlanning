@@ -13,12 +13,12 @@
             background-image: url('./images/admin5.webp');
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            color: #f4f4f4;
+            color: #000000;
             padding: 20px;
         }
 
         h2 {
-            color: #e2e2e2; 
+            color: #252525;
             text-align: center;
         }
 
@@ -30,23 +30,25 @@
         }
 
         th, td {
-            border: 1px solid #393939; 
+            border: 1px solid #FFEDED; 
             padding: 12px;
             text-align: left;
-            color: #f4f4f4; 
+            color: #000000; 
         }
 
         th {
             background-color: #6D7FCC; 
             color: #ffffff;
+            text-align: center;
         }
 
-        tr:nth-child(even) {
-            background-color: #333333;
+        tr:nth(even) {
+            background-color: transparent;
+            
         }
 
         tr:hover {
-            background-color: #575757; 
+            background-color: rgba(222, 189, 237,0.25);
         }
 
         .delete-btn,
@@ -61,7 +63,7 @@
         }
 
         .update-btn {
-            background-color: #4CAF50; 
+            background-color: #4C9BAF; 
         }
 
         .delete-btn:hover,
