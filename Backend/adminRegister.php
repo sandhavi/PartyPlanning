@@ -38,7 +38,10 @@
                         </div>
                     </div>
                     <div class="group-6">
-                        This is Admin Login - Only Admin can register in here.
+                        <div class="text-wrapper-4">Name</div>
+                        <input class="text-wrapper-5" placeholder="Enter your Name" type="text" name="name" style="border:none;" />
+                        <div class="rectangle"></div>
+                        <img class="message" src="./images/message-1.svg" alt="new" />
                     </div>
                     <div class="group-7">
                         <div class="text-wrapper-6">Confrim Password</div>

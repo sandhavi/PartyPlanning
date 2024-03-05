@@ -263,6 +263,13 @@ $feedbackCount = getCount('form', $conn);
             <h3>Venue</h3>
             <a href="./viewVennue.php" class="manage">Check Venue</a>
         </div>
+
+        <div class="dashboard-box">
+        <i class="fa fa-address-book" aria-hidden="true"></i>
+
+            <h3>New Admin</h3>
+            <a href="./adminRegister.php" class="manage">Create New Admin</a>
+        </div>
     </div>
 
     <a href="../Pages/Login-Admin/index.html" class="logout-link">Logout</a>
