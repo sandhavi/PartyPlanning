@@ -89,7 +89,7 @@
             </div>
             <div class="line-separator">
                 <div class="copyright-partypro">
-                    Copyright © PartyPRO | Designed by XXX - Powered by XXX.
+                    USCS | GROUP 22 IS BATCH 20
 
                 </div>
             </div>

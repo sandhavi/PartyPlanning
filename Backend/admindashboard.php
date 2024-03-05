@@ -272,7 +272,7 @@ $feedbackCount = getCount('form', $conn);
         </div>
     </div>
 
-    <a href="../Pages/Login-Admin/index.html" class="logout-link">Logout</a>
+    <a href="../Pages/Login-Admin/index.php" class="logout-link">Logout</a>
 </body>
 
 </html>

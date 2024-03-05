@@ -16,16 +16,17 @@
 
 <body>
 
- //<?php
- //session_start();
- //include '../../Include/connectin.php';
- //include '../../Template/navbar.php';
- //?> 
+  //<?php
+    //session_start();
+    //include '../../Include/connectin.php';
+    //include '../../Template/navbar.php';
+    //
+    ?>
 
-   <?php
-session_start();
+  <?php
+  session_start();
 
-if (isset($_SESSION['id'])) {
+  if (isset($_SESSION['id'])) {
     include '../../Include/connectin.php';
 
     $userId = $_SESSION['id'];
@@ -33,19 +34,18 @@ if (isset($_SESSION['id'])) {
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        // User found, get the name
-        $row = $result->fetch_assoc();
-        $userName = $row['name'];
+      // User found, get the name
+      $row = $result->fetch_assoc();
+      $userName = $row['name'];
     } else {
-        // User not found, set a default name
-        $userName = "Log In";
+      // User not found, set a default name
+      $userName = "Log In";
     }
-   
-} else {
+  } else {
     $userName = "Log In";
-}
-?>
-<div class="home-page-ordinary-user">
+  }
+  ?>
+  <div class="home-page-ordinary-user">
     <header class="header">
       <img class="background-icon" alt="" src="./public/background.svg" alt="new" />
 
@@ -72,7 +72,9 @@ if (isset($_SESSION['id'])) {
           <div class="pricing"> <a href="../Pricing/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Pricing</a></div>
         </div>
         <div class="icon2"></div>
-        <div class="my-projects"> <<a href="../my projects/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">My Projects</a></div>
+        <div class="my-projects">
+          <<a href="../my projects/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">My Projects</a>
+        </div>
         <div class="icon3"></div>
         <div class="features">Features</div>
         <div class="icon4"></div>
@@ -96,8 +98,8 @@ if (isset($_SESSION['id'])) {
 
             <div class="join-the-community">
               <button class="button">
-               <a href="../theme-p/displayBoxes.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Join the Community</a>
-</div>
+                <a href="../theme-p/displayBoxes.php" style="color:purple;  font-size:large;  text-decoration: none;" Create Reservation </a>
+
               </button>
             </div>
           </div>
@@ -402,7 +404,7 @@ if (isset($_SESSION['id'])) {
           </div>
           <div class="line-separator">
             <div class="copyright-partypro">
-              Copyright © PartyPRO | Designed by XXX - Powered by XXX.
+              USCS | GROUP 22 IS BATCH 20
 
             </div>
           </div>

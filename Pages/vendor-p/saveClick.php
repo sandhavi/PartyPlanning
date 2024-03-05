@@ -4,7 +4,7 @@ include('../../Include/connectin.php');
 
 $vendor_id = $_POST['vendor_id'];
 
-$sql = "INSERT INTO reservation (vendor_id) VALUES (?)";
+$sql = "UPDATE reservation SET (vendor_id) ORDER BY id DESC LIMIT 1 VALUES (?)";
 $stmt = $conn->prepare($sql);
 
 if (!$stmt) {

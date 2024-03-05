@@ -103,7 +103,7 @@ function saveAndRedirect(venueId) {
   })
   .then(response => {
     if (response.ok) {
-      window.location.href = "https://app.flocus.com/"; // Specify your redirect page
+      window.location.href = "../date-p/formD.php"; // Specify your redirect page
     } else {
       alert('Error saving click.');
     }
