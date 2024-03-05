@@ -17,7 +17,7 @@
           <div class="group"><div class="group-2"></div></div>
           <div class="back-to-website">
             <div class="text-wrapper">
-              <a href="../Home/index.html" style="color: aliceblue;">
+              <a href="../Home/index.php" style="color: aliceblue;">
                 Back to the website
               </a>
               
@@ -34,7 +34,7 @@
                 <p class="you-can-login-here">
                   <span class="span">You can&nbsp;&nbsp; </span>
                   <span class="text-wrapper-3">
-                    <a href="../Login/LoginUser.html">
+                    <a href="../Login/LoginUser.php">
                       Login here !
                     </a>
                   </span>
