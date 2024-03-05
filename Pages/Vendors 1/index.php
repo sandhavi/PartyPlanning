@@ -11,9 +11,33 @@
 </head>
 
 <body>
-  <?php
-  include '../../Template/navbar.php';
-  ?>
+ <?php
+session_start();
+
+if (isset($_SESSION['id'])) {
+    include '../../Include/connectin.php';
+    include '../../Template/navbar.php';
+    $userId = $_SESSION['id'];
+    $sql = "SELECT name FROM customer WHERE id = $userId";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // User found, get the name
+        $row = $result->fetch_assoc();
+        $userName = $row['name'];
+    } else {
+        // User not found, set a default name
+        $userName = "Log In";
+    }
+    $conn->close();
+} else {
+    $userName = "Log In";
+}
+?>
+
+  //<?php
+  //include '../../Template/navbar.php';
+  //?>
   <div class="vendors">
     <div class="div">
       <div class="overlap">
@@ -165,27 +189,27 @@
         </div>
         <div class="menu">
           <div class="menu-2">
-            <div class="text-wrapper-14">Home</div>
+            <div class="text-wrapper-14"><a href="../Home/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Home</a></div>
             <div class="about">
-              <div class="text-wrapper-15">About</div>
+              <div class="text-wrapper-15"><a href="../aboutus/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">About Us</a></div>
               <img class="line-2" src="img/line-4-1.svg" alt="new" />
             </div>
             <div class="pages-2">
               <div class="pages-3">
-                <div class="text-wrapper-16">Pricing</div>
+                <div class="text-wrapper-16"><a href="../Pricing/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Pricing</a></div>
               </div>
               <img class="line-2" src="img/line-4-1.svg" alt="new" />
             </div>
             <div class="project">
-              <div class="text-wrapper-15">My Projects</div>
+              <div class="text-wrapper-15"><a href="../help/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Help</a></div>
               <img class="line-2" src="img/line-4-1.svg" alt="new" />
             </div>
             <div class="contact">
-              <div class="text-wrapper-15">Features</div>
+              <div class="text-wrapper-15"><a href="../KeyOfferings/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Features</a></div>
               <img class="line-2" src="img/line-4-1.svg" alt="new" />
             </div>
             <div class="contact-2">
-              <div class="text-wrapper-15">SignIn</div>
+              <div class="text-wrapper-15"><a href="../Login/Loginuser.php" style="color:aliceblue; font-size:large;  text-decoration: none;">SignIn</a></div>
               <img class="line-2" src="img/line-4-1.svg" alt="new" />
             </div>
           </div>
