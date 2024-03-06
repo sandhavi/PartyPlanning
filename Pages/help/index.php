@@ -63,7 +63,7 @@
                 <img class="line" src="img/line-4-1.svg" alt="new" />
               </div>
               <div class="project">
-                <div class="text-wrapper-3"><a href="../my projects/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">My Projects</a></div>
+                <div class="text-wrapper-3"><a href="../theme-p/displayBoxes.php" style="color:aliceblue; font-size:large;  text-decoration: none;">My Projects</a></div>
                 <img class="line" src="img/line-4-1.svg" alt="new" />
               </div>
               <div class="contact">
