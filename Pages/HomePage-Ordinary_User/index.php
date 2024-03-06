@@ -16,7 +16,7 @@
 
 <body>
 
- 
+
   <div class="home-page-ordinary-user">
     <header class="header">
       <img class="background-icon" alt="" src="./public/background.svg" alt="new" />
@@ -34,21 +34,21 @@
       </div>
       <div class="line">
         <div class="home">
-          <a href="../Home/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;"> Home</a>
+          <a href="../HomePage-Ordinary_User/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;"> Home</a>
 
         </div>
         <div class="icon"></div>
-        <div class="about"> <a href="../aboutus/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">About Us</a></div>
+           <div class="about"> <a href="../aboutus/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">About Us</a></div>
         <div class="icon1"></div>
-        <div class="email">
+       
           <div class="pricing"> <a href="../Pricing/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Pricing</a></div>
-        </div>
+  
         <div class="icon2"></div>
-      
+
         <div class="icon3"></div>
         <div class="features">Features</div>
         <div class="icon4"></div>
-        <div class="user-welcome"> <a href="../my projects/index.html" style="color:aliceblue; font-size:large;  text-decoration: none;"></a></div>
+        <div class="user-welcome"> <a href="../my projects/index.html" style="color:aliceblue; font-size:large;  text-decoration: none;">Project</a></div>
       </div>
     </header>
     <img class="background-icon1" alt="" src="./public/background.svg" alt="new" />
@@ -68,7 +68,7 @@
 
             <div class="join-the-community">
               <button class="button">
-               <a href="../Login/LoginUser.php">LOG IN</a>
+                <a href="../Login/LoginUser.php">LOG IN</a>
 
               </button>
             </div>
