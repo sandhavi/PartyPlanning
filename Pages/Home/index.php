@@ -394,7 +394,7 @@
                     <img class="line-4" src="img/line-4.svg" alt="new" />
                   </div>
                   <div class="project-2">
-                    <div class="text-wrapper-24"><a href="../my projects/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">My Projects</a></div>
+                    <div class="text-wrapper-24"><a href="../theme-p/displayBoxes.php" style="color:aliceblue; font-size:large;  text-decoration: none;">My Projects</a></div>
                     <img class="line-4" src="img/line-4.svg" alt="new" />
                   </div>
                   <div class="contact">

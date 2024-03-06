@@ -106,13 +106,39 @@
 </head>
 
 <body>
+    
+ <?php
+session_start();
+
+if (isset($_SESSION['id'])) {
+    include '../../Include/connectin.php';
+    $userId = $_SESSION['id'];
+    $sql = "SELECT name FROM customer WHERE id = $userId";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // User found, get the name
+        $row = $result->fetch_assoc();
+        $userName = $row['name'];
+    } else {
+        // User not found, set a default name
+        $userName = "Log In";
+    }
+    $conn->close();
+} else {
+    $userName = "Log In";
+}
+?>
     <div class="container">
         <h1 class="title">Reservation Details</h1>
         <div class="form-container" id="reservationForm">
             <?php
             include('../../Include/connectin.php');
-            $sql = "SELECT * FROM reservation WHERE customer_id = 1 ORDER BY id DESC LIMIT 1";
-            $result = $conn->query($sql);
+            $sql = "SELECT * FROM reservation WHERE customer_id = $userId ORDER BY id DESC LIMIT 1";
+$result = $conn->query($sql);
+
+            
+            
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo '<div class="reservation-item">';
