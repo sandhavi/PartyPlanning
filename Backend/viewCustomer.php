@@ -108,27 +108,6 @@
     <?php
     include '../Include/connectin.php';
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_user'])) {
-        $editUserId = $_POST['edit_user_id'];
-        $editUserName = $_POST['edit_user_name'];
-        $editUserAge = $_POST['edit_user_age'];
-        $editUserAddress = $_POST['edit_user_address'];
-        $editUserEmail = $_POST['edit_user_email'];
-
-        $updateSql = "UPDATE customer SET 
-                      name = '$editUserName', 
-                      age = '$editUserAge', 
-                      address = '$editUserAddress', 
-                      email = '$editUserEmail' 
-                      WHERE id = $editUserId";
-
-        if ($conn->query($updateSql) === TRUE) {
-            echo "Record updated successfully";
-        } else {
-            echo "Error updating record: " . $conn->error;
-        }
-    }
-
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_user'])) {
         $deleteUserId = $_POST['delete_user_id'];
 
@@ -202,13 +181,12 @@
         function openDeletePopup(userId) {
             document.getElementById('deleteUserId').value = userId;
 
-            // Display the delete pop-up
             document.getElementById('deletePopup').style.display = 'block';
             document.getElementById('deleteOverlay').style.display = 'block';
         }
 
         function closeDeletePopup() {
-            // Close the delete pop-up
+            
             document.getElementById('deletePopup').style.display = 'none';
             document.getElementById('deleteOverlay').style.display = 'none';
         }

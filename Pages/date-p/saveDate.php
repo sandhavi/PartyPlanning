@@ -11,8 +11,6 @@ $date = $_POST['date'];
 $time = $_POST['time'];
 $no_guests = $_POST['no_guests'];
 
-// Prepare the update statement to update the last row
-// This example assumes 'id' is an auto-increment column used to identify the last row
 $sql = "UPDATE reservation SET date=?, time=?, no_guests=? ORDER BY id DESC LIMIT 1";
 
 $stmt = $conn->prepare($sql);

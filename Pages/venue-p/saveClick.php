@@ -1,10 +1,10 @@
 <?php
-// Include your database connection file
-include('../../Include/connectin.php'); 
+include('../../Include/connectin.php');
 
 $venue_id = $_POST['venue_id'];
+$reservation_id = $_POST['id']; // Assuming this is passed similarly
 
-$sql = "INSERT INTO reservation (venue_id) VALUES (?)";
+$sql = "UPDATE reservation SET venue_id = ? WHERE id = ?";
 $stmt = $conn->prepare($sql);
 
 if (!$stmt) {
@@ -12,7 +12,7 @@ if (!$stmt) {
     exit;
 }
 
-$stmt->bind_param("i", $venue_id);
+$stmt->bind_param("ii", $venue_id, $reservation_id);
 
 if (!$stmt->execute()) {
     echo 'Execute failed: ' . $stmt->error;

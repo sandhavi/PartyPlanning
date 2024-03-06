@@ -5,18 +5,17 @@ session_start();
 include 'C:\xampp\htdocs\PartyPlanning\Include\connectin.php';
 
 if (isset($_SESSION['id'])) {
-       
+
     $adminId = $_SESSION['id'];
     $sql = "SELECT name FROM admin WHERE id = $adminId";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        
+
         $row = $result->fetch_assoc();
         $userName = $row['name'];
-    } 
-  
-} 
+    }
+}
 
 
 
@@ -50,7 +49,7 @@ $feedbackCount = getCount('form', $conn);
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="./images/favicon-icon.svg">
-   <style>
+    <style>
         body {
             font-family: 'Arial', sans-serif;
             background-image: url('./images/admin5.webp');
@@ -105,6 +104,7 @@ $feedbackCount = getCount('form', $conn);
             font-size: 1.5em;
             color: #000080;
         }
+
         .dashboard-box h3:hover {
             font-size: 1.5em;
             color: #660066;
@@ -115,7 +115,7 @@ $feedbackCount = getCount('form', $conn);
             font-weight: bold;
             margin: 0;
         }
-        
+
         .dashboard-box p:hover {
             font-size: 3em;
             font-weight: bold;
@@ -159,17 +159,17 @@ $feedbackCount = getCount('form', $conn);
             border-radius: 5px;
             transition: background-color 0.3s;
             text-decoration: wavy;
-            color:  #EDECE6;
+            color: #EDECE6;
         }
 
-        h1{
-            color:#39004b;
+        h1 {
+            color: #39004b;
             text-align: center;
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        h1:hover{
-            color:#650184;
+        h1:hover {
+            color: #650184;
             text-align: center;
             font-family: Arial, Helvetica, sans-serif;
         }
@@ -189,7 +189,7 @@ $feedbackCount = getCount('form', $conn);
 
 <body>
 
-<h1>Welcome, <?php echo $userName?></h1>
+    <h1>Welcome, <?php echo $userName ?></h1>
 
     <div class="dashboard-container">
         <div class="dashboard-box">
@@ -265,7 +265,7 @@ $feedbackCount = getCount('form', $conn);
         </div>
 
         <div class="dashboard-box">
-        <i class="fa fa-address-book" aria-hidden="true"></i>
+            <i class="fa fa-address-book" aria-hidden="true"></i>
 
             <h3>New Admin</h3>
             <a href="./adminRegister.php" class="manage">Create New Admin</a>
