@@ -43,7 +43,7 @@
         }
     }
 
-    // Process of delete form submission and delete the record from the database
+ 
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_reservation'])) {
         $deleteReservationId = $_POST['delete_reservation_id'];
 
@@ -56,11 +56,10 @@
         }
     }
 
-    // Query the database
     $sql = "SELECT * FROM reservation";
     $result = $conn->query($sql);
 
-    // Process the results
+ 
     $rows = array();
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
@@ -68,7 +67,7 @@
         }
     }
 
-    // Close the connection
+
     $conn->close();
     ?>
 

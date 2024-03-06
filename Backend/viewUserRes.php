@@ -113,7 +113,7 @@
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
-            // Display reservation data in a box
+            
             echo '<div class="reservation-box">';
             while ($row = $result->fetch_assoc()) {
                 echo "<p>Reservation ID: <i>{$row['id']}</i></p>";

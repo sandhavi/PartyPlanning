@@ -316,14 +316,14 @@
                 document.getElementById('editThemeDescription').value = theme.description;
                 document.getElementById('editThemeImage').value = theme.image;
 
-                // Display the edit pop-up
+                
                 document.getElementById('editPopup').style.display = 'block';
                 document.getElementById('editOverlay').style.display = 'block';
             }
         }
 
         function closeEditPopup() {
-            // Close the edit pop-up
+            
             document.getElementById('editPopup').style.display = 'none';
             document.getElementById('editOverlay').style.display = 'none';
         }
@@ -331,25 +331,25 @@
         function openDeletePopup(themeId) {
             document.getElementById('deleteThemeId').value = themeId;
 
-            // Display the delete pop-up
+            
             document.getElementById('deletePopup').style.display = 'block';
             document.getElementById('deleteOverlay').style.display = 'block';
         }
 
         function closeDeletePopup() {
-            // Close the delete pop-up
+            
             document.getElementById('deletePopup').style.display = 'none';
             document.getElementById('deleteOverlay').style.display = 'none';
         }
 
         function openAddPopup() {
-            // Display the add pop-up
+         
             document.getElementById('addPopup').style.display = 'block';
             document.getElementById('addOverlay').style.display = 'block';
         }
 
         function closeAddPopup() {
-            // Close the add pop-up
+            
             document.getElementById('addPopup').style.display = 'none';
             document.getElementById('addOverlay').style.display = 'none';
         }

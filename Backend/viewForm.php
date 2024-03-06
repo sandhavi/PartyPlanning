@@ -138,7 +138,7 @@
             if (confirm('Are you sure you want to delete this row?')) {
                 var deleteForm = document.createElement('form');
                 deleteForm.method = 'post';
-                deleteForm.action = window.location.href; // PHP_SELF alternative for better XSS protection
+                deleteForm.action = window.location.href; 
 
                 var formIdInput = document.createElement('input');
                 formIdInput.type = 'hidden';
