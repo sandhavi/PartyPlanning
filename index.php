@@ -34,21 +34,21 @@
       </div>
       <div class="line">
         <div class="home">
-          <a href="../Home/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;"> Home</a>
+          <a href="Pages/Home/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;"> Home</a>
 
         </div>
         <div class="icon"></div>
-        <div class="about"> <a href="../aboutus/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">About Us</a></div>
+        <div class="about"> <a href="Pages/aboutus/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">About Us</a></div>
         <div class="icon1"></div>
         <div class="email">
-          <div class="pricing"> <a href="../Pricing/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Pricing</a></div>
+          <div class="pricing"> <a href="Pages/Pricing/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Pricing</a></div>
         </div>
         <div class="icon2"></div>
       
         <div class="icon3"></div>
-        <div class="features">Features</div>
+        
         <div class="icon4"></div>
-        <div class="user-welcome"> <a href="../my projects/index.html" style="color:aliceblue; font-size:large;  text-decoration: none;"></a></div>
+        <div class="user-welcome"></div>
       </div>
     </header>
     <img class="background-icon1" alt="" src="./public/background.svg" alt="new" />

@@ -46,9 +46,10 @@
         <div class="icon2"></div>
 
         <div class="icon3"></div>
-        <div class="features">Features</div>
+        <div class="features"><a href="../Login/Loginuser.php" style="color:aliceblue; font-size:large;  text-decoration: none;">SignIn</a>
+</div>
         <div class="icon4"></div>
-        <div class="user-welcome"> <a href="../my projects/index.html" style="color:aliceblue; font-size:large;  text-decoration: none;">Project</a></div>
+        <div class="user-welcome"> <a href="../theme-p/displayBoxes.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Project</a></div>
       </div>
     </header>
     <img class="background-icon1" alt="" src="./public/background.svg" alt="new" />
