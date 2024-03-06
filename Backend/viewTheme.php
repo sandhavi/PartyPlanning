@@ -18,13 +18,13 @@
         }
 
         h2 {
-            color: #4B0082; 
+            color: #4B0082;
             text-align: center;
             transition: color 0.3s ease;
         }
 
         h2:hover {
-            color: #9370DB; 
+            color: #9370DB;
         }
 
         table {
@@ -34,7 +34,8 @@
             animation: fadeIn 0.5s ease-in-out;
         }
 
-        th, td {
+        th,
+        td {
             border: 1px solid #393939;
             padding: 12px;
             text-align: left;
@@ -48,7 +49,7 @@
         }
 
         td {
-            color: #333; 
+            color: #333;
         }
 
         tr:nth-child(even) {
@@ -56,38 +57,48 @@
         }
 
         tr:hover {
-            background-color: #f2f2f2; 
+            background-color: #f2f2f2;
         }
 
         button {
             cursor: pointer;
             background-color: #39004b;
-            color: #FFFFFF; 
+            color: #FFFFFF;
             padding: 10px 20px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
-           margin-top: 10px;
+            margin-top: 10px;
             margin-right: 10px;
-            align-items: center;    
+            align-items: center;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         button:hover {
-           background-color: #4B0082;
+            background-color: #4B0082;
             transform: translateY(-3px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+        /* Enhanced styles for pop-ups */
+.edit-popup, .overlay {
+    /* Existing styles */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
 
-        .edit-popup, .overlay {
+
+
+        .edit-popup,
+        .overlay {
             display: none;
             position: fixed;
-            top: 50%;
+            top: 75%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            background: rgba(234, 249, 252, 0.9);
+            padding: 40px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
             z-index: 2;
             border-radius: 5px;
             animation: zoomIn 0.3s ease-in-out;
@@ -100,30 +111,43 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.2);
             z-index: 1;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         @keyframes zoomIn {
-            from { transform: scale(0.5); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
+
         input[type="text"] {
             border: 1px solid #ddd;
             border-radius: 4px;
-            padding: 10px;
+            padding: 15px;
             margin-bottom: 10px;
             width: calc(100% - 22px);
             transition: border-color 0.3s ease;
         }
 
         input[type="text"]:focus {
-            border-color: #4B0082; 
+            border-color: #4B0082;
         }
 
         form {
@@ -132,19 +156,19 @@
         }
 
         form button[type="submit"] {
-            background-color: #4CAF50;
+            background-color: #39004b;
             color: #fff;
         }
 
         form button[type="button"] {
-            background-color: #6c757d; 
+            background-color: #6c757d;
             color: #fff;
         }
 
-        form button[type="submit"]:hover, form button[type="button"]:hover {
-            background-color: darken(#4CAF50, 10%); 
+        form button[type="submit"]:hover,
+        form button[type="button"]:hover {
+            background-color: darken(#39004b, 10%);
         }
-
     </style>
 </head>
 
@@ -152,8 +176,9 @@
     <?php
     include '../Include/connectin.php';
 
-    
+
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_theme'])) {
+        
         $editThemeId = $_POST['edit_theme_id'];
         $editThemeName = $_POST['edit_theme_name'];
         $editThemeDescription = $_POST['edit_theme_description'];
@@ -185,11 +210,12 @@
     }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_theme'])) {
+        $addThemeAdminId = $_POST['add_theme_admin_id'];
         $addThemeName = $_POST['add_theme_name'];
         $addThemeDescription = $_POST['add_theme_description'];
         $addThemeImage = $_POST['add_theme_image'];
 
-        $addSql = "INSERT INTO theme (name, description, image) VALUES ('$addThemeName', '$addThemeDescription', '$addThemeImage')";
+        $addSql = "INSERT INTO theme (admin_id,name, description, image) VALUES ('$addThemeAdminId','$addThemeName', '$addThemeDescription', '$addThemeImage')";
 
         if ($conn->query($addSql) === TRUE) {
             echo "Record added successfully";
