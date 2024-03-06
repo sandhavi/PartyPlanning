@@ -30,13 +30,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
            
             echo "<script>alert('Incorrect password'); 
-            window.location.href = '../Pages/Login/LoginUser.html';</script>";
+            window.location.href = '../index.php';</script>";
             exit();
         }
     } else {
        
         echo "<script>alert('User not found'); 
-        window.location.href = '../Pages/Login/LoginUser.html';</script>";
+        window.location.href = '../index.php';</script>";
         exit();
     }
 

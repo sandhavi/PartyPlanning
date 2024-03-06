@@ -62,7 +62,7 @@
       </a>
     </div>
     <a
-      href="../Home/index.php"
+      href="../../index.php"
       style="color: white; position: absolute; top: 20px; left: 20px"
       >← Back to the website</a
     >

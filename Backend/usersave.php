@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->close();
     $conn->close();
 
-    echo "<script>alert('Login successful'); 
-            window.location.href = '../Pages/Login/LoginUser.html';</script>";
+    echo "<script>alert('Registration successful'); 
+            window.location.href = '../Pages/Login/LoginUser.php';</script>";
     exit();
 }

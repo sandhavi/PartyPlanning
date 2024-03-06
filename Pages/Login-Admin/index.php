@@ -62,7 +62,7 @@ if (isset($_SESSION['id'])) {
               <div class="group-7">
                 <div class="group-8">
                   <div class="group-9">
-                    <div class="text-wrapper-4">Email</div>
+                    <div class="text-wrapper-4">Username</div>
                     <div class="text-wrapper-5">
                       <input
                         placeholder="Enter your Username"
