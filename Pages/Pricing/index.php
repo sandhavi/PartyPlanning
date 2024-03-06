@@ -11,11 +11,9 @@
 </head>
 
 <body>
- <?php
-session_start();
-
-
-?>
+  <?php
+  session_start();
+  ?>
 
   <div class="pricing">
     <div class="div">
@@ -31,7 +29,7 @@ session_start();
               </div>
               <div class="text-wrapper-2">What Our Customers Say</div>
             </div>
-            <div class="aerrow">
+            <div class="arrow">
               <div class="overlap-group-wrapper">
                 <div class="overlap-group">
                   <img class="vector" src="img/vector.svg" alt="new" />
@@ -276,7 +274,7 @@ session_start();
             </div>
             <div class="contact">
               <div class="text-wrapper-28"><a href="../help/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Help</a>
-</div>
+              </div>
               <img class="line-5" src="img/line-4.svg" alt="new" />
             </div>
             <div class="contact-2">
@@ -302,26 +300,23 @@ session_start();
           <div class="content-3">
             <div class="about-us-our-team-wrapper">
               <p class="about-us-our-team">
-              <a href="../about us/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">About Us</a> <br />
-                  <a href="../Vendors 1/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Our Team</a> <br />
-                  <a href="../my projects/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">OurProject</a><br />
-                  <a href="../Pricing/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Pricing</a><br />
-                  <a href="../Help/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Contact</a>
-                 </p>
+                <a href="../about us/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">About Us</a> <br />
+                <a href="../Vendors 1/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Our Team</a> <br />
+                <a href="../my projects/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">OurProject</a><br />
+                <a href="../Pricing/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Pricing</a><br />
+                <a href="../Help/index.php" style="color:aliceblue; font-size:large;  text-decoration: none;">Contact</a>
+              </p>
             </div>
             <div class="subscribe">
               <div class="content-4">
                 <div class="name-2">
                   <div class="overlap-group-4">
-                  <input 
-                            class="text-wrapper-30"
-                            placeholder="Email here*"
-                      /> 
+                    <input class="text-wrapper-30" placeholder="Email here*" />
                   </div>
                 </div>
                 <button class="button-2">
                   <button class="button-3">
-                  <input type="submit" class="text-wrapper-31" value="Send Now">
+                    <input type="submit" class="text-wrapper-31" value="Send Now">
                   </button>
                   <a href="https://www.linkedin.com"><img class="follow" src="img/follow.svg" alt="new" /></a>
                 </button>

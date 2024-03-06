@@ -11,33 +11,28 @@
 </head>
 
 <body>
-    //<?php
-    //include '../../Include/connectin.php';
-    //session_start();
-    //?>
+    <?php
+    session_start();
 
- <?php
-session_start();
+    if (isset($_SESSION['id'])) {
+        include '../../Include/connectin.php';
+        $userId = $_SESSION['id'];
+        $sql = "SELECT name FROM customer WHERE id = $userId";
+        $result = $conn->query($sql);
 
-if (isset($_SESSION['id'])) {
-    include '../../Include/connectin.php';
-    $userId = $_SESSION['id'];
-    $sql = "SELECT name FROM customer WHERE id = $userId";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        // User found, get the name
-        $row = $result->fetch_assoc();
-        $userName = $row['name'];
+        if ($result->num_rows > 0) {
+            // User found, get the name
+            $row = $result->fetch_assoc();
+            $userName = $row['name'];
+        } else {
+            // User not found, set a default name
+            $userName = "Log In";
+        }
+        
     } else {
-        // User not found, set a default name
         $userName = "Log In";
     }
-    $conn->close();
-} else {
-    $userName = "Log In";
-}
-?>
+
 
     if (isset($_SESSION['id'])) {
 
@@ -57,7 +52,7 @@ if (isset($_SESSION['id'])) {
             // User not found, set a default name
             $userName = "Log In";
         }
-        $conn->close();
+      
     } else {
         $userName = "Log In";
     }
@@ -71,32 +66,32 @@ if (isset($_SESSION['id'])) {
             <input type="text" id="name" name="name" value="<?php echo $name; ?>">
 
             <label for="username">User Name</label>
-            <input type="text" id="username" name="username" value="<?php echo $userName; ?>" >
+            <input type="text" id="username" name="username" value="<?php echo $userName; ?>">
 
             <label for="age">Age</label>
-            <input type="text" id="age" name="age" value="<?php echo $age; ?>" >
+            <input type="text" id="age" name="age" value="<?php echo $age; ?>">
 
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" value="<?php echo $email; ?>" >
+            <input type="email" id="email" name="email" value="<?php echo $email; ?>">
 
             <label for="address">Address</label>
-            <input type="text" id="address" name="address" value="<?php echo $address; ?>" >
+            <input type="text" id="address" name="address" value="<?php echo $address; ?>">
 
-           
+
             <div>
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" value="<?php echo $password; ?>" >
+                <input type="password" id="password" name="password" value="<?php echo $password; ?>">
 
                 <label for="password">Confirm Password</label>
-                <input type="password" id="password" name="password" value="<?php echo $password; ?>" >
+                <input type="password" id="password" name="password" value="<?php echo $password; ?>">
             </div>
             <div><input type="submit" value="Update"></div>
-               
-            </div>
 
-        </form>
-        <?php
-        include '../../Backend/viewUserRes.php'
+    </div>
+
+    </form>
+    <?php
+    include '../../Backend/viewUserRes.php'
     ?>
     </div>
 
