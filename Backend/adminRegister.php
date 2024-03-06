@@ -30,7 +30,7 @@
                             <p class="you-can-login-here">
                                 <span class="span">You can&nbsp;&nbsp; </span>
                                 <span class="text-wrapper-3">
-                                    <a href="./adminlogin.php">
+                                    <a href="../Pages/Login-Admin/index.php">
                                         Login here !
                                     </a>
                                 </span>

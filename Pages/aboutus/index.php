@@ -2,31 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="globals.css" />
     
   </head>
   <body>
  <?php
 session_start();
-
-if (isset($_SESSION['id'])) {
-    include '../../Include/connectin.php';
-    $userId = $_SESSION['id'];
-    $sql = "SELECT name FROM customer WHERE id = $userId";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        // User found, get the name
-        $row = $result->fetch_assoc();
-        $userName = $row['name'];
-    } else {
-        // User not found, set a default name
-        $userName = "Log In";
-    }
-    $conn->close();
-} else {
-    $userName = "Log In";
-}
 ?>
+
     <div class="about-us">
       <div class="div">
         <div class="overlap">

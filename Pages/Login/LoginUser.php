@@ -9,28 +9,7 @@
     <link rel="stylesheet" href="../Login-Admin/style.css" />
   </head>
   <body>
- <?php
-session_start();
 
-if (isset($_SESSION['id'])) {
-    include '../../Include/connectin.php';
-    $userId = $_SESSION['id'];
-    $sql = "SELECT name FROM customer WHERE id = $userId";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        // User found, get the name
-        $row = $result->fetch_assoc();
-        $userName = $row['name'];
-    } else {
-        // User not found, set a default name
-        $userName = "Log In";
-    }
-    $conn->close();
-} else {
-    $userName = "Log In";
-}
-?>
     <div class="login-admin">
       <div class="div">
         <div class="overlap">
@@ -58,7 +37,7 @@ if (isset($_SESSION['id'])) {
                 <div class="text-wrapper-3">
                   You can
                   <span style="font-size: large">
-                    <a href="../Register-Ordinary/index.html">
+                    <a href="../Register-Ordinary/index.php">
                       Register Here !
                     </a>
                   </span>
