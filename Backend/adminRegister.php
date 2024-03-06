@@ -61,7 +61,7 @@
                     </div>
                     <div class="overlap-group-wrapper">
                         <button type="submit" class="overlap-group">
-                            <div class="text-wrapper-10" style="color: aliceblue; font-size: x-large;">Login</div>
+                            <div class="text-wrapper-10" style="color: aliceblue; font-size: x-large;">Register</div>
                         </button>
                     </div>
                     <div class="overlap-wrapper">
