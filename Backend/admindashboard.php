@@ -31,7 +31,7 @@ function getCount($table, $conn)
     }
 }
 
-// $adminName = 
+
 $customerCount = getCount('customer', $conn);
 $reservationCount = getCount('reservation', $conn);
 $themeCount = getCount('theme', $conn);

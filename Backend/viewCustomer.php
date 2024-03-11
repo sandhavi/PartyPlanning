@@ -123,7 +123,7 @@
     $sql = "SELECT * FROM customer";
     $result = $conn->query($sql);
 
-    // Process the results
+ 
     $rows = array();
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {

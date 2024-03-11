@@ -17,7 +17,7 @@
           <div class="group"><div class="group-2"></div></div>
           <div class="back-to-website">
             <div class="text-wrapper">
-              <a href="../index.php" style="color: aliceblue;">
+              <a href="../../index.php" style="color: aliceblue;">
                 Back to the website
               </a>
               
@@ -39,10 +39,11 @@
                     </a>
                   </span>
                 </p>
+
               </div>
             </div>
             <div class="group-6">
-              <div class="text-wrapper-4">Username</div>
+              <div class="text-wrapper-4">Email</div>
               <input
                 class="text-wrapper-5"
                 placeholder="Enter your Email"
@@ -83,7 +84,7 @@
             </div>
             <div class="overlap-group-wrapper">
               <button type="submit" class="overlap-group">
-                <div class="text-wrapper-10" style="color: aliceblue; font-size: x-large;">Login</div>
+                <div class="text-wrapper-10" style="color: aliceblue; font-size: x-large;">Register</div>
               </button>
             </div>
             <div class="overlap-wrapper">
