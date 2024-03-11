@@ -1,4 +1,4 @@
-UCSC WEB ASSIGNMENT GROUP 22
+UCSC WEB ASSIGNMENT GROUP 22 - Party Planning Online System
 
 Admin Login
     Username: uoc
@@ -9,4 +9,3 @@ Customer Login(Party Planner)
     Password: ucsc
 
 
-    
