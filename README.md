@@ -1,3 +1,3 @@
-# PartyPlanning
+
 UCSC WEB ASSIGNMENT GROUP 22
 NEW test
