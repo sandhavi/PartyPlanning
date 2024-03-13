@@ -284,7 +284,9 @@
                     <button onclick="openAddPopup()">Add New Vendor</button>
                 </div>
 
-        
+                <?php
+        include './back.php'
+        ?>
 
     <?php else : ?>
         <p>No results found.</p>
