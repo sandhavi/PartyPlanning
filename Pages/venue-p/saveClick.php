@@ -1,25 +1,35 @@
+
+
 <?php
+session_start();
+
 include('../../Include/connectin.php');
 
+// Assuming you have validated and sanitized input
 $venue_id = $_POST['venue_id'];
-$reservation_id = $_POST['id']; // Assuming this is passed similarly
 
-$sql = "UPDATE reservation SET venue_id = ? WHERE id = ?";
+
+$sql = "UPDATE reservation SET  venue_id=? ORDER BY id DESC LIMIT 1";
+
 $stmt = $conn->prepare($sql);
 
-if (!$stmt) {
-    echo 'Prepare failed: ' . $conn->error;
-    exit;
+
+if ($stmt === false) {
+    die("Prepare failed: " . $conn->error);
 }
 
-$stmt->bind_param("ii", $venue_id, $reservation_id);
+$stmt->bind_param("i", $venue_id) ;
+
 
 if (!$stmt->execute()) {
-    echo 'Execute failed: ' . $stmt->error;
-} else {
-    echo 'Success';
+    die("Execute failed: " . $stmt->error);
 }
+
 
 $stmt->close();
 $conn->close();
+
+header("Location: ../venue-p/displayBoxes.php");
+exit();
 ?>
+
