@@ -134,25 +134,29 @@ VALUES (
         2,
         1,
         'Gihan Food',
-        'High Tea and many short eats you like'
+        'High Tea and many short eats you like',
+        'food'
     ),
     (
         3,
         1,
         'Cocoa & Chai Café',
-        'A cozy retreat offering a tantalizing blend of rich cocoa and aromatic chai, accompanied by delectable pastries and treats.'
+        'A cozy retreat offering a tantalizing blend of rich cocoa and aromatic chai, accompanied by delectable pastries and treats.',
+        'food'
     ),
     (
         4,
         1,
         'Terra Verde Bistro',
-        'A charming bistro offering a variety of fresh, healthy, and delicious meals, including vegetarian and vegan options.'
+        'A charming bistro offering a variety of fresh, healthy, and delicious meals, including vegetarian and vegan options.',
+        'food'
     ),
     (
         5,
         1,
         'The Grill',
-        'A casual dining experience featuring a variety of grilled meats, seafood, and vegetarian options, as well as a selection of refreshing beverages.'
+        'A casual dining experience featuring a variety of grilled meats, seafood, and vegetarian options, as well as a selection of refreshing beverages.',
+        'food'
     );
 CREATE TABLE IF NOT EXISTS `venue` (
     `id` INT(100) NOT NULL AUTO_INCREMENT,
@@ -177,7 +181,10 @@ VALUES (
     (2,1,'Crystal Cove Ballroom','Elegant charm meets modern luxury in our versatile ballroom, ideal for weddings, galas, and corporate events.'),
     (3,1,'Sapphire Sky Terrace','Elevate your event to new heights on our stunning rooftop terrace with panoramic city views and chic ambiance.'),
     (4,1,'Golden Gardens Estate','Step into a world of opulence and grandeur at our historic estate, offering timeless elegance for unforgettable occasions.'),
-    ()
+    (5,1,'Emerald Isle Garden','Discover a lush oasis of tranquility in our enchanting garden, a serene setting for intimate gatherings and outdoor ceremonies.'),
+    (6,1,'Moonlit Meadows Barn','Rustic charm meets refined elegance in our beautifully renovated barn, a charming venue for rustic weddings and intimate gatherings.'),
+    (7,1,'Ocean Breeze Pavilion','Feel the gentle sea breeze as you celebrate in our waterfront pavilion, offering breathtaking views and coastal charm.'),
+    (8,1,'Harbor Lights Yacht Club','Set sail on a voyage of celebration aboard our luxurious yacht, offering unparalleled views and nautical elegance.')
     ;
 CREATE TABLE IF NOT EXISTS `reservation` (
     `id` INT(100) NOT NULL AUTO_INCREMENT,
