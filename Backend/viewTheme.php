@@ -297,6 +297,9 @@
         </div>
 
         <button onclick="openAddPopup()">Add New Theme</button>
+        <?php
+        include './back.php'
+        ?>
 
     <?php else : ?>
         <p>No results found.</p>
