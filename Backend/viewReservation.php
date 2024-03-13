@@ -147,7 +147,9 @@
     <?php else : ?>
         <p>No results found.</p>
     <?php endif; ?>
-
+    <?php
+        include './back.php'
+        ?>
     <!-- JS -->
     <script>
         function openEditPopup(reservationId) {

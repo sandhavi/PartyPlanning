@@ -136,6 +136,9 @@
         echo '<p>User not logged in.</p>';
     }
     ?>
+     <?php
+        include './back.php'
+        ?>
 </body>
 
 </html>

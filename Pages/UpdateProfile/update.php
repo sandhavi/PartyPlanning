@@ -94,7 +94,9 @@
     include '../../Backend/viewUserRes.php'
     ?>
     </div>
-
+    <?php
+        include '../../Backend/back.php'
+        ?>
     <script src="script.js"></script>
 </body>
 

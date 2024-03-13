@@ -156,6 +156,7 @@ $result = $conn->query($sql);
             ?>
         </div>
         <button class="back-button" onclick="window.location.href='../../Pages/HomePage-Ordinary_User/index.php'">Back to Home</button>
+        
     </div>
     <script src="script.js"></script>
 </body>
