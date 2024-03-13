@@ -22,10 +22,10 @@ Setup Steps
 
 ## 2. Table Creation
 
-    Open the party.sql file located in the SQL folder directory. (./SQL/party.sql)
-                    OR
-    RUN BELLOW SQL QUERIES  (SAME QUERIES AS ./SQL/party.sql) 
-<hr>
+Open the party.sql file located in the SQL folder directory. (./SQL/party.sql)
+OR
+RUN BELLOW SQL QUERIES  (SAME QUERIES AS ./SQL/party.sql) 
+
     CREATE TABLE IF NOT EXISTS `customer` (
     `id` INT(100) NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(50) NOT NULL,
@@ -35,8 +35,8 @@ Setup Steps
     username VARCHAR(50) NOT NULL,
     `password` VARCHAR(100) NOT NULL,
     PRIMARY KEY (`id`)
-);
-INSERT INTO `customer` (
+    );
+    INSERT INTO `customer` (
         `id`,
         `name`,
         `age`,
@@ -45,7 +45,7 @@ INSERT INTO `customer` (
         `username`,
         `password`
     )
-VALUES (
+    VALUES (
         1,
         'student',
         23,
@@ -54,16 +54,22 @@ VALUES (
         'uoc',
         'ucsc'
     );
-CREATE TABLE IF NOT EXISTS `admin` (
+
+
+    CREATE TABLE IF NOT EXISTS `admin` (
     `id` INT(100) NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(100) NOT NULL,
     `username` VARCHAR(50) NOT NULL,
     `password` VARCHAR(100) NOT NULL,
     PRIMARY KEY (`id`)
-);
-INSERT INTO `admin` (`id`, `name`, `username`, `password`)
-VALUES (1, 'Party-Admin', 'uoc', 'ucsc');
-CREATE TABLE IF NOT EXISTS `form` (
+    );
+
+    INSERT INTO `admin` (`id`, `name`, `username`, `password`)
+
+    VALUES (1, 'Party-Admin', 'uoc', 'ucsc');
+
+
+    CREATE TABLE IF NOT EXISTS `form` (
     `id` INT(100) NOT NULL AUTO_INCREMENT,
     `customer_id` INT(100) NOT NULL,
     `name` VARCHAR(50) NOT NULL,
@@ -72,8 +78,8 @@ CREATE TABLE IF NOT EXISTS `form` (
     `email` VARCHAR(20) NOT NULL,
     PRIMARY KEY (`id`),
     FOREIGN KEY (`customer_id`) REFERENCES `customer` (`id`)
-);
-INSERT INTO `form` (
+    );
+    INSERT INTO `form` (
         `id`,
         `customer_id`,
         `name`,
@@ -81,7 +87,8 @@ INSERT INTO `form` (
         `p_numeber`,
         `email`
     )
-VALUES (
+
+    VALUES (
         1,
         1,
         'Aruna',
@@ -89,21 +96,23 @@ VALUES (
         '0712345678',
         'aruna@gmail.com'
     );
-CREATE TABLE IF NOT EXISTS `theme` (
+    CREATE TABLE IF NOT EXISTS `theme` (
     `id` INT(100) NOT NULL AUTO_INCREMENT,
     `admin_id` INT(100) NOT NULL,
     `name` VARCHAR(50) NOT NULL,
     `description` VARCHAR(1000) NOT NULL,
     PRIMARY KEY (`id`),
     FOREIGN KEY (`admin_id`) REFERENCES `admin` (`id`)
-);
-INSERT INTO `theme` (
+    );
+
+    INSERT INTO `theme` (
         `id`,
         `admin_id`,
         `name`,
         `description`
     )
-VALUES (
+
+    VALUES (
         1,
         1,
         'Decade Party',
@@ -133,7 +142,9 @@ VALUES (
         'Superhero or Villain Party:',
         'Guests dress up as their favorite superheroes or villains for a fun-filled night of heroics or mischief'
     );
-CREATE TABLE IF NOT EXISTS `vendor` (
+
+
+    CREATE TABLE IF NOT EXISTS `vendor` (
     `id` INT(100) NOT NULL AUTO_INCREMENT,
     `admin_id` INT(100) NOT NULL,
     `name` VARCHAR(50) NOT NULL,
@@ -141,15 +152,17 @@ CREATE TABLE IF NOT EXISTS `vendor` (
     `type` VARCHAR(100) NOT NULL,
     PRIMARY KEY (`id`),
     FOREIGN KEY (`admin_id`) REFERENCES `admin` (`id`)
-);
-INSERT INTO `vendor` (
+    );
+
+    INSERT INTO `vendor` (
         `id`,
         `admin_id`,
         `name`,
         `description`,
         `type`
     )
-VALUES (
+
+    VALUES (
         1,
         1,
         'Amaya Food',
@@ -184,21 +197,25 @@ VALUES (
         'A casual dining experience featuring a variety of grilled meats, seafood, and vegetarian options, as well as a selection of refreshing beverages.',
         'food'
     );
-CREATE TABLE IF NOT EXISTS `venue` (
+
+
+    CREATE TABLE IF NOT EXISTS `venue` (
     `id` INT(100) NOT NULL AUTO_INCREMENT,
     `admin_id` INT(100) NOT NULL,
     `name` VARCHAR(50) NOT NULL,
     `description` VARCHAR(1000) NOT NULL,
     PRIMARY KEY (`id`),
     FOREIGN KEY (`admin_id`) REFERENCES `admin` (`id`)
-);
-INSERT INTO `venue` (
+    );
+
+    INSERT INTO `venue` (
         `id`,
         `admin_id`,
         `name`,
         `description`
     )
-VALUES (
+
+    VALUES (
         1,
         1,
         'Starry Night Pavilion',
@@ -246,7 +263,9 @@ VALUES (
         'Harbor Lights Yacht Club',
         'Set sail on a voyage of celebration aboard our luxurious yacht, offering unparalleled views and nautical elegance.'
     );
-CREATE TABLE IF NOT EXISTS `reservation` (
+
+
+    CREATE TABLE IF NOT EXISTS `reservation` (
     `id` INT(100) NOT NULL AUTO_INCREMENT,
     `customer_id` INT(100) NOT NULL,
     `theme_id` INT(100) NOT NULL,
@@ -263,8 +282,9 @@ CREATE TABLE IF NOT EXISTS `reservation` (
     FOREIGN KEY (`vendor_id`) REFERENCES `vendor` (`id`),
     FOREIGN KEY (`venue_id`) REFERENCES `venue` (`id`),
     FOREIGN KEY (`admin_id`) REFERENCES `admin` (`id`)
-);
-INSERT INTO `reservation` (
+    );
+
+    INSERT INTO `reservation` (
         `id`,
         `customer_id`,
         `theme_id`,
@@ -276,7 +296,8 @@ INSERT INTO `reservation` (
         `description`,
         `no_guests`
     )
-VALUES (
+
+    VALUES (
         1,
         1,
         1,
@@ -288,30 +309,52 @@ VALUES (
         'I want to celebrate my birthday party with my friends and family.There will be 20 old guests and 10 kids. I want to have a 1920s theme party with Amaya Food.',
         100
     );
-ALTER TABLE `reservation`
-ADD `status` VARCHAR(255) NOT NULL
-AFTER `no_guests`;
-ALTER TABLE `customer`
-MODIFY COLUMN `age` INT(100) NULL,
+
+
+    ALTER TABLE `reservation`
+    ADD `status` VARCHAR(255) NOT NULL
+    AFTER `no_guests`;
+
+
+    ALTER TABLE `customer`
+    MODIFY COLUMN `age` INT(100) NULL,
     MODIFY COLUMN `address` VARCHAR(20) NULL,
     MODIFY COLUMN `name` VARCHAR(50) NULL;
-ALTER TABLE `reservation`
-MODIFY COLUMN `customer_id` INT(100) NULL;
-ALTER TABLE `reservation`
-MODIFY COLUMN `theme_id` INT(100) NULL;
-ALTER TABLE `reservation`
-MODIFY COLUMN `vendor_id` INT(100) NULL;
-ALTER TABLE `reservation`
-MODIFY COLUMN `venue_id` INT(100) NULL;
-ALTER TABLE `reservation`
-MODIFY COLUMN `admin_id` INT(100) NULL;
-ALTER TABLE `reservation`
-MODIFY COLUMN `date` DATE NULL;
-ALTER TABLE `reservation`
-MODIFY COLUMN `time` TIME NULL;
-ALTER TABLE `reservation`
-MODIFY COLUMN `description` VARCHAR(1000) NULL;
-ALTER TABLE `reservation`
-MODIFY COLUMN `no_guests` INT(100) NULL;
+
+
+    ALTER TABLE `reservation`
+    MODIFY COLUMN `customer_id` INT(100) NULL;
+
+
+    ALTER TABLE `reservation`
+    MODIFY COLUMN `theme_id` INT(100) NULL;
+
+
+    ALTER TABLE `reservation`
+    MODIFY COLUMN `vendor_id` INT(100) NULL;
+
+
+    ALTER TABLE `reservation`
+    MODIFY COLUMN `venue_id` INT(100) NULL;
+
+
+    ALTER TABLE `reservation`
+    MODIFY COLUMN `admin_id` INT(100) NULL;
+
+
+    ALTER TABLE `reservation`
+    MODIFY COLUMN `date` DATE NULL;
+
+
+    ALTER TABLE `reservation`
+    MODIFY COLUMN `time` TIME NULL;
+
+
+    ALTER TABLE `reservation`
+    MODIFY COLUMN `description` VARCHAR(1000) NULL;
+
+
+    ALTER TABLE `reservation`
+    MODIFY COLUMN `no_guests` INT(100) NULL;
 
 
