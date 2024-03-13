@@ -27,6 +27,7 @@
             width: 100%;
             margin-top: 20px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
         }
 
         th,
@@ -44,6 +45,7 @@
 
         tr:nth(even) {
             background-color: #333333;
+         
         }
 
         tr:hover {

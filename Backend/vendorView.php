@@ -282,11 +282,12 @@
         </div>
                 <div class="b2">
                     <button onclick="openAddPopup()">Add New Vendor</button>
-                </div>
-
-                <?php
+                    <?php
         include './back.php'
         ?>
+                </div>
+
+        
 
     <?php else : ?>
         <p>No results found.</p>
