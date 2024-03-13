@@ -9,7 +9,7 @@
         .go-back-btn {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #9E91C1;
+            background-color: #0D5252;
             color: white;
             text-decoration: none;
             border-radius: 50px;
@@ -17,7 +17,8 @@
         }
 
         .go-back-btn:hover {
-            background-color: #6C72A5;
+            background-color: #D577F7;
+            color: black;
             cursor: pointer;
         }
     </style>
