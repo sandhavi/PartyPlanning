@@ -40,31 +40,8 @@ CREATE TABLE IF NOT EXISTS `admin` (
     PRIMARY KEY (`id`)
 );
 INSERT INTO `admin` (`id`, `name`, `username`, `password`)
-VALUES (1, 'lak', 'lak123', '123');
-CREATE TABLE IF NOT EXISTS `customer_account` (
-    `id` INT(100) NOT NULL AUTO_INCREMENT,
-    `customer_id` INT(100) NOT NULL,
-    `admin_id` INT(100) NOT NULL,
-    `username` VARCHAR(50) NOT NULL,
-    `password` INT(100) NOT NULL,
-    PRIMARY KEY (`id`),
-    FOREIGN KEY (`customer_id`) REFERENCES `customer` (`id`),
-    FOREIGN KEY (`admin_id`) REFERENCES `admin` (`id`)
-);
-INSERT INTO `customer_account` (
-        `id`,
-        `customer_id`,
-        `admin_id`,
-        `username`,
-        `password`
-    )
-VALUES (
-        1,
-        1,
-        1,
-        'uoc',
-        'ucsc'
-    );
+VALUES (1, 'Party-Admin', 'uoc', 'ucsc');
+
 CREATE TABLE IF NOT EXISTS `form` (
     `id` INT(100) NOT NULL AUTO_INCREMENT,
     `customer_id` INT(100) NOT NULL,
