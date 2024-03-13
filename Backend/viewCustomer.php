@@ -15,6 +15,7 @@
             background-image: url('./images/admin5.webp');
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
+            font-size: larger;
         }
 
         h2 {
@@ -88,6 +89,8 @@
             cursor: pointer;
             font-size: 1rem;
             margin-right: 5px;
+            width: auto;
+            font-size: large;
         }
 
         button:hover {

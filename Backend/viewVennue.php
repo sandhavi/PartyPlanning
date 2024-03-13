@@ -15,7 +15,10 @@
             -webkit-backdrop-filter: blur(10px);
             color: #f4f4f4;
             margin: 0;
+            margin-left: 10px;
+            margin-right: 10px;
             padding: 0;
+            font-size: large;
         }
 
         h2 {
@@ -28,6 +31,8 @@
             width: 100%;
             margin-top: 20px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          
+            margin-bottom: 10px;
         }
 
         th,
@@ -107,12 +112,15 @@
             color: #ffffff;
             cursor: pointer;
             margin-right: 10px;
+            width: auto;
+            font-size: large;
             transition: background-color 0.3s ease;
-            width: 40%;
+            
+            
         }
 
         button:hover {
-            background-color: #663399;
+            background-color: #2208A5;
         }
 
         .add-button {
@@ -120,6 +128,7 @@
             color: #252525;
             padding: 10px 15px;
             border: none;
+            width: 30px;
             cursor: pointer;
             margin-bottom: 20px;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
