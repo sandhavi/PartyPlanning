@@ -4,11 +4,10 @@ session_start();
 include('../../Include/connectin.php');
 
 // Assuming you have validated and sanitized input
-$date = $_POST['date'];
-$time = $_POST['time'];
-$no_guests = $_POST['no_guests'];
+$description = $_POST['description'];
 
-$sql = "UPDATE reservation SET date=?, time=?, no_guests=? ORDER BY id DESC LIMIT 1";
+
+$sql = "UPDATE reservation SET description=? ORDER BY id DESC LIMIT 1";
 
 $stmt = $conn->prepare($sql);
 
@@ -17,7 +16,7 @@ if ($stmt === false) {
     die("Prepare failed: " . $conn->error);
 }
 
-$stmt->bind_param("ssi", $date, $time, $no_guests);
+$stmt->bind_param("s", $description);
 
 
 if (!$stmt->execute()) {
@@ -28,6 +27,6 @@ if (!$stmt->execute()) {
 $stmt->close();
 $conn->close();
 
-header("Location: ../Description-p/index.php");
+header("Location: ../checkout/formD.php");
 exit();
 ?>
