@@ -19,20 +19,14 @@
         $editReservationDate = $_POST['edit_reservation_date'];
         $editReservationTime = $_POST['edit_reservation_time'];
         $editReservationDescription = $_POST['edit_reservation_description'];
-        $editReservationVenue = $_POST['edit_reservation_venue'];
         $editReservationNoGuests = $_POST['edit_reservation_no_guests'];
-        $editReservationVendor = $_POST['edit_reservation_vendor'];
-        $editReservationTheme = $_POST['edit_reservation_theme'];
         $editReservationStatus = $_POST['edit_reservation_status'];
 
         $updateSql = "UPDATE reservation SET 
                       date = '$editReservationDate', 
                       time = '$editReservationTime', 
                       description = '$editReservationDescription', 
-                      venue = '$editReservationVenue', 
                       no_guests = '$editReservationNoGuests', 
-                      vendor = '$editReservationVendor', 
-                      theme = '$editReservationTheme', 
                       status = '$editReservationStatus' 
                       WHERE id = $editReservationId";
 
@@ -83,10 +77,7 @@
                 <th>Date</th>
                 <th>Time</th>
                 <th>Description</th>
-                <th>Venue</th>
                 <th>No. of Guests</th>
-                <th>Vendor</th>
-                <th>Theme</th>
                 <th>Status</th>
                 <th>Actions</th>
             </tr>
@@ -100,10 +91,7 @@
                     <td><?php echo $row['date']; ?></td>
                     <td><?php echo $row['time']; ?></td>
                     <td><?php echo $row['description']; ?></td>
-                    <td><?php echo $row['venue']; ?></td>
                     <td><?php echo $row['no_guests']; ?></td>
-                    <td><?php echo $row['vendor']; ?></td>
-                    <td><?php echo $row['theme']; ?></td>
                     <td><?php echo $row['status']; ?></td>
                     <td>
                         <button onclick="openEditPopup(<?php echo $row['id']; ?>)">Edit</button>
@@ -122,10 +110,7 @@
                 Date: <input type="date" name="edit_reservation_date" id="editReservationDate" required><br>
                 Time: <input type="time" name="edit_reservation_time" id="editReservationTime" required><br>
                 Description: <input type="text" name="edit_reservation_description" id="editReservationDescription" required><br>
-                Venue: <input type="text" name="edit_reservation_venue" id="editReservationVenue" required><br>
                 No. of Guests: <input type="number" name="edit_reservation_no_guests" id="editReservationNoGuests" required><br>
-                Vendor: <input type="text" name="edit_reservation_vendor" id="editReservationVendor" required><br>
-                Theme: <input type="text" name="edit_reservation_theme" id="editReservationTheme" required><br>
                 Status: <input type="text" name="edit_reservation_status" id="editReservationStatus" required><br>
                 <button type="submit" name="edit_reservation">Save</button>
                 <button type="button" onclick="closeEditPopup()">Cancel</button>
@@ -160,10 +145,7 @@
                 document.getElementById('editReservationDate').value = reservation.date;
                 document.getElementById('editReservationTime').value = reservation.time;
                 document.getElementById('editReservationDescription').value = reservation.description;
-                document.getElementById('editReservationVenue').value = reservation.venue;
                 document.getElementById('editReservationNoGuests').value = reservation.no_guests;
-                document.getElementById('editReservationVendor').value = reservation.vendor;
-                document.getElementById('editReservationTheme').value = reservation.theme;
                 document.getElementById('editReservationStatus').value = reservation.status;
 
                 // Display the edit pop-up
