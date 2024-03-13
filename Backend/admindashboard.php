@@ -59,7 +59,7 @@ $feedbackCount = getCount('form', $conn);
             margin: 0;
             padding: 20px;
             transition: background-color 0.5s;
-
+            font-size:large;
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
         }
@@ -176,6 +176,10 @@ $feedbackCount = getCount('form', $conn);
 
         .logout-link:hover {
             background-color: #4d004d;
+        }
+
+        a{
+            font-size: larger;
         }
 
         /* Responsive grid */

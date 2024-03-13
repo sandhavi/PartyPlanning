@@ -15,12 +15,14 @@
             -webkit-backdrop-filter: blur(10px);
             color: #333;
             padding: 20px;
+            font-size: large;
         }
 
         h2 {
             color: #4B0082;
             text-align: center;
             transition: color 0.3s ease;
+            font-size: xx-large;
         }
 
         h2:hover {
@@ -72,6 +74,8 @@
             margin-right: 10px;
             align-items: center;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            width: auto;
+            font-size: large;
         }
 
         button:hover {
