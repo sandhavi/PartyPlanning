@@ -1,6 +1,4 @@
--- Creating the Database named "party"
-CREATE DATABASE party -- Use "party" database for creating all the tables
-USE party CREATE TABLE IF NOT EXISTS `customer` (
+CREATE TABLE IF NOT EXISTS `customer` (
     `id` INT(100) NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(50) NOT NULL,
     `age` INT(100) NOT NULL,
@@ -58,10 +56,10 @@ INSERT INTO `form` (
 VALUES (
         1,
         1,
-        'sasini',
-        'This is a text message',
-        '1234',
-        'sasini@gmail.com'
+        'Aruna',
+        'The party planning site made organizing my event a breeze! From selecting vendors to coordinating details, everything was seamless. Highly recommend for stress-free party planning.',
+        '0712345678',
+        'aruna@gmail.com'
     );
 CREATE TABLE IF NOT EXISTS `theme` (
     `id` INT(100) NOT NULL AUTO_INCREMENT,
@@ -178,14 +176,48 @@ VALUES (
         'Starry Night Pavilion',
         'Dance under the twinkling stars in our picturesque outdoor pavilion, the perfect setting for magical celebrations.'
     ),
-    (2,1,'Crystal Cove Ballroom','Elegant charm meets modern luxury in our versatile ballroom, ideal for weddings, galas, and corporate events.'),
-    (3,1,'Sapphire Sky Terrace','Elevate your event to new heights on our stunning rooftop terrace with panoramic city views and chic ambiance.'),
-    (4,1,'Golden Gardens Estate','Step into a world of opulence and grandeur at our historic estate, offering timeless elegance for unforgettable occasions.'),
-    (5,1,'Emerald Isle Garden','Discover a lush oasis of tranquility in our enchanting garden, a serene setting for intimate gatherings and outdoor ceremonies.'),
-    (6,1,'Moonlit Meadows Barn','Rustic charm meets refined elegance in our beautifully renovated barn, a charming venue for rustic weddings and intimate gatherings.'),
-    (7,1,'Ocean Breeze Pavilion','Feel the gentle sea breeze as you celebrate in our waterfront pavilion, offering breathtaking views and coastal charm.'),
-    (8,1,'Harbor Lights Yacht Club','Set sail on a voyage of celebration aboard our luxurious yacht, offering unparalleled views and nautical elegance.')
-    ;
+    (
+        2,
+        1,
+        'Crystal Cove Ballroom',
+        'Elegant charm meets modern luxury in our versatile ballroom, ideal for weddings, galas, and corporate events.'
+    ),
+    (
+        3,
+        1,
+        'Sapphire Sky Terrace',
+        'Elevate your event to new heights on our stunning rooftop terrace with panoramic city views and chic ambiance.'
+    ),
+    (
+        4,
+        1,
+        'Golden Gardens Estate',
+        'Step into a world of opulence and grandeur at our historic estate, offering timeless elegance for unforgettable occasions.'
+    ),
+    (
+        5,
+        1,
+        'Emerald Isle Garden',
+        'Discover a lush oasis of tranquility in our enchanting garden, a serene setting for intimate gatherings and outdoor ceremonies.'
+    ),
+    (
+        6,
+        1,
+        'Moonlit Meadows Barn',
+        'Rustic charm meets refined elegance in our beautifully renovated barn, a charming venue for rustic weddings and intimate gatherings.'
+    ),
+    (
+        7,
+        1,
+        'Ocean Breeze Pavilion',
+        'Feel the gentle sea breeze as you celebrate in our waterfront pavilion, offering breathtaking views and coastal charm.'
+    ),
+    (
+        8,
+        1,
+        'Harbor Lights Yacht Club',
+        'Set sail on a voyage of celebration aboard our luxurious yacht, offering unparalleled views and nautical elegance.'
+    );
 CREATE TABLE IF NOT EXISTS `reservation` (
     `id` INT(100) NOT NULL AUTO_INCREMENT,
     `customer_id` INT(100) NOT NULL,
@@ -196,10 +228,7 @@ CREATE TABLE IF NOT EXISTS `reservation` (
     `date` DATE NOT NULL,
     `time` TIME NOT NULL,
     `description` VARCHAR(1000) NOT NULL,
-    `venue` VARCHAR(100) NOT NULL,
     `no_guests` INT(100) NOT NULL,
-    `vendor` VARCHAR(100) NOT NULL,
-    `theme` VARCHAR(100) NOT NULL,
     PRIMARY KEY (`id`),
     FOREIGN KEY (`customer_id`) REFERENCES `customer` (`id`),
     FOREIGN KEY (`theme_id`) REFERENCES `theme` (`id`),
@@ -217,10 +246,7 @@ INSERT INTO `reservation` (
         `date`,
         `time`,
         `description`,
-        `venue`,
-        `no_guests`,
-        `vendor`,
-        `theme`
+        `no_guests`
     )
 VALUES (
         1,
@@ -229,17 +255,14 @@ VALUES (
         1,
         1,
         1,
-        '2021-10-10',
+        '2024-10-10',
         '10:00:00',
-        'This is a text message',
-        'venue',
-        100,
-        'vendor',
-        'theme'
+        'I want to celebrate my birthday party with my friends and family.There will be 20 old guests and 10 kids. I want to have a 1920s theme party with Amaya Food.',
+        100
     );
 ALTER TABLE `reservation`
 ADD `status` VARCHAR(255) NOT NULL
-AFTER `theme`;
+AFTER `no_guests`;
 ALTER TABLE `customer`
 MODIFY COLUMN `age` INT(100) NULL,
     MODIFY COLUMN `address` VARCHAR(20) NULL,
@@ -261,10 +284,4 @@ MODIFY COLUMN `time` TIME NULL;
 ALTER TABLE `reservation`
 MODIFY COLUMN `description` VARCHAR(1000) NULL;
 ALTER TABLE `reservation`
-MODIFY COLUMN `venue` VARCHAR(100) NULL;
-ALTER TABLE `reservation`
 MODIFY COLUMN `no_guests` INT(100) NULL;
-ALTER TABLE `reservation`
-MODIFY COLUMN `vendor` VARCHAR(100) NULL;
-ALTER TABLE `reservation`
-MODIFY COLUMN `theme` VARCHAR(100) NULL;
