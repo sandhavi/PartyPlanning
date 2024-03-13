@@ -1,3 +1,0 @@
-Navbar
-Footer
-(reusable components)

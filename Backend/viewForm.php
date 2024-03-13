@@ -15,6 +15,7 @@
             -webkit-backdrop-filter: blur(10px);
             color: #000000;
             padding: 20px;
+            font-size: larger;
         }
 
         h2 {
@@ -27,6 +28,7 @@
             width: 100%;
             margin-top: 20px;
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+            margin-bottom: 20px;
         }
 
         th, td {
@@ -51,8 +53,7 @@
             background-color: rgba(222, 189, 237,0.25);
         }
 
-        .delete-btn,
-        .update-btn {
+        .delete-btn {
             cursor: pointer;
             background-color: #f44336; 
             color: white;
@@ -60,14 +61,13 @@
             border: none;
             border-radius: 4px;
             margin-right: 5px;
+            width: auto;
+            font-size: large;
         }
 
-        .update-btn {
-            background-color: #4C9BAF; 
-        }
+        
 
-        .delete-btn:hover,
-        .update-btn:hover {
+        .delete-btn:hover {
             opacity: 0.8;
         }
 
@@ -132,6 +132,9 @@
     <?php else : ?>
         <p>No results found.</p>
     <?php endif; ?>
+    <?php
+        include './back.php'
+        ?>
 
     <script>
         function deleteFormRow(formId) {

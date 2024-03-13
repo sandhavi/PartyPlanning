@@ -15,6 +15,7 @@
             background-image: url('./images/admin5.webp');
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
+            font-size: larger;
         }
 
         h2 {
@@ -27,6 +28,7 @@
             width: 100%;
             margin-top: 20px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
         }
 
         th,
@@ -44,6 +46,7 @@
 
         tr:nth(even) {
             background-color: #333333;
+         
         }
 
         tr:hover {
@@ -86,6 +89,8 @@
             cursor: pointer;
             font-size: 1rem;
             margin-right: 5px;
+            width: auto;
+            font-size: large;
         }
 
         button:hover {
@@ -175,7 +180,9 @@
     <?php else : ?>
         <p>No results found.</p>
     <?php endif; ?>
-
+    <?php
+        include './back.php'
+        ?>
     <!-- JS -->
     <script>
         function openDeletePopup(userId) {

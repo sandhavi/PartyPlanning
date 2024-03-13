@@ -15,12 +15,14 @@
             -webkit-backdrop-filter: blur(10px);
             color: #333;
             padding: 20px;
+            font-size: large;
         }
 
         h2 {
             color: #4B0082;
             text-align: center;
             transition: color 0.3s ease;
+            font-size: xx-large;
         }
 
         h2:hover {
@@ -72,6 +74,8 @@
             margin-right: 10px;
             align-items: center;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            width: auto;
+            font-size: large;
         }
 
         button:hover {
@@ -182,12 +186,12 @@
         $editThemeId = $_POST['edit_theme_id'];
         $editThemeName = $_POST['edit_theme_name'];
         $editThemeDescription = $_POST['edit_theme_description'];
-        $editThemeImage = $_POST['edit_theme_image'];
+    
 
         $updateSql = "UPDATE theme SET 
                       name = '$editThemeName', 
                       description = '$editThemeDescription', 
-                      image = '$editThemeImage'
+                     
                       WHERE id = $editThemeId";
 
         if ($conn->query($updateSql) === TRUE) {
@@ -213,9 +217,9 @@
         $addThemeAdminId = $_POST['add_theme_admin_id'];
         $addThemeName = $_POST['add_theme_name'];
         $addThemeDescription = $_POST['add_theme_description'];
-        $addThemeImage = $_POST['add_theme_image'];
+       
 
-        $addSql = "INSERT INTO theme (admin_id,name, description, image) VALUES ('$addThemeAdminId','$addThemeName', '$addThemeDescription', '$addThemeImage')";
+        $addSql = "INSERT INTO theme (admin_id,name, description) VALUES ('$addThemeAdminId','$addThemeName', '$addThemeDescription')";
 
         if ($conn->query($addSql) === TRUE) {
             echo "Record added successfully";
@@ -245,7 +249,6 @@
                 <th>Admin ID</th>
                 <th>Name</th>
                 <th>Description</th>
-                <th>Image</th>
                 <th>Actions</th>
             </tr>
             <?php foreach ($rows as $row) : ?>
@@ -254,7 +257,6 @@
                     <td><?php echo $row['admin_id']; ?></td>
                     <td><?php echo $row['name']; ?></td>
                     <td><?php echo $row['description']; ?></td>
-                    <td><?php echo $row['image']; ?></td>
                     <td>
                         <button onclick="openEditPopup(<?php echo $row['id']; ?>)">Edit</button>
                         <button onclick="openDeletePopup(<?php echo $row['id']; ?>)">Delete</button>
@@ -270,7 +272,6 @@
                 <input type="hidden" name="edit_theme_id" id="editThemeId" value="">
                 Name: <input type="text" name="edit_theme_name" id="editThemeName" required><br>
                 Description: <input type="text" name="edit_theme_description" id="editThemeDescription" required><br>
-                Image: <input type="text" name="edit_theme_image" id="editThemeImage" required><br>
                 <button type="submit" name="edit_theme">Save</button>
                 <button type="button" onclick="closeEditPopup()">Cancel</button>
             </form>
@@ -294,13 +295,15 @@
                 Name: <input type="text" name="add_theme_name" required><br>
                 Admin ID: <input type="text" name="add_theme_admin_id" required><br>
                 Description: <input type="text" name="add_theme_description" required><br>
-                Image: <input type="text" name="add_theme_image" required><br>
                 <button type="submit" name="add_theme">Add</button>
                 <button type="button" onclick="closeAddPopup()">Cancel</button>
             </form>
         </div>
 
         <button onclick="openAddPopup()">Add New Theme</button>
+        <?php
+        include './back.php'
+        ?>
 
     <?php else : ?>
         <p>No results found.</p>
@@ -314,7 +317,7 @@
                 document.getElementById('editThemeId').value = theme.id;
                 document.getElementById('editThemeName').value = theme.name;
                 document.getElementById('editThemeDescription').value = theme.description;
-                document.getElementById('editThemeImage').value = theme.image;
+               
 
                 
                 document.getElementById('editPopup').style.display = 'block';

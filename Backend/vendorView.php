@@ -16,6 +16,7 @@
             -webkit-backdrop-filter: blur(10px);
             color: #0A0909;
             padding: 20px;
+            font-size: large;
         }
 
         h2 {
@@ -88,6 +89,9 @@
             border-radius: 4px;
             margin-right: 5px;
             transition: opacity 0.3s ease;
+            width: auto;
+            font-size: large;
+            margin-top: 10px;
         }
 
         .delete-btn {
@@ -282,6 +286,9 @@
         </div>
                 <div class="b2">
                     <button onclick="openAddPopup()">Add New Vendor</button>
+                    <?php
+        include './back.php'
+        ?>
                 </div>
 
         

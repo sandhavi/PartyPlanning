@@ -59,7 +59,7 @@ $feedbackCount = getCount('form', $conn);
             margin: 0;
             padding: 20px;
             transition: background-color 0.5s;
-
+            font-size: large;
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
         }
@@ -178,6 +178,10 @@ $feedbackCount = getCount('form', $conn);
             background-color: #4d004d;
         }
 
+        a {
+            font-size: larger;
+        }
+
         /* Responsive grid */
         @media (max-width: 768px) {
             .dashboard-container {
@@ -228,38 +232,37 @@ $feedbackCount = getCount('form', $conn);
             <p><?php echo $adminCount; ?></p>
         </div>
         <div class="dashboard-box">
-            <i class="fa fa-fire" aria-hidden="true"></i>
+            <i class="fa fa-user-plus" aria-hidden="true"></i>
             <h3>Users</h3>
             <a href="./viewCustomer.php" class="manage">Check Users</a>
         </div>
 
         <div class="dashboard-box">
-            <i class="fa fa-fire" aria-hidden="true"></i>
+            <i class="fa fa-gift" aria-hidden="true"></i>
             <h3>Vendor</h3>
             <a href="./vendorView.php" class="manage">Check Vendors</a>
         </div>
 
         <div class="dashboard-box">
-            <i class="fa fa-fire" aria-hidden="true"></i>
+            <i class="fa fa-shopping-basket" aria-hidden="true"></i>
             <h3>Reservations</h3>
             <a href="./viewReservation.php" class="manage">Check Reservations</a>
         </div>
 
         <div class="dashboard-box">
-            <i class="fa fa-fire" aria-hidden="true"></i>
+            <i class="fa fa-camera" aria-hidden="true"></i>
             <h3>Theme</h3>
             <a href="./viewTheme.php" class="manage">Check Theme</a>
         </div>
 
         <div class="dashboard-box">
-            <i class="fa fa-fire" aria-hidden="true"></i>
+            <i class="fa fa-bell" aria-hidden="true"></i>
             <h3>Feedback</h3>
             <a href="./viewForm.php" class="manage">Check Feedback</a>
         </div>
 
         <div class="dashboard-box">
-            <i class="fa fa-fire" aria-hidden="true"></i>
-
+            <i class="fa fa-taxi" aria-hidden="true"></i>
             <h3>Venue</h3>
             <a href="./viewVennue.php" class="manage">Check Venue</a>
         </div>

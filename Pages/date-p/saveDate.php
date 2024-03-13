@@ -28,6 +28,6 @@ if (!$stmt->execute()) {
 $stmt->close();
 $conn->close();
 
-header("Location: ../checkout/formD.php");
+header("Location: ../Description-p/index.php");
 exit();
 ?>
