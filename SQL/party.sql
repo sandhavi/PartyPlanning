@@ -1,3 +1,9 @@
+-- Creating the Database named "party"
+CREATE DATABASE party 
+
+-- Use "party" database for creating all the tables
+USE party 
+
 CREATE TABLE IF NOT EXISTS `customer` (
     `id` INT(100) NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(50) NOT NULL,
@@ -5,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `customer` (
     `email` VARCHAR(20) NOT NULL,
     `address` VARCHAR(20) NOT NULL,
     username VARCHAR(50) NOT NULL,
-    `password` INT(100) NOT NULL,
+    `password` VARCHAR(100) NOT NULL,
     PRIMARY KEY (`id`)
 );
 INSERT INTO `customer` (
@@ -30,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
     `id` INT(100) NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(100) NOT NULL,
     `username` VARCHAR(50) NOT NULL,
-    `password` INT(100) NOT NULL,
+    `password` VARCHAR(100) NOT NULL,
     PRIMARY KEY (`id`)
 );
 INSERT INTO `admin` (`id`, `name`, `username`, `password`)

@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             
             echo "<script>alert('Incorrect password'); 
-            window.location.href = './admindashboard.php;</script>";
+            window.location.href = '../Pages/Login-Admin/index.html;</script>";
             exit();
         }
     } else {
