@@ -17,14 +17,14 @@ Setup Steps
 
    ### SQL Quary for Create database 
 
-   CREATE DATABASE party;
+    CREATE DATABASE party;
 
 
 ## 2. Table Creation
 
-Open the party.sql file located in the SQL folder directory. (./SQL/party.sql)
-OR
-RUN BELLOW SQL QUERIES  (SAME QUERIES AS ./SQL/party.sql) 
+Open the party.sql file located in the SQL folder directory. (./SQL/party.sql)<br>
+OR<br>
+RUN BELLOW SQL QUERIES  (SAME QUERIES AS ./SQL/party.sql) <br>
 
     CREATE TABLE IF NOT EXISTS `customer` (
     `id` INT(100) NOT NULL AUTO_INCREMENT,
