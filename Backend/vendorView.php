@@ -102,7 +102,7 @@
             opacity: 0.8;
         }
 
-        /* Adjust button style inside the form */
+    
         form button[type=submit],
         form button[type=button] {
             background-color: #3C1C60;
@@ -122,7 +122,7 @@
             background-color: #7a7a7a;
         }
 
-        /* Style for adding new vendors */
+    
         .add-vendor-btn {
             display: block;
             width: max-content;

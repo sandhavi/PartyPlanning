@@ -101,7 +101,7 @@
             <?php endforeach; ?>
         </table>
 
-        <!-- Edit pop-up window-->
+
         <div class="overlay" id="editOverlay"></div>
         <div class="edit-popup" id="editPopup">
             <h3>Edit Reservation</h3>
@@ -117,7 +117,7 @@
             </form>
         </div>
 
-        <!-- Delete pop-up window -->
+  
         <div class="overlay" id="deleteOverlay"></div>
         <div class="edit-popup" id="deletePopup">
             <h3>Delete Reservation</h3>
@@ -135,7 +135,7 @@
     <?php
         include './back.php'
         ?>
-    <!-- JS -->
+
     <script>
         function openEditPopup(reservationId) {
             var reservation = <?php echo json_encode($rows); ?>.find(r => r.id == reservationId);
@@ -148,14 +148,14 @@
                 document.getElementById('editReservationNoGuests').value = reservation.no_guests;
                 document.getElementById('editReservationStatus').value = reservation.status;
 
-                // Display the edit pop-up
+              
                 document.getElementById('editPopup').style.display = 'block';
                 document.getElementById('editOverlay').style.display = 'block';
             }
         }
 
         function closeEditPopup() {
-            // Close the edit pop-up
+          
             document.getElementById('editPopup').style.display = 'none';
             document.getElementById('editOverlay').style.display = 'none';
         }
@@ -163,13 +163,13 @@
         function openDeletePopup(reservationId) {
             document.getElementById('deleteReservationId').value = reservationId;
 
-            // Display the delete pop-up
+        
             document.getElementById('deletePopup').style.display = 'block';
             document.getElementById('deleteOverlay').style.display = 'block';
         }
 
         function closeDeletePopup() {
-            // Close the delete pop-up
+           
             document.getElementById('deletePopup').style.display = 'none';
             document.getElementById('deleteOverlay').style.display = 'none';
         }
