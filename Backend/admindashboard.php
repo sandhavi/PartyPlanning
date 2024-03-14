@@ -2,7 +2,7 @@
 
 session_start();
 
-include 'C:\xampp\htdocs\PartyPlanning\Include\connectin.php';
+include '../Include/connectin.php';
 
 if (isset($_SESSION['id'])) {
 
