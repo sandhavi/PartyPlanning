@@ -84,7 +84,7 @@
         input[type=time],
         input[type=number] {
             padding-left: 30px;
-            /* Make room for icons */
+           
         }
     </style>
 </head>

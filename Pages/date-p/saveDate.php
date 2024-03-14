@@ -3,7 +3,7 @@ session_start();
 
 include('../../Include/connectin.php');
 
-// Assuming you have validated and sanitized input
+
 $date = $_POST['date'];
 $time = $_POST['time'];
 $no_guests = $_POST['no_guests'];

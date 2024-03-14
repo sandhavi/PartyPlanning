@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
     updateForm.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        // Fetch form data
+       
         const formData = new FormData(updateForm);
 
-        // Use fetch API to send a POST request
+       
         fetch("../../Backend/updateProfile.php", {
             method: "POST",
             body: formData,

@@ -3,7 +3,7 @@ session_start();
 
 include('../../Include/connectin.php');
 
-// Assuming you have validated and sanitized input
+
 $description = $_POST['description'];
 
 

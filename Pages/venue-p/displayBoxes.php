@@ -1,5 +1,5 @@
 <?php
-// Include your database connection file
+
 include('../../Include/connectin.php');
 $sql = "SELECT * FROM venue";
 $result = $conn->query($sql);
@@ -103,7 +103,7 @@ function saveAndRedirect(venueId) {
   })
   .then(response => {
     if (response.ok) {
-      window.location.href = "../date-p/date.php";// Specify your redirect page
+      window.location.href = "../date-p/date.php"; 
     } else {
       alert('Error saving click.');
     }

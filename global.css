@@ -4,13 +4,13 @@ body {
 }
 
 :root {
-  /* fonts */
+
   --font-krub: Krub;
   --font-league-spartan: "League Spartan";
   --font-rubik: Rubik;
   --font-post-no-bills-jaffna-light: "Post No Bills Jaffna Light";
 
-  /* font sizes */
+
   --font-size-base: 16px;
   --font-size-xl: 20px;
   --font-size-sm: 14px;
@@ -20,7 +20,7 @@ body {
   --font-size-2xl: 21px;
   --font-size-6xl: 25px;
 
-  /* Colors */
+
   --color-white: #fff;
   --color-midnightblue-100: #300942;
   --color-midnightblue-200: #091242;
@@ -34,7 +34,7 @@ body {
   --color-orange-200: #ffb62a;
   --color-slategray: #666c89;
 
-  /* Gaps */
+
   --gap-mid: 17px;
   --gap-12xl: 31px;
   --gap-xl: 20px;
@@ -53,7 +53,7 @@ body {
   --gap-88xl: 107px;
   --gap-68xl: 87px;
 
-  /* Paddings */
+  
   --padding-xl: 20px;
   --padding-5xs: 8px;
   --padding-lgi: 19px;

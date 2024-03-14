@@ -182,7 +182,7 @@ $feedbackCount = getCount('form', $conn);
             font-size: larger;
         }
 
-        /* Responsive grid */
+      
         @media (max-width: 768px) {
             .dashboard-container {
                 grid-template-columns: 1fr;
