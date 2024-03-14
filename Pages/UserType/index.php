@@ -10,7 +10,7 @@
     <style>
       body {
         font-family: "Poppins", sans-serif;
-        background-color: #39004b; /* or the exact color from your design */
+        background-color: #39004b; 
         color: white;
         display: flex;
         justify-content: center;

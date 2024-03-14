@@ -5,7 +5,7 @@ session_start();
 
 include('../../Include/connectin.php');
 
-// Assuming you have validated and sanitized input
+
 $vendor_id = $_POST['vendor_id'];
 
 

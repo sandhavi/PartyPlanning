@@ -1,5 +1,5 @@
 <?php
-// Include your database connection file
+
 include('../../Include/connectin.php');
 $sql = "SELECT * FROM theme";
 $result = $conn->query($sql);
@@ -103,7 +103,7 @@ function saveAndRedirect(themeId) {
   })
   .then(response => {
     if (response.ok) {
-      window.location.href = "../vendor-p/displayBoxes.php"; // Specify your redirect page
+      window.location.href = "../vendor-p/displayBoxes.php"; 
     } else {
       alert('Error saving click.');
     }

@@ -1,5 +1,5 @@
 <?php
-// Include your database connection file
+
 include('../../Include/connectin.php');
 $sql = "SELECT * FROM vendor";
 $result = $conn->query($sql);
@@ -104,7 +104,7 @@ function saveAndRedirect(vendorId) {
   })
   .then(response => {
     if (response.ok) {
-      window.location.href = "../venue-p/displayBoxes.php";// Specify your redirect page
+      window.location.href = "../venue-p/displayBoxes.php";
     } else {
       alert('Error saving click.');
     }

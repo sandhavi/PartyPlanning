@@ -274,7 +274,7 @@
         include './back.php'
         ?>
 
-    <!-- JS -->
+    
     <script>
         function openEditPopup(venueId) {
             var venue = <?php echo json_encode($rows); ?>.find(v => v.id == venueId);

@@ -35,7 +35,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        /* Typography & Colors */
+
         .reservation-box p {
             color: #555;
             line-height: 1.5;
@@ -44,22 +44,22 @@
             color: #39004b;
             font-weight: bold;
 
- 
+
         }
 
         .reservation-box hr {
             border-color: #eee;
         }
 
- 
+
         .reservation-box i {
             margin-right: 8px;
             font-family: Arial, Helvetica, sans-serif;
             color: #013220;
-  
+
         }
 
-    
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -100,11 +100,9 @@
 
 <body>
     <?php
-    include '/xampp/htdocs/PartyPlanning/Include/connectin.php';
-
-
-
-
+     error_reporting(0);
+    include '../Include/connectin.php';
+   
     if (isset($_SESSION['id'])) {
         $userId = $_SESSION['id'];
 
@@ -113,18 +111,16 @@
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
-            
+
             echo '<div class="reservation-box">';
             while ($row = $result->fetch_assoc()) {
                 echo "<p>Reservation ID: <i>{$row['id']}</i></p>";
                 echo "<p>Date: <i>{$row['date']}</i></p>";
                 echo "<p>Time: <i>{$row['time']}</i></p>";
                 echo "<p>Description: <i>{$row['description']}</i></p>";
-                echo "<p>Location: <i>{$row['venue']}</i> </p>";
                 echo "<p>Number of Guests: <i>{$row['no_guests']}</i></p>";
                 echo "<p>Reservation Status: <i>{$row['status']}</i></p>";
                 echo "<hr>";
-    
             }
             echo '</div>';
         } else {
@@ -135,10 +131,9 @@
     } else {
         echo '<p>User not logged in.</p>';
     }
+    include './back.php'
     ?>
-     <?php
-        include './back.php'
-        ?>
+   
 </body>
 
 </html>

@@ -2,7 +2,7 @@
 
 session_start();
 
-include 'C:\xampp\htdocs\PartyPlanning\Include\connectin.php';
+include '../Include/connectin.php';
 
 if (isset($_SESSION['id'])) {
 
@@ -182,7 +182,7 @@ $feedbackCount = getCount('form', $conn);
             font-size: larger;
         }
 
-        /* Responsive grid */
+      
         @media (max-width: 768px) {
             .dashboard-container {
                 grid-template-columns: 1fr;

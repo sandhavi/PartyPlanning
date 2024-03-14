@@ -19,11 +19,11 @@ if (isset($_SESSION['id'])) {
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        // User found, get the name
+       
         $row = $result->fetch_assoc();
         $userName = $row['name'];
     } else {
-        // User not found, set a default name
+     
         $userName = "Log In";
     }
     $conn->close();

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Description Box</title>
     <style>
-        /* Center the box */
+    
         body, html {
             height: 100%;
             margin: 0;
@@ -15,9 +15,9 @@
             background-color: #f0f0f0;
         }
 
-        /* Style the box */
+    
         .description-box {
-            width: 300px; /* Adjust width as needed */
+            width: 300px; 
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             background-color: white;
@@ -27,18 +27,18 @@
             gap: 10px;
         }
 
-        /* Style the textarea */
+      
         textarea {
             padding: 10px;
             border: 1px solid #ccc;
             font-size: large;
             border-radius: 4px;
-            width: calc(100% - 22px); /* Adjust for padding and border */
-            height: 100px; /* Adjust height as needed */
-            resize: vertical; /* Allows vertical resizing, remove if fixed size is needed */
+            width: calc(100% - 22px); 
+            height: 100px; 
+            resize: vertical;
         }
 
-        /* Style the button */
+    
         button {
             padding: 10px;
             background-color: #9C55BA;
@@ -55,7 +55,7 @@
             background-color: #560743;
         }
 
-        /* Add animations, transitions, or motions as needed */
+     
     </style>
 </head>
 <body>

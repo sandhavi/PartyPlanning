@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservation Details</title>
     <style>
-        /* Reset margin and padding */
+   
         * {
             margin: 0;
             padding: 0;
@@ -117,11 +117,11 @@ if (isset($_SESSION['id'])) {
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        // User found, get the name
+      
         $row = $result->fetch_assoc();
         $userName = $row['name'];
     } else {
-        // User not found, set a default name
+        
         $userName = "Log In";
     }
     $conn->close();
