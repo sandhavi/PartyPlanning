@@ -172,7 +172,6 @@
             transition: all 0.3s ease;
         }
 
-        /* Responsive design */
         @media (max-width: 768px) {
             .main-content {
                 padding: 2rem 1.5rem;
@@ -187,12 +186,12 @@
             }
         }
     </style>
-    <!-- Font Awesome CDN for icons -->
+ 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Main Content -->
+
     <div class="main-content">
         <div class="header">
             <h1>Dashboard</h1>
@@ -201,8 +200,6 @@
             </button>
         </div>
 
-
-        <!-- Main Action Buttons -->
         <h2>Quick Actions</h2>
         <div class="action-buttons">
             <button class="action-button primary">
@@ -234,15 +231,13 @@
         </div>
     </div>
 
-    <!-- Notification component -->
     <div class="notification" id="notification">
         <i class="fas fa-check-circle notification-icon"></i>
         <span id="notification-message">Action completed successfully!</span>
     </div>
 
-    <!-- JavaScript for notification functionality -->
     <script>
-        // Show notification function
+ 
         function showNotification(message) {
             const notification = document.getElementById('notification');
             const messageEl = document.getElementById('notification-message');

@@ -1,29 +1,24 @@
 <?php
 header('Content-Type: application/json');
 
-// Include DB connection
 require_once '../../Include/connectin.php';
 
-// Helper function to sanitize input
 define('MAX_MESSAGE_LENGTH', 1000);
 function sanitize($data)
 {
     return htmlspecialchars(strip_tags(trim($data)));
 }
 
-// Get POST data
 $name = isset($_POST['name']) ? sanitize($_POST['name']) : '';
 $email = isset($_POST['email']) ? sanitize($_POST['email']) : '';
 $phone = isset($_POST['phone']) ? sanitize($_POST['phone']) : '';
 $message = isset($_POST['message']) ? sanitize($_POST['message']) : '';
 
-// Basic validation
 if ($name === '' || $email === '' || $message === '' || strlen($message) > MAX_MESSAGE_LENGTH) {
     echo json_encode(['success' => false, 'error' => 'Invalid input.']);
     exit;
 }
 
-// Try to find customer by email (optional, fallback to NULL)
 $customer_id = 1;
 $sql = "SELECT id FROM customer WHERE email = ? LIMIT 1";
 if ($stmt = mysqli_prepare($conn, $sql)) {
@@ -36,14 +31,12 @@ if ($stmt = mysqli_prepare($conn, $sql)) {
     mysqli_stmt_close($stmt);
 }
 
-// Insert into form table
 $insert = "INSERT INTO form (customer_id, name, message, phone, email) VALUES (?, ?, ?, ?, ?)";
 if ($stmt = mysqli_prepare($conn, $insert)) {
-    // Always bind customer_id as integer, use null if not found
+
     mysqli_stmt_bind_param($stmt, 'issss', $customer_id, $name, $message, $phone, $email);
     $result = mysqli_stmt_execute($stmt);
     if (!$result) {
-        // Output error for debugging
         echo json_encode(['success' => false, 'error' => 'DB error: ' . mysqli_stmt_error($stmt)]);
         mysqli_stmt_close($stmt);
         exit;
@@ -52,7 +45,5 @@ if ($stmt = mysqli_prepare($conn, $insert)) {
     echo json_encode(['success' => true]);
     exit;
 }
-// If we reach here, something went wrong
 http_response_code(500);
 echo json_encode(['success' => false, 'error' => 'Database error.']);
-// Note: Check your DB column name. 'p_numeber' may be a typo. Should it be 'phone_number'?

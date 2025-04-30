@@ -462,12 +462,9 @@ session_start();
 
         <?php
 
-
-        // Check for status messages from process_reservation.php
         $status = isset($_GET['status']) ? $_GET['status'] : '';
         $message = isset($_GET['message']) ? $_GET['message'] : '';
 
-        // You can use $status and $message to display feedback to the user
         ?>
 
         <?php

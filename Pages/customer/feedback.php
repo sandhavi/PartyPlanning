@@ -196,7 +196,7 @@
                 e.preventDefault();
 
                 if (validateForm()) {
-                    // If using AJAX instead of form submission
+                   
                     const formData = new FormData(form);
 
                     fetch('process.php', {
@@ -214,7 +214,7 @@
                         })
                         .catch(error => {
                             console.error('Error:', error);
-                            // For demo purposes, show success anyway when there's no actual PHP backend
+                          
                             showSuccessMessage();
                             form.reset();
                         });
@@ -224,32 +224,27 @@
             function validateForm() {
                 let isValid = true;
 
-                // Reset previous errors
                 const formGroups = form.querySelectorAll('.form-group');
                 formGroups.forEach(group => group.classList.remove('error'));
 
-                // Validate name
                 const name = document.getElementById('name');
                 if (name.value.trim() === '') {
                     setError(name, 'Please enter your name');
                     isValid = false;
                 }
 
-                // Validate email
                 const email = document.getElementById('email');
                 if (!isValidEmail(email.value)) {
                     setError(email, 'Please enter a valid email address');
                     isValid = false;
                 }
 
-                // Validate phone number
                 const phone = document.getElementById('phone');
                 if (!isValidPhone(phone.value)) {
                     setError(phone, 'Please enter a valid phone number');
                     isValid = false;
                 }
 
-                // Validate message
                 const message = document.getElementById('message');
                 if (message.value.trim() === '') {
                     setError(message, 'Please enter your message');
@@ -273,7 +268,7 @@
             }
 
             function isValidPhone(phone) {
-                // Simple validation - checks if there are at least 10 digits
+             
                 const re = /^\+?[0-9\s\-()]{10,}$/;
                 return phone.trim() === '' || re.test(phone);
             }
@@ -281,7 +276,7 @@
             function showSuccessMessage() {
                 successMessage.style.display = 'block';
 
-                // Hide the success message after 5 seconds
+               
                 setTimeout(() => {
                     successMessage.style.display = 'none';
                 }, 5000);
