@@ -20,11 +20,11 @@
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
- 
+
       $row = $result->fetch_assoc();
       $userName = $row['name'];
     } else {
-     
+
       $userName = "Log In";
     }
     $conn->close();
@@ -63,7 +63,7 @@
                 <img class="line" src="img/line-4-1.svg" alt="new" />
               </div>
               <div class="project">
-                <div class="text-wrapper-3"><a href="../customer/newReservation.php" style="color:aliceblue; font-size:large;  text-decoration: none;">My Projects</a></div>
+                <div class="text-wrapper-3"><a href="../customer/dashboard.php" style="color:aliceblue; font-size:large;  text-decoration: none;">My Projects</a></div>
                 <img class="line" src="img/line-4-1.svg" alt="new" />
               </div>
               <div class="contact">

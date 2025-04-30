@@ -269,7 +269,7 @@
               <img class="line-5" src="img/line-4.svg" alt="new" />
             </div>
             <div class="project">
-              <div class="text-wrapper-28"><a href="../customer/newReservation.php" style="color:aliceblue; font-size:large;  text-decoration: none;">My Projects</a></div>
+              <div class="text-wrapper-28"><a href="../customer/dashboard.php" style="color:aliceblue; font-size:large;  text-decoration: none;">My Projects</a></div>
               <img class="line-5" src="img/line-4.svg" alt="new" />
             </div>
             <div class="contact">

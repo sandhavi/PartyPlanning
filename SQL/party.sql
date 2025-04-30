@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `form` (
     `customer_id` INT(100) NOT NULL,
     `name` VARCHAR(50) NOT NULL,
     `message` VARCHAR(1000) NOT NULL,
-    `p_numeber` VARCHAR(11) NOT NULL,
+    `phone` VARCHAR(11) NOT NULL,
     `email` VARCHAR(20) NOT NULL,
     PRIMARY KEY (`id`),
     FOREIGN KEY (`customer_id`) REFERENCES `customer` (`id`)
@@ -50,7 +50,7 @@ INSERT INTO `form` (
         `customer_id`,
         `name`,
         `message`,
-        `p_numeber`,
+        `phone`,
         `email`
     )
 VALUES (

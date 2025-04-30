@@ -10,9 +10,9 @@
 </head>
 
 <body>
-<?php
+  <?php
   session_start();
-  
+
 
   if (isset($_SESSION['id'])) {
     include '../../Include/connectin.php';
@@ -22,11 +22,11 @@
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
- 
+
       $row = $result->fetch_assoc();
       $userName = $row['username'];
     } else {
-     
+
       $userName = "Log In";
     }
   } else {
@@ -164,7 +164,7 @@
           </div>
           <div class="frame-2"></div>
         </div>
-    
+
         <div class="group">
           <div class="services">
             <div class="heading">
@@ -395,7 +395,7 @@
                     <img class="line-4" src="img/line-4.svg" alt="new" />
                   </div>
                   <div class="project-2">
-                    <div class="text-wrapper-24"><a href="../customer/newReservation.php" style="color:aliceblue; font-size:large;  text-decoration: none;">My Projects</a></div>
+                    <div class="text-wrapper-24"><a href="../customer/dashboard.php" style="color:aliceblue; font-size:large;  text-decoration: none;">My Projects</a></div>
                     <img class="line-4" src="img/line-4.svg" alt="new" />
                   </div>
                   <div class="contact">

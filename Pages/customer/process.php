@@ -24,7 +24,7 @@ if ($name === '' || $email === '' || $message === '' || strlen($message) > MAX_M
 }
 
 // Try to find customer by email (optional, fallback to NULL)
-$customer_id = null;
+$customer_id = 1;
 $sql = "SELECT id FROM customer WHERE email = ? LIMIT 1";
 if ($stmt = mysqli_prepare($conn, $sql)) {
     mysqli_stmt_bind_param($stmt, 's', $email);
@@ -37,15 +37,10 @@ if ($stmt = mysqli_prepare($conn, $sql)) {
 }
 
 // Insert into form table
-$insert = "INSERT INTO form (customer_id, name, message, p_numeber, email) VALUES (?, ?, ?, ?, ?)";
+$insert = "INSERT INTO form (customer_id, name, message, phone, email) VALUES (?, ?, ?, ?, ?)";
 if ($stmt = mysqli_prepare($conn, $insert)) {
-    // If customer_id is null, use null and bind as 's' (string), else as 'i' (int)
-    if (is_null($customer_id)) {
-        $null = null;
-        mysqli_stmt_bind_param($stmt, 'sssss', $null, $name, $message, $phone, $email);
-    } else {
-        mysqli_stmt_bind_param($stmt, 'issss', $customer_id, $name, $message, $phone, $email);
-    }
+    // Always bind customer_id as integer, use null if not found
+    mysqli_stmt_bind_param($stmt, 'issss', $customer_id, $name, $message, $phone, $email);
     $result = mysqli_stmt_execute($stmt);
     if (!$result) {
         // Output error for debugging
